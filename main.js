@@ -1,5 +1,4 @@
 var myHeading = document.querySelector('h1');
-myHeading.textContent = 'Hello world!';
 
 var myButton1 = document.querySelector('button.hint1');
 myButton1.onclick = function() {
