@@ -1,16 +1,27 @@
 .header {color: blue;}
 .container {position: relative;}
-.hint1 {background-color: white; color: black;}
-.show1 {background-color: white; color: black;}
 
-.hint2 {background-color: white; color: black;}
-.show2 {background-color: white; color: black;}
+.jumble1 {font-size: 24px;}
+.word1 {font-size: 18px;}
+.hint1 {background-color: white; color: black; font-size: 24px;}
+.show1 {background-color: white; color: black; font-size: 24px;}
 
-.hint3 {background-color: white; color: black;}
-.show3 {background-color: white; color: black;}
+.jumble2 {font-size: 24px;}
+.word2 {font-size: 18px;}
+.hint2 {background-color: white; color: black; font-size: 24px;}
+.show2 {background-color: white; color: black; font-size: 24px;}
 
-.hint4 {background-color: white; color: black;}
-.show4 {background-color: white; color: black;}
+.jumble3 {font-size: 24px;}
+.word3 {font-size: 18px;}
+.hint3 {background-color: white; color: black; font-size: 24px;}
+.show3 {background-color: white; color: black; font-size: 24px;}
 
-.hint5 {background-color: white; color: black;}
-.show5 {background-color: white; color: black;}
+.jumble4 {font-size: 24px;}
+.word4 {font-size: 18px;}
+.hint4 {background-color: white; color: black; font-size: 24px;}
+.show4 {background-color: white; color: black; font-size: 24px;}
+
+.jumble5 {font-size: 24px;}
+.word5 {font-size: 18px;}
+.hint5 {background-color: white; color: black; font-size: 24px;}
+.show5 {background-color: white; color: black; font-size: 24px;}
