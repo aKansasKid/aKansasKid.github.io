@@ -1,4 +1,7 @@
-.hint1 {background-color: green; color: red;}
-.hint2 {background-color: green; color: red;}
-.show1 {background-color: red; color: green;}
-.show2 {background-color: red; color: green;}
+.header {color: blue;}
+.container {position: relative;}
+.hint1 {background-color: white; color: black;}
+.show1 {background-color: white; color: black;}
+
+.hint2 {background-color: white; color: black;}
+.show2 {background-color: white; color: black;}
