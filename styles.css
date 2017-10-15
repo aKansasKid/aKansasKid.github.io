@@ -1,5 +1,4 @@
-.header {color: blue;}
-.footer {font-size: xx-large; margin-top: 4%;}
+.header {color: blue; font-size: 42px; margin-bottom: 2%}
 
 .container {position: relative;}
 
@@ -27,3 +26,5 @@
 .word5 {font-size: 24px; margin-right: 4%;}
 .hint5 {background-color: white; color: black; font-size: xx-large; margin-right: 1%;}
 .show5 {background-color: white; color: black; font-size: xx-large; margin-bottom: 2%;}
+
+/*.footer {font-size: 12px; margin-top: 4%;}*/
