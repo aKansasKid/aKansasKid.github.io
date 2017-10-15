@@ -5,25 +5,25 @@
 
 .jumble1 {font-size: xx-large; margin-right: 2%;}
 .word1 {font-size: 24px; margin-right: 4%;}
-.hint1 {background-color: white; color: black; font-size: xx-large; margin-right: 1%}
-.show1 {background-color: white; color: black; font-size: xx-large;}
+.hint1 {background-color: white; color: black; font-size: xx-large; margin-right: 1%;}
+.show1 {background-color: white; color: black; font-size: xx-large; margin-bottom: 2%;}
 
 .jumble2 {font-size: xx-large; margin-right: 2%;}
 .word2 {font-size: 24px; margin-right: 4%;}
-.hint2 {background-color: white; color: black; font-size: xx-large;}
-.show2 {background-color: white; color: black; font-size: xx-large;}
+.hint2 {background-color: white; color: black; font-size: xx-large; margin-right: 1%;}
+.show2 {background-color: white; color: black; font-size: xx-large; margin-bottom: 2%;}
 
 .jumble3 {font-size: xx-large; margin-right: 2%;}
 .word3 {font-size: 24px; margin-right: 4%;}
-.hint3 {background-color: white; color: black; font-size: xx-large;}
-.show3 {background-color: white; color: black; font-size: xx-large;}
+.hint3 {background-color: white; color: black; font-size: xx-large; margin-right: 1%;}
+.show3 {background-color: white; color: black; font-size: xx-large; margin-bottom: 2%;}
 
 .jumble4 {font-size: xx-large; margin-right: 2%;}
 .word4 {font-size: 24px; margin-right: 4%;}
-.hint4 {background-color: white; color: black; font-size: xx-large;}
-.show4 {background-color: white; color: black; font-size: xx-large;}
+.hint4 {background-color: white; color: black; font-size: xx-large; margin-right: 1%;}
+.show4 {background-color: white; color: black; font-size: xx-large; margin-bottom: 2%;}
 
 .jumble5 {font-size: xx-large; margin-right: 2%;}
 .word5 {font-size: 24px; margin-right: 4%;}
-.hint5 {background-color: white; color: black; font-size: xx-large;}
-.show5 {background-color: white; color: black; font-size: xx-large;}
+.hint5 {background-color: white; color: black; font-size: xx-large; margin-right: 1%;}
+.show5 {background-color: white; color: black; font-size: xx-large; margin-bottom: 2%;}
