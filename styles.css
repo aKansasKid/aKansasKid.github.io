@@ -1,27 +1,29 @@
 .header {color: blue;}
 .container {position: relative;}
 
-.jumble1 {font-size: 24px;}
-.word1 {font-size: 18px;}
-.hint1 {background-color: white; color: black; font-size: 24px;}
-.show1 {background-color: white; color: black; font-size: 24px;}
+.jumble1 {font-size: xx-large;}
+.word1 {font-size: 24px;}
+.hint1 {background-color: white; color: black; font-size: xx-large;}
+.show1 {background-color: white; color: black; font-size: xx-large;}
 
-.jumble2 {font-size: 24px;}
-.word2 {font-size: 18px;}
-.hint2 {background-color: white; color: black; font-size: 24px;}
-.show2 {background-color: white; color: black; font-size: 24px;}
+.jumble2 {font-size: xx-large;}
+.word2 {font-size: 24px;}
+.hint2 {background-color: white; color: black; font-size: xx-large;}
+.show2 {background-color: white; color: black; font-size: xx-large;}
 
-.jumble3 {font-size: 24px;}
-.word3 {font-size: 18px;}
-.hint3 {background-color: white; color: black; font-size: 24px;}
-.show3 {background-color: white; color: black; font-size: 24px;}
+.jumble3 {font-size: xx-large;}
+.word3 {font-size: 24px;}
+.hint3 {background-color: white; color: black; font-size: xx-large;}
+.show3 {background-color: white; color: black; font-size: xx-large;}
 
-.jumble4 {font-size: 24px;}
-.word4 {font-size: 18px;}
-.hint4 {background-color: white; color: black; font-size: 24px;}
-.show4 {background-color: white; color: black; font-size: 24px;}
+.jumble4 {font-size: xx-large;}
+.word4 {font-size: 24px;}
+.hint4 {background-color: white; color: black; font-size: xx-large;}
+.show4 {background-color: white; color: black; font-size: xx-large;}
 
-.jumble5 {font-size: 24px;}
-.word5 {font-size: 18px;}
-.hint5 {background-color: white; color: black; font-size: 24px;}
-.show5 {background-color: white; color: black; font-size: 24px;}
+.jumble5 {font-size: xx-large;}
+.word5 {font-size: 24px;}
+.hint5 {background-color: white; color: black; font-size: xx-large;}
+.show5 {background-color: white; color: black; font-size: xx-large;}
+
+.space {font-size: xx-large;}
