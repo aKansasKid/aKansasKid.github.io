@@ -1,31 +1,142 @@
-.header {color: blue; font-size: 36px; margin-bottom: 2%;}
-.NewWords {color:red; font-size: x-large; margin-top:3%}
-.footer {color: red; font-size: 12px; margin-top: 3%;}
+.header {
+    color: blue; 
+    font-size: 36px;
+    font-family: arial;
+    margin-bottom: 2%;
+}
+.NewWords {
+    color:red
+    font-size: x-large;
+    margin-top:3%
+}
+.footer {
+    color: red;
+    font-size: 12px;
+    margin-top: 3%;
+}
 
 
-.container {position: relative; text-align: left}
+.container {
+    position: relative;
+    text-align: left;
+}
 
-.jumble1 {color: black; font-size: xx-large; margin-right: 2%;}
-.word1 {color: red; font-size: 24px; margin-right: 4%;}
-.hint1 {background-color: white; color: blue; font-size: xx-large; margin-right: 1%;}
-.show1 {background-color: white; color: blue; font-size: xx-large; margin-bottom: 2%;}
+.hint1 {
+    border: none;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    font-size: xx-large;
+    margin-right: 1%;
+}
+.show1 {
+    border: none;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    font-size: xx-large;
+}
+.jumble1 {
+    color: black;
+    font-size: xx-large;
+}
+.word1 {
+    color: red;
+    font-size: 24px;
+}
 
-.jumble2 {color: black; font-size: xx-large; margin-right: 2%;}
-.word2 {color: red; font-size: 24px; margin-right: 4%;}
-.hint2 {background-color: white; color: blue; font-size: xx-large; margin-right: 1%;}
-.show2 {background-color: white; color: blue; font-size: xx-large; margin-bottom: 2%;}
+.hint2 {
+    border: none;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    font-size: xx-large;
+    margin-right: 1%;
+}
+.show2 {
+    border: none;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    font-size: xx-large;
+}
+.jumble2 {
+    color: black;
+    font-size: xx-large;
+}
+.word2 {
+    color: red;
+    font-size: 24px;
+}
 
-.jumble3 {color: black; font-size: xx-large; margin-right: 2%;}
-.word3 {color: red; font-size: 24px; margin-right: 4%;}
-.hint3 {background-color: white; color: blue; font-size: xx-large; margin-right: 1%;}
-.show3 {background-color: white; color: blue; font-size: xx-large; margin-bottom: 2%;}
+.hint3 {
+    border: none;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    font-size: xx-large;
+    margin-right: 1%;
+}
+.show3 {
+    border: none;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    font-size: xx-large;
+}
+.jumble3 {
+    color: black;
+    font-size: xx-large;
+}
+.word3 {
+    color: red;
+    font-size: 24px;
+}
 
-.jumble4 {color: black; font-size: xx-large; margin-right: 2%;}
-.word4 {color: red; font-size: 24px; margin-right: 4%;}
-.hint4 {background-color: white; color: blue; font-size: xx-large; margin-right: 1%;}
-.show4 {background-color: white; color: blue; font-size: xx-large; margin-bottom: 2%;}
+.hint4 {
+    border: none;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    font-size: xx-large;
+    margin-right: 1%;
+}
+.show4 {
+    border: none;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    font-size: xx-large;
+}
+.jumble4 {
+    color: black;
+    font-size: xx-large;
+}
+.word4 {
+    color: red;
+    font-size: 24px;
+}
 
-.jumble5 {color: black; font-size: xx-large; margin-right: 2%;}
-.word5 {color: red; font-size: 24px; margin-right: 4%;}
-.hint5 {background-color: white; color: blue; font-size: xx-large; margin-right: 1%;}
-.show5 {background-color: white; color: blue; font-size: xx-large; margin-bottom: 2%;}
+.hint5 {
+    border: none;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    font-size: xx-large;
+    margin-right: 1%;
+}
+.show5 {
+    border: none;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    font-size: xx-large;
+}
+.jumble5 {
+    color: black;
+    font-size: xx-large;
+}
+.word5 {
+    color: red;
+    font-size: 24px;
+}
