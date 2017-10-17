@@ -44,6 +44,53 @@ show5Button.onclick = function() {
    var currentWord = document.querySelector('label.word5');
    currentWord.textContent = displayWords[5];
 }
+
+var hint1Button = document.querySelector('button.hint1');
+hint1Button.onclick = function() {
+        hint1Count++;
+        if (hint1Count <= displayWords[1].length) {
+            var hintWord = document.querySelector('label.word1');
+            hintWord.textContent = displayWords[1].substring(0, hint1Count) + questionMarks.substring(hint1Count, displayWords[1].length);
+        }
+
+}
+var hint2Button = document.querySelector('button.hint2');
+hint2Button.onclick = function() {
+        hint2Count++;
+        if (hint2Count <= displayWords[2].length) {
+            var hintWord = document.querySelector('label.word2');
+            hintWord.textContent = displayWords[2].substring(0, hint2Count) + questionMarks.substring(hint2Count, displayWords[2].length);
+        }
+
+}
+var hint3Button = document.querySelector('button.hint3');
+hint3Button.onclick = function() {
+        hint3Count++;
+        if (hint3Count <= displayWords[3].length) {
+            var hintWord = document.querySelector('label.word3');
+            hintWord.textContent = displayWords[3].substring(0, hint3Count) + questionMarks.substring(hint3Count, displayWords[3].length);
+        }
+
+}
+var hint4Button = document.querySelector('button.hint4');
+hint4Button.onclick = function() {
+        hint4Count++;
+        if (hint4Count <= displayWords[4].length) {
+            var hintWord = document.querySelector('label.word4');
+            hintWord.textContent = displayWords[4].substring(0, hint4Count) + questionMarks.substring(hint4Count, displayWords[4].length);
+        }
+
+}
+var hint5Button = document.querySelector('button.hint5');
+hint5Button.onclick = function() {
+        hint5Count++;
+        if (hint5Count <= displayWords[5].length) {
+            var hintWord = document.querySelector('label.word5');
+            hintWord.textContent = displayWords[5].substring(0, hint5Count) + questionMarks.substring(hint5Count, displayWords[5].length);
+        }
+
+}
+
 function getDisplayWords(displayWords) {
         var index1=1; var index2=1; var index3=1; var index4=1; var index5=1;
         while ( (index1 == index2) ||
