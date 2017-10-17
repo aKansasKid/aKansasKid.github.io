@@ -6,46 +6,80 @@ var numWords = 1355;
 var wordList = new Array();
    getWords(wordList);
 
+   var questionMarks = '??????';
+   var hint1Count = 0;
+   var hint2Count = 0;
+   var hint3Count = 0;
+   var hint4Count = 0;
+   var hint5Count = 0;
 
-var hint1Count = 0;
-var hint2Count = 0;
-var hint3Count = 0;
-var hint4Count = 0;
-var hint5Count = 0;
+var newWordsButton = document.querySelector('button.NewWords');
 
-var questionMarks = '??????';
+var show1Button = document.querySelector('button.show1');
+var show2Button = document.querySelector('button.show2');
+var show3Button = document.querySelector('button.show3');
+var show4Button = document.querySelector('button.show4');
+var show5Button = document.querySelector('button.show5');
 
-getDisplayWords(displayWords);
+var hint1Button = document.querySelector('button.hint1');    
+var hint2Button = document.querySelector('button.hint2');
+var hint3Button = document.querySelector('button.hint3');
+var hint4Button = document.querySelector('button.hint4');
+var hint5Button = document.querySelector('button.hint5');
 
-displayJumble();
+mainLoop(wordList);
+
+function mainLoop(wordList){
+   hint1Count = 0;
+   hint2Count = 0;
+   hint3Count = 0;
+   hint4Count = 0;
+   hint5Count = 0;
+
+
+   var hintWord = document.querySelector('label.word1');
+       hintWord.textContent = 'word1';
+   var hintWord = document.querySelector('label.word2');
+       hintWord.textContent = 'word2';
+   var hintWord = document.querySelector('label.word3');
+       hintWord.textContent = 'word3';
+   var hintWord = document.querySelector('label.word4');
+       hintWord.textContent = 'word4';
+   var hintWord = document.querySelector('label.word5');
+       hintWord.textContent = 'word5';
+
+   getDisplayWords(displayWords);
+
+   displayJumble();
+
+} /* End of function mainLoop */
+
+newWordsButton.onclick = function() {
+   mainLoop(wordList);
+}
 
 var show1Button = document.querySelector('button.show1');
 show1Button.onclick = function() {
    var currentWord = document.querySelector('label.word1');
    currentWord.textContent = displayWords[1];
 }
-var show2Button = document.querySelector('button.show2');
 show2Button.onclick = function() {
    var currentWord = document.querySelector('label.word2');
    currentWord.textContent = displayWords[2];
 }
-var show3Button = document.querySelector('button.show3');
 show3Button.onclick = function() {
    var currentWord = document.querySelector('label.word3');
    currentWord.textContent = displayWords[3];
 }
-var show4Button = document.querySelector('button.show4');
 show4Button.onclick = function() {
    var currentWord = document.querySelector('label.word4');
    currentWord.textContent = displayWords[4];
 }
-var show5Button = document.querySelector('button.show5');
 show5Button.onclick = function() {
    var currentWord = document.querySelector('label.word5');
    currentWord.textContent = displayWords[5];
 }
 
-var hint1Button = document.querySelector('button.hint1');
 hint1Button.onclick = function() {
         hint1Count++;
         if (hint1Count <= displayWords[1].length) {
@@ -54,7 +88,6 @@ hint1Button.onclick = function() {
         }
 
 }
-var hint2Button = document.querySelector('button.hint2');
 hint2Button.onclick = function() {
         hint2Count++;
         if (hint2Count <= displayWords[2].length) {
@@ -63,7 +96,6 @@ hint2Button.onclick = function() {
         }
 
 }
-var hint3Button = document.querySelector('button.hint3');
 hint3Button.onclick = function() {
         hint3Count++;
         if (hint3Count <= displayWords[3].length) {
@@ -72,7 +104,6 @@ hint3Button.onclick = function() {
         }
 
 }
-var hint4Button = document.querySelector('button.hint4');
 hint4Button.onclick = function() {
         hint4Count++;
         if (hint4Count <= displayWords[4].length) {
@@ -81,7 +112,6 @@ hint4Button.onclick = function() {
         }
 
 }
-var hint5Button = document.querySelector('button.hint5');
 hint5Button.onclick = function() {
         hint5Count++;
         if (hint5Count <= displayWords[5].length) {
