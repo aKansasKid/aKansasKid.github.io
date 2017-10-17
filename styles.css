@@ -1,30 +1,30 @@
-.header {color: blue; font-size: 42px; margin-bottom: 2%}
+.header {color: blue; font-size: 36px; margin-bottom: 2%; text-align: center;}
+.footer {color: red; font-size: 12px; margin-top: 4%;}
 
-.container {position: relative;}
 
-.jumble1 {font-size: xx-large; margin-right: 2%;}
-.word1 {font-size: 24px; margin-right: 4%;}
-.hint1 {background-color: white; color: black; font-size: xx-large; margin-right: 1%;}
-.show1 {background-color: white; color: black; font-size: xx-large; margin-bottom: 2%;}
+.container {position: relative; text-align: left}
 
-.jumble2 {font-size: xx-large; margin-right: 2%;}
-.word2 {font-size: 24px; margin-right: 4%;}
-.hint2 {background-color: white; color: black; font-size: xx-large; margin-right: 1%;}
-.show2 {background-color: white; color: black; font-size: xx-large; margin-bottom: 2%;}
+.jumble1 {color: black; font-size: xx-large; margin-right: 2%;}
+.word1 {color: red; font-size: 24px; margin-right: 4%;}
+.hint1 {background-color: white; color: blue; font-size: xx-large; margin-right: 1%;}
+.show1 {background-color: white; color: blue; font-size: xx-large; margin-bottom: 2%;}
 
-.jumble3 {font-size: xx-large; margin-right: 2%;}
-.word3 {font-size: 24px; margin-right: 4%;}
-.hint3 {background-color: white; color: black; font-size: xx-large; margin-right: 1%;}
-.show3 {background-color: white; color: black; font-size: xx-large; margin-bottom: 2%;}
+.jumble2 {color: black; font-size: xx-large; margin-right: 2%;}
+.word2 {color: red; font-size: 24px; margin-right: 4%;}
+.hint2 {background-color: white; color: blue; font-size: xx-large; margin-right: 1%;}
+.show2 {background-color: white; color: blue; font-size: xx-large; margin-bottom: 2%;}
 
-.jumble4 {font-size: xx-large; margin-right: 2%;}
-.word4 {font-size: 24px; margin-right: 4%;}
-.hint4 {background-color: white; color: black; font-size: xx-large; margin-right: 1%;}
-.show4 {background-color: white; color: black; font-size: xx-large; margin-bottom: 2%;}
+.jumble3 {color: black; font-size: xx-large; margin-right: 2%;}
+.word3 {color: red; font-size: 24px; margin-right: 4%;}
+.hint3 {background-color: white; color: blue; font-size: xx-large; margin-right: 1%;}
+.show3 {background-color: white; color: blue; font-size: xx-large; margin-bottom: 2%;}
 
-.jumble5 {font-size: xx-large; margin-right: 2%;}
-.word5 {font-size: 24px; margin-right: 4%;}
-.hint5 {background-color: white; color: black; font-size: xx-large; margin-right: 1%;}
-.show5 {background-color: white; color: black; font-size: xx-large; margin-bottom: 2%;}
+.jumble4 {color: black; font-size: xx-large; margin-right: 2%;}
+.word4 {color: red; font-size: 24px; margin-right: 4%;}
+.hint4 {background-color: white; color: blue; font-size: xx-large; margin-right: 1%;}
+.show4 {background-color: white; color: blue; font-size: xx-large; margin-bottom: 2%;}
 
-/*.footer {font-size: 12px; margin-top: 4%;}*/
+.jumble5 {color: black; font-size: xx-large; margin-right: 2%;}
+.word5 {color: red; font-size: 24px; margin-right: 4%;}
+.hint5 {background-color: white; color: blue; font-size: xx-large; margin-right: 1%;}
+.show5 {background-color: white; color: blue; font-size: xx-large; margin-bottom: 2%;}
