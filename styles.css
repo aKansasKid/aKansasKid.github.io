@@ -6,7 +6,7 @@
 }
 .NewWords {
     color:red
-    font-size: x-large;
+    font-size: xx-large;
     margin-top:3%
 }
 .footer {
@@ -28,6 +28,7 @@
     color: white;
     font-size: xx-large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 .show1 {
     border: none;
@@ -35,6 +36,7 @@
     background-color: red;
     color: white;
     font-size: xx-large;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 .jumble1 {
     color: black;
@@ -52,6 +54,7 @@
     color: white;
     font-size: xx-large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 .show2 {
     border: none;
@@ -59,6 +62,7 @@
     background-color: red;
     color: white;
     font-size: xx-large;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 .jumble2 {
     color: black;
@@ -76,6 +80,7 @@
     color: white;
     font-size: xx-large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 .show3 {
     border: none;
@@ -83,6 +88,7 @@
     background-color: red;
     color: white;
     font-size: xx-large;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 .jumble3 {
     color: black;
@@ -100,6 +106,7 @@
     color: white;
     font-size: xx-large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 .show4 {
     border: none;
@@ -107,6 +114,7 @@
     background-color: red;
     color: white;
     font-size: xx-large;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 .jumble4 {
     color: black;
@@ -124,6 +132,7 @@
     color: white;
     font-size: xx-large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 .show5 {
     border: none;
@@ -131,6 +140,7 @@
     background-color: red;
     color: white;
     font-size: xx-large;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 .jumble5 {
     color: black;
