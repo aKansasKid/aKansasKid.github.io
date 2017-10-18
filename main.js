@@ -167,9 +167,13 @@ function displayJumble(){
                     var temp = tempWord;
                     tempWord = temp.substring(0, --ind + 1) + temp.substring(++ind + 1);
                 }
-                var j3 = jumbleWord.substring(0, 3);
-                var d3 = displayWords[i].substring(0, 3);
-                if (j3.localeCompare(d3) != 0) {
+                var jfirst2 = jumbleWord.substring(0, 2);
+                var dfirst2 = displayWords[i].substring(0, 2);
+                var jlast2 = jumbleWord.substring(len-2);
+                var dlast2 = displayWords[i].substring(len-2);
+                if( (jfirst2.localeCompare(dfirst2) != 0) && 
+                    (jlast2.localeCompare(dlast2) != 0) )
+                {
                     goodJumble = true;
                     jumble[i] = jumbleWord;
                 }
