@@ -1,1553 +1,498 @@
+var c = document.getElementById("gameCanvas");
+var ctx = c.getContext("2d");
 
-var displayWords = new Array();
-var jumble = new Array();
-
-var numWords = 1355;
-var wordList = new Array();
-   getWords(wordList);
-
-   var questionMarks = '??????';
-   var hint1Count = 0;
-   var hint2Count = 0;
-   var hint3Count = 0;
-   var hint4Count = 0;
-   var hint5Count = 0;
-
-var newWordsButton = document.querySelector('button.NewWords');
-
-var show1Button = document.querySelector('button.show1');
-var show2Button = document.querySelector('button.show2');
-var show3Button = document.querySelector('button.show3');
-var show4Button = document.querySelector('button.show4');
-var show5Button = document.querySelector('button.show5');
-
-var hint1Button = document.querySelector('button.hint1');    
-var hint2Button = document.querySelector('button.hint2');
-var hint3Button = document.querySelector('button.hint3');
-var hint4Button = document.querySelector('button.hint4');
-var hint5Button = document.querySelector('button.hint5');
-
-mainLoop(wordList);
-
-function mainLoop(wordList){
-   hint1Count = 0;
-   hint2Count = 0;
-   hint3Count = 0;
-   hint4Count = 0;
-   hint5Count = 0;
+var xClicked;
+var yClicked;
+var event = document.getElementById("gameCanvas");
+event.addEventListener("click", getClickedCoordinates, false);
 
 
-   var hintWord = document.querySelector('label.word1');
-       hintWord.textContent = 'word1';
-   var hintWord = document.querySelector('label.word2');
-       hintWord.textContent = 'word2';
-   var hintWord = document.querySelector('label.word3');
-       hintWord.textContent = 'word3';
-   var hintWord = document.querySelector('label.word4');
-       hintWord.textContent = 'word4';
-   var hintWord = document.querySelector('label.word5');
-       hintWord.textContent = 'word5';
+var newGameButton = document.querySelector('button.NewGame');
+var setLevelButton = document.querySelector('button.setLevel');
 
-   getDisplayWords(displayWords);
+var maxX = c.width;
+var maxY = c.height;
+var maxX3 = maxX/3;
+var maxX23 = 2*maxX/3;
+var maxY3 = maxY/3;
+var maxY23 = 2*maxY/3;
+var offset = 0.375 * maxX3;
 
-   displayJumble();
+//Define centers of the 9 grid squares
+   var centers = new Array(10);
+      for(i=0; i<10; i++) {
+         centers[i] = new Array(4);
+      }
+        //Squares are numbered:
+        // 1  2  3
+        // 4  5  6
+        // 7  8  9
+        centers[1][1] = maxX / 6;       centers[1][2] = maxY / 6;
+        centers[2][1] = maxX / 2;       centers[2][2] = maxY / 6;
+        centers[3][1] = (5 * maxX) / 6; centers[3][2] = maxY / 6;
+        centers[4][1] = maxX / 6;       centers[4][2] = maxY / 2;
+        centers[5][1] = maxX / 2;       centers[5][2] = maxY / 2;
+        centers[6][1] = (5 * maxX) / 6; centers[6][2] = maxY / 2;
+        centers[7][1] = maxX / 6;       centers[7][2] = (5 * maxY) / 6;
+        centers[8][1] = maxX / 2;       centers[8][2] = (5 * maxY) / 6;
+        centers[9][1] = (5 * maxX) / 6; centers[9][2] = (5 * maxY) / 6;
 
-} /* End of function mainLoop */
+//Initialize board array to hold "x" or "o" for each square
+   var board = new Array(10);
 
-newWordsButton.onclick = function() {
-   mainLoop(wordList);
+var gameLevel = 1;
+var humanTurn;
+var humanMove;
+var cpuMove ;
+var turn;
+var gameOver;
+var move;
+//??    String text;
+
+startNewGame();
+
+function startNewGame() {
+
+   //Set board back to blanks
+   for(i=0; i<10; i++) { board[i] = ' ';}
+
+   humanTurn = true;
+   humanMove = 0;
+   cpuMove = 0;
+   turn = 1;
+   gameOver = false;
+   move = 0;
+
+   //erase board graphics
+    ctx.clearRect(0, 0, c.width, c.height);   
+
+   //draw blank grid
+   drawGrid()
 }
 
-var show1Button = document.querySelector('button.show1');
-show1Button.onclick = function() {
-   var currentWord = document.querySelector('label.word1');
-   currentWord.textContent = displayWords[1];
-}
-show2Button.onclick = function() {
-   var currentWord = document.querySelector('label.word2');
-   currentWord.textContent = displayWords[2];
-}
-show3Button.onclick = function() {
-   var currentWord = document.querySelector('label.word3');
-   currentWord.textContent = displayWords[3];
-}
-show4Button.onclick = function() {
-   var currentWord = document.querySelector('label.word4');
-   currentWord.textContent = displayWords[4];
-}
-show5Button.onclick = function() {
-   var currentWord = document.querySelector('label.word5');
-   currentWord.textContent = displayWords[5];
+function drawGrid() {
+
+   ctx.beginPath();
+   ctx.strokeStyle = 'black';
+   ctx.lineWidth = 5;
+
+   ctx.moveTo(c.width/3,0); ctx.lineTo(c.width/3, c.height);
+   ctx.moveTo( (2*c.width)/3,0); ctx.lineTo( (2*c.width)/3, c.height);
+   ctx.moveTo(0, c.height/3); ctx.lineTo(c.width, c.height/3);
+   ctx.moveTo(0, (2*c.height)/3); ctx.lineTo(c.width, (2*c.height)/3);
+   ctx.stroke();
 }
 
-hint1Button.onclick = function() {
-        hint1Count++;
-        if (hint1Count <= displayWords[1].length) {
-            var hintWord = document.querySelector('label.word1');
-            hintWord.textContent = displayWords[1].substring(0, hint1Count) + questionMarks.substring(hint1Count, displayWords[1].length);
-        }
+function drawX( x, y ) {
 
-}
-hint2Button.onclick = function() {
-        hint2Count++;
-        if (hint2Count <= displayWords[2].length) {
-            var hintWord = document.querySelector('label.word2');
-            hintWord.textContent = displayWords[2].substring(0, hint2Count) + questionMarks.substring(hint2Count, displayWords[2].length);
-        }
+   ctx.beginPath();
+   ctx.strokeStyle = 'red';
+   ctx.lineWidth = 10;
 
-}
-hint3Button.onclick = function() {
-        hint3Count++;
-        if (hint3Count <= displayWords[3].length) {
-            var hintWord = document.querySelector('label.word3');
-            hintWord.textContent = displayWords[3].substring(0, hint3Count) + questionMarks.substring(hint3Count, displayWords[3].length);
-        }
-
-}
-hint4Button.onclick = function() {
-        hint4Count++;
-        if (hint4Count <= displayWords[4].length) {
-            var hintWord = document.querySelector('label.word4');
-            hintWord.textContent = displayWords[4].substring(0, hint4Count) + questionMarks.substring(hint4Count, displayWords[4].length);
-        }
-
-}
-hint5Button.onclick = function() {
-        hint5Count++;
-        if (hint5Count <= displayWords[5].length) {
-            var hintWord = document.querySelector('label.word5');
-            hintWord.textContent = displayWords[5].substring(0, hint5Count) + questionMarks.substring(hint5Count, displayWords[5].length);
-        }
-
+   ctx.moveTo( x - offset, y - offset ); ctx.lineTo (x + offset, y + offset );
+   ctx.moveTo( x - offset, y + offset ); ctx.lineTo( x + offset, y - offset );
+   ctx.stroke();
 }
 
-function getDisplayWords(displayWords) {
-        var index1=1; var index2=1; var index3=1; var index4=1; var index5=1;
-        while ( (index1 == index2) ||
-                (index1 == index3) ||
-                (index1 == index4) ||
-                (index1 == index5) ||
-                (index2 == index3) ||
-                (index2 == index4) ||
-                (index2 == index5) ||
-                (index3 == index4) ||
-                (index3 == index5) ||
-                (index4 == index5)
-                )
+function drawO( x, y) {
+
+   ctx.beginPath();
+   ctx.strokeStyle = 'blue';
+   ctx.lineWidth = 10;
+   ctx.arc( x, y, offset, 0, Math.PI * 2, true);
+   ctx.stroke();
+}
+
+function getClickedCoordinates ( event ) {
+        var xTouch = event.clientX;
+        var yTouch = event.clientY;
+
+        gameOver = checkGameOver();
+
+        if ((!gameOver ) && (turn <= 9) && humanTurn)
         {
-            index1 = Math.floor((Math.random() * numWords) + 1);
-            index2 = Math.floor((Math.random() * numWords) + 1);
-            index3 = Math.floor((Math.random() * numWords) + 1);
-            index4 = Math.floor((Math.random() * numWords) + 1);
-            index5 = Math.floor((Math.random() * numWords) + 1);
-        }
-        displayWords[1] = wordList[index1];
-        displayWords[2] = wordList[index2];
-        displayWords[3] = wordList[index3];
-        displayWords[4] = wordList[index4];
-        displayWords[5] = wordList[index5];
+            humanTurn = false;
+            goodMove = false;
 
-}
-function displayJumble(){
-        var len; var index;
-        var goodJumble;
-        var i; var j;
-        for (i = 1; i<=5; i++)
-        {
-            goodJumble = false;
-            while (!goodJumble) {
-                var jumbleWord = '';
-                var tempWord = displayWords[i];
-                len = tempWord.length;
-                for (j = len-1; j >= 0; j--) {
-                    index = Math.floor(Math.random() * j );
-                    jumbleWord = jumbleWord + tempWord.charAt(index);
-                    /* Delete char at index in tempWord */
-                    var ind = index;
-                    var temp = tempWord;
-                    tempWord = temp.substring(0, --ind + 1) + temp.substring(++ind + 1);
+                if ((xTouch < maxX3+10) && (yTouch < maxY3+10)) {
+                    humanMove = 1;
+                } else if ((xTouch > maxX3+10) && (xTouch < maxX23+10) && (yTouch < maxY3+10)) {
+                    humanMove = 2;
+                } else if ((xTouch > maxX23+10) && (yTouch < maxY3+10)) {
+                    humanMove = 3;
+                } else if ((xTouch < maxX3+10) && (yTouch > maxY3+10) && (yTouch < maxY23+10)) {
+                    humanMove = 4;
+                } else if ((xTouch > maxX3+10) && (xTouch < maxX23+10) && (yTouch > maxY3+10) && (yTouch < maxY23+10)) {
+                    humanMove = 5;
+                } else if ((xTouch > maxX23+10) && (yTouch > maxY3+10) && (yTouch < maxY23+10)) {
+                    humanMove = 6;
+                } else if ((xTouch < maxX3+10) && (yTouch > maxY23+10) && (yTouch < maxY+10)) {
+                    humanMove = 7;
+                } else if ((xTouch > maxX3+10) && (xTouch < maxX23+10) && (yTouch > maxY23+10) && (yTouch < maxY+10)) {
+                    humanMove = 8;
+                } else if ((xTouch > maxX23+10) && (yTouch > maxY23+10) && (yTouch < maxY+10)) {
+                    humanMove = 9;
+                } else {
+                    humanMove = 0;
                 }
-                var jfirst2 = jumbleWord.substring(0, 2);
-                var dfirst2 = displayWords[i].substring(0, 2);
-                var jlast2 = jumbleWord.substring(len-2);
-                var dlast2 = displayWords[i].substring(len-2);
-                if( (jfirst2.localeCompare(dfirst2) != 0) && 
-                    (jlast2.localeCompare(dlast2) != 0) )
+                if (humanMove > 0)
                 {
-                    goodJumble = true;
-                    jumble[i] = jumbleWord;
+                    if ((board[humanMove] != 'x') && (board[humanMove] != 'o'))
+                    {
+                        goodMove = true;
+                        move = humanMove;
+                        humanTurn = !humanTurn;
+                    }
                 }
+            if (goodMove)
+            {
+                if (turn==1 || turn==3 || turn==5 || turn==7 || turn==9) {
+                    drawX(centers[move][1], centers[move][2]);
+                    board[move] = 'x';
+                } 
+/***************else {
+                    drawO(centers[move][1], centers[move][2]);
+                    board[move] = 'o';
+                }
+****************/
+                turn = turn + 1;
+console.log('turn: ', turn, 'humanMove: ', humanMove);
+                gameOver = checkGameOver();
+console.log('gameOver = ', gameOver);
+                if (gameOver) {
+                    drawGameOver(centers, board);
+                }
+                cpuMove = 0;
+                if ( (!gameOver) && (turn <= 9) ) {
+                    if (turn == 2) {
+                        if (gameLevel == 2){
+                            if (board[5] == ' ') cpuMove = 5;
+                            else if (board[5] == 'x') {
+                                //pick a random corner
+                                corner = 1 + Math.floor(4 * Math.random());
+                                switch (corner) {
+                                    case 1:
+                                        cpuMove = 1;
+                                        break;
+                                    case 2:
+                                        cpuMove = 3;
+                                        break;
+                                    case 3:
+                                        cpuMove = 7;
+                                        break;
+                                    case 4:
+                                        cpuMove = 9;
+                                        break;
+                                }
+                            }
+                        }
+                       else //random move
+                        {
+                            goodMove = false;
+                            cpuMove = 1 + Math.floor(9 * Math.random());
+console.log('Level 1 - cpuMove: ', cpuMove);
+                            while (!goodMove) {
+console.log('Checking move.', 'Board:', board[cpuMove]);
+                                if ((board[cpuMove] != 'x') && (board[cpuMove] != 'o')) {
+                                    move = cpuMove;
+                                    goodMove = true;
+                                } 
+                                else {
+                                       cpuMove = 1 + Math.floor(9 * Math.random());
+console.log('Level 1 - next cpuMove to try: ', cpuMove);
+                                }
+                            }
+                        }
+                    }
+                    else {
+                        //if 2 'o' in a row, win
+
+                        //Row checks
+                        if ((  ( (board[1] == 'o') && (board[2] == 'o') ) )
+                                && (board[3] == ' ')) {cpuMove = 3;}
+                        else if ((((board[1] == 'o') && (board[3] == 'o')))
+                                && (board[2] == ' ')) {cpuMove = 2;}
+                        else if ((((board[2] == 'o') && (board[3] == 'o')))
+                                && (board[1] == ' ')) {cpuMove = 1;}
+
+                        else if ((((board[4] == 'o') && (board[5] == 'o')))
+                                && (board[6] == ' ')) {cpuMove = 6;}
+                        else if ((((board[4] == 'o') && (board[6] == 'o')))
+                                && (board[5] == ' ')) {cpuMove = 5;}
+                        else if ((((board[5] == 'o') && (board[6] == 'o')))
+                                && (board[4] == ' ')) {cpuMove = 4;}
+
+                        else if ((((board[7] == 'o') && (board[8] == 'o')))
+                                && (board[9] == ' ')) {cpuMove = 9;}
+                        else if ((((board[7] == 'o') && (board[9] == 'o')))
+                                && (board[8] == ' ')) {cpuMove = 8;}
+                        else if ((((board[8] == 'o') && (board[9] == 'o')))
+                                && (board[7] == ' ')) {cpuMove = 7;}
+
+                            //Column checks
+                        else if ((((board[1] == 'o') && (board[4] == 'o')))
+                                && (board[7] == ' ')) {cpuMove = 7;}
+                        else if ((((board[1] == 'o') && (board[7] == 'o')))
+                                && (board[4] == ' ')) {cpuMove = 4;}
+                        else if ((((board[4] == 'o') && (board[7] == 'o')))
+                                && (board[1] == ' ')) {cpuMove = 1;}
+
+                        else if ((((board[2] == 'o') && (board[5] == 'o')))
+                                && (board[8] == ' ')) {cpuMove = 8;}
+                        else if ((((board[2] == 'o') && (board[8] == 'o')))
+                                && (board[5] == ' ')) {cpuMove = 5;}
+                        else if ((((board[5] == 'o') && (board[8] == 'o')))
+                                && (board[2] == ' ')) {cpuMove = 2;}
+
+                        else if ((((board[3] == 'o') && (board[6] == 'o')))
+                                && (board[9] == ' ')) {cpuMove = 9;}
+                        else if ((((board[3] == 'o') && (board[9] == 'o')))
+                                && (board[6] == ' ')) {cpuMove = 6;}
+                        else if ((((board[6] == 'o') && (board[9] == 'o')))
+                                && (board[3] == ' ')) {cpuMove = 3;}
+
+                            //Diagonal checks
+                        else if ((((board[1] == 'o') && (board[5] == 'o')))
+                                && (board[9] == ' ')) {cpuMove = 9;}
+                        else if ((((board[1] == 'o') && (board[9] == 'o')))
+                                && (board[5] == ' ')) {cpuMove = 5;}
+                        else if ((((board[5] == 'o') && (board[9] == 'o')))
+                                && (board[1] == ' ')) {cpuMove = 1;}
+
+                        else if ((((board[3] == 'o') && (board[5] == 'o')))
+                                && (board[7] == ' ')) {cpuMove = 7;}
+                        else if ((((board[3] == 'o') && (board[7] == 'o')))
+                                && (board[5] == ' ')) {cpuMove = 5;}
+                        else if ((((board[5] == 'o') && (board[7] == 'o')))
+                                && (board[3] == ' ')) {cpuMove = 3;}
+
+                        //if 2 'x' in a row, block
+
+                        //Row checks
+                        if (cpuMove == 0) {
+                            if ( ( ( (board[1] == 'x') && (board[2] == 'x') ) )
+                                    && (board[3] == ' ')) {cpuMove = 3;}
+                            else if ((((board[1] == 'x') && (board[3] == 'x')))
+                                    && (board[2] == ' ')) {cpuMove = 2;}
+                            else if ((((board[2] == 'x') && (board[3] == 'x')))
+                                    && (board[1] == ' ')) {cpuMove = 1;}
+
+                            else if ((((board[4] == 'x') && (board[5] == 'x')))
+                                    && (board[6] == ' ')) {cpuMove = 6;}
+                            else if ((((board[4] == 'x') && (board[6] == 'x')))
+                                    && (board[5] == ' ')) {cpuMove = 5;}
+                            else if ((((board[5] == 'x') && (board[6] == 'x')))
+                                    && (board[4] == ' ')) {cpuMove = 4;}
+
+                            else if ((((board[7] == 'x') && (board[8] == 'x')))
+                                    && (board[9] == ' ')) {cpuMove = 9;}
+                            else if ((((board[7] == 'x') && (board[9] == 'x')))
+                                    && (board[8] == ' ')) {cpuMove = 8;}
+                            else if ((((board[8] == 'x') && (board[9] == 'x')))
+                                    && (board[7] == ' ')) {cpuMove = 7;}
+
+                                //Column checks
+                            else if ((((board[1] == 'x') && (board[4] == 'x')))
+                                    && (board[7] == ' ')) {cpuMove = 7;}
+                            else if ((((board[1] == 'x') && (board[7] == 'x')))
+                                    && (board[4] == ' ')) {cpuMove = 4;}
+                            else if ((((board[4] == 'x') && (board[7] == 'x')))
+                                    && (board[1] == ' ')) {cpuMove = 1;}
+
+                            else if ((((board[2] == 'x') && (board[5] == 'x')))
+                                    && (board[8] == ' ')) {cpuMove = 8;}
+                            else if ((((board[2] == 'x') && (board[8] == 'x')))
+                                    && (board[5] == ' ')) {cpuMove = 5;}
+                            else if ((((board[5] == 'x') && (board[8] == 'x')))
+                                    && (board[2] == ' ')) {cpuMove = 2;}
+
+                            else if ((((board[3] == 'x') && (board[6] == 'x')))
+                                    && (board[9] == ' ')) {cpuMove = 9;}
+                            else if ((((board[3] == 'x') && (board[9] == 'x')))
+                                    && (board[6] == ' ')) {cpuMove = 6;}
+                            else if ((((board[6] == 'x') && (board[9] == 'x')))
+                                    && (board[3] == ' ')) {cpuMove = 3;}
+
+                                //Diagonal checks
+                            else if ((((board[1] == 'x') && (board[5] == 'x')))
+                                    && (board[9] == ' ')) {cpuMove = 9;}
+                            else if ((((board[1] == 'x') && (board[9] == 'x')))
+                                    && (board[5] == ' ')) {cpuMove = 5;}
+                            else if ((((board[5] == 'x') && (board[9] == 'x')))
+                                    && (board[1] == ' ')) {cpuMove = 1;}
+
+                            else if ((((board[3] == 'x') && (board[5] == 'x')))
+                                    && (board[7] == ' ')) {cpuMove = 7;}
+                            else if ((((board[3] == 'x') && (board[7] == 'x')))
+                                    && (board[5] == ' ')) {cpuMove = 5;}
+                            else if ((((board[5] == 'x') && (board[7] == 'x')))
+                                    && (board[3] == ' ')) {cpuMove = 3;}
+                        }
+                    }
+                    if (cpuMove == 0) //random move
+                        {
+                            goodMove = false;
+                            cpuMove = 1 + Math.floor(9 * Math.random());
+                            while (!goodMove) {
+                                if ((board[cpuMove] != 'x') && (board[cpuMove] != 'o')) {
+                                    move = cpuMove;
+                                    goodMove = true;
+                                } else cpuMove = 1 + Math.floor(9 * Math.random());
+                            }
+                        }
+
+                }
+                move = cpuMove;
+                //Wait a little berfore showing CPU move
+               
+                            doCPUmove(cpuMove);
+                        
             }
         }
-        /* Display jumbled words */
-        var word1Jumble = document.querySelector('label.jumble1');
-        word1Jumble.textContent = jumble[1];
-        var word2Jumble = document.querySelector('label.jumble2');
-        word2Jumble.textContent = jumble[2];
-        var word3Jumble = document.querySelector('label.jumble3');
-        word3Jumble.textContent = jumble[3];
-        var word4Jumble = document.querySelector('label.jumble4');
-        word4Jumble.textContent = jumble[4];
-        var word5Jumble = document.querySelector('label.jumble5');
-        word5Jumble.textContent = jumble[5];
+   
+
+  }
+
+function doCPUmove(cpuMove) {
+    drawO(centers[cpuMove][1], centers[cpuMove][2]);
+    board[cpuMove] = 'o';
+    turn = turn + 1;
+console.log('turn: ', turn, 'cpuMove: ', cpuMove);
+    gameOver = checkGameOver();
+console.log('gameOver = ', gameOver);
+    if (gameOver) drawGameOver();
+    humanTurn = true;
+}
+
+function checkGameOver() {
+     over = false;
+        // First row
+        if ((board[1] == 'x') || (board[1] == 'o')) {
+            if ((board[1] == board[2]) && (board[1] == board[3])) {
+                over = true;
+            }
+        }
+        // Second row
+        if ((board[4] == 'x') || (board[4] == 'o')) {
+            if ((board[4] == board[5]) && (board[4] == board[6])) {
+                over = true;
+            }
+        }
+        // Third row
+        if ((board[7] == 'x') || (board[7] == 'o')) {
+            if ((board[7] == board[8]) && (board[7] == board[9])) {
+                over = true;
+            }
+        }
+        // First column
+        if ((board[1] == 'x') || (board[1] == 'o')) {
+            if ((board[1] == board[4]) && (board[1] == board[7])) {
+                over = true;
+            }
+        }
+        // Second column
+        if ((board[2] == 'x') || (board[2] == 'o')) {
+            if ((board[2] == board[5]) && (board[2] == board[8])) {
+                over = true;
+            }
+        }
+        // Third column
+        if ((board[3] == 'x') || (board[3] == 'o')) {
+            if ((board[3] == board[6]) && (board[3] == board[9])) {
+                over = true;
+            }
+        }
+        // First diagonal
+        if ((board[1] == 'x') || (board[1] == 'o')) {
+            if ((board[1] == board[5]) && (board[1] == board[9])) {
+                over = true;
+            }
+        }
+        // Second diagonal
+        if ((board[3] == 'x') || (board[3] == 'o')) {
+            if ((board[3] == board[5]) && (board[3] == board[7])) {
+                over = true;
+            }
+        }
+        return over;
+}
+
+function drawGameOver() {
+
+   ctx.beginPath();
+   ctx.strokeStyle = 'green';
+   ctx.lineWidth = 10;
+
+   ctx.stroke();
+
+        over = false;
+        // First row
+        if ((board[1] == 'x') || (board[1] == 'o')) {
+            if ((board[1] == board[2]) && (board[1] == board[3])) {
+                ctx.moveTo( 0+10, centers[1][2]+10 ); ctx.lineTo (maxX+10, centers[1][2]+10 );
+            }
+        }
+        // Second row
+        if ((board[4] == 'x') || (board[4] == 'o')) {
+            if ((board[4] == board[5]) && (board[4] == board[6])) {
+                ctx.moveTo( 0+10, centers[4][2]+10 ); ctx.lineTo (maxX+10, centers[4][2]+10 );
+            }
+        }
+        // Third row
+        if ((board[7] == 'x') || (board[7] == 'o')) {
+            if ((board[7] == board[8]) && (board[7] == board[9])) {
+                ctx.moveTo( 0+10, centers[7][2]+10 ); ctx.lineTo (maxX+10, centers[7][2]+10 );
+            }
+        }
+        // First column
+        if ((board[1] == 'x') || (board[1] == 'o')) {
+            if ((board[1] == board[4]) && (board[1] == board[7])) {
+                ctx.moveTo( centers[1][1]+10, 0+10 ); ctx.lineTo ( centers[1][1]+10, maxY+10 );
+            }
+        }
+        // Second column
+        if ((board[2] == 'x') || (board[2] == 'o')) {
+            if ((board[2] == board[5]) && (board[2] == board[8])) {
+                ctx.moveTo( centers[2][1]+10, 0+10 ); ctx.lineTo ( centers[2][1]+10, maxY+10 );
+            }
+        }
+        // Third column
+        if ((board[3] == 'x') || (board[3] == 'o')) {
+            if ((board[3] == board[6]) && (board[3] == board[9])) {
+                ctx.moveTo( centers[3][1]+10, 0+10 ); ctx.lineTo ( centers[3][1]+10, maxY+10 );
+            }
+        }
+        // First diagonal
+        if ((board[1] == 'x') || (board[1] == 'o')) {
+            if ((board[1] == board[5]) && (board[1] == board[9])) {
+                ctx.moveTo( 0+10, 0+10 ); ctx.lineTo ( maxX+10, maxY+10 );
+            }
+        }
+        // Second diagonal
+        if ((board[3] == 'x') || (board[3] == 'o')) {
+            if ((board[3] == board[5]) && (board[3] == board[7])) {
+                ctx.moveTo( maxX+10, 0+10 ); ctx.lineTo ( 0+10, maxY+10 );
+            }
+        }
+   
+   ctx.stroke();
+}
+
+newGameButton.onclick = function () {
+    startNewGame();
 
 }
-function getWords(wordList)
-    {
-        wordList[1] = "about".toUpperCase();
-        wordList[2] = "above".toUpperCase();
-        wordList[3] = "abroad".toUpperCase();
-        wordList[4] = "absorb".toUpperCase();
-        wordList[5] = "abuse".toUpperCase();
-        wordList[6] = "accent".toUpperCase();
-        wordList[7] = "accept".toUpperCase();
-        wordList[8] = "access".toUpperCase();
-        wordList[9] = "accuse".toUpperCase();
-        wordList[10] = "across".toUpperCase();
-        wordList[11] = "action".toUpperCase();
-        wordList[12] = "active".toUpperCase();
-        wordList[13] = "actor".toUpperCase();
-        wordList[14] = "actual".toUpperCase();
-        wordList[15] = "adapt".toUpperCase();
-        wordList[16] = "added".toUpperCase();
-        wordList[17] = "adjust".toUpperCase();
-        wordList[18] = "admire".toUpperCase();
-        wordList[19] = "admit".toUpperCase();
-        wordList[20] = "adopt".toUpperCase();
-        wordList[21] = "adult".toUpperCase();
-        wordList[22] = "advice".toUpperCase();
-        wordList[23] = "advise".toUpperCase();
-        wordList[24] = "affair".toUpperCase();
-        wordList[25] = "affect".toUpperCase();
-        wordList[26] = "afford".toUpperCase();
-        wordList[27] = "afraid".toUpperCase();
-        wordList[28] = "after".toUpperCase();
-        wordList[29] = "again".toUpperCase();
-        wordList[30] = "agency".toUpperCase();
-        wordList[31] = "agenda".toUpperCase();
-        wordList[32] = "agent".toUpperCase();
-        wordList[33] = "agree".toUpperCase();
-        wordList[34] = "ahead".toUpperCase();
-        wordList[35] = "aisle".toUpperCase();
-        wordList[36] = "alarm".toUpperCase();
-        wordList[37] = "album".toUpperCase();
-        wordList[38] = "alien".toUpperCase();
-        wordList[39] = "alike".toUpperCase();
-        wordList[40] = "alive".toUpperCase();
-        wordList[41] = "alley".toUpperCase();
-        wordList[42] = "allow".toUpperCase();
-        wordList[43] = "almost".toUpperCase();
-        wordList[44] = "alone".toUpperCase();
-        wordList[45] = "along".toUpperCase();
-        wordList[46] = "alter".toUpperCase();
-        wordList[47] = "always".toUpperCase();
-        wordList[48] = "among".toUpperCase();
-        wordList[49] = "amount".toUpperCase();
-        wordList[50] = "angel".toUpperCase();
-        wordList[51] = "anger".toUpperCase();
-        wordList[52] = "angle".toUpperCase();
-        wordList[53] = "angry".toUpperCase();
-        wordList[54] = "animal".toUpperCase();
-        wordList[55] = "ankle".toUpperCase();
-        wordList[56] = "annual".toUpperCase();
-        wordList[57] = "answer".toUpperCase();
-        wordList[58] = "anyone".toUpperCase();
-        wordList[59] = "anyway".toUpperCase();
-        wordList[60] = "apart".toUpperCase();
-        wordList[61] = "appeal".toUpperCase();
-        wordList[62] = "appear".toUpperCase();
-        wordList[63] = "apple".toUpperCase();
-        wordList[64] = "apply".toUpperCase();
-        wordList[65] = "arena".toUpperCase();
-        wordList[66] = "argue".toUpperCase();
-        wordList[67] = "arise".toUpperCase();
-        wordList[68] = "armed".toUpperCase();
-        wordList[69] = "around".toUpperCase();
-        wordList[70] = "array".toUpperCase();
-        wordList[71] = "arrest".toUpperCase();
-        wordList[72] = "arrive".toUpperCase();
-        wordList[73] = "arrow".toUpperCase();
-        wordList[74] = "artist".toUpperCase();
-        wordList[75] = "aside".toUpperCase();
-        wordList[76] = "asleep".toUpperCase();
-        wordList[77] = "aspect".toUpperCase();
-        wordList[78] = "assert".toUpperCase();
-        wordList[79] = "assess".toUpperCase();
-        wordList[80] = "asset".toUpperCase();
-        wordList[81] = "assign".toUpperCase();
-        wordList[82] = "assist".toUpperCase();
-        wordList[83] = "assume".toUpperCase();
-        wordList[84] = "assure".toUpperCase();
-        wordList[85] = "attach".toUpperCase();
-        wordList[86] = "attack".toUpperCase();
-        wordList[87] = "attend".toUpperCase();
-        wordList[88] = "author".toUpperCase();
-        wordList[89] = "avoid".toUpperCase();
-        wordList[90] = "await".toUpperCase();
-        wordList[91] = "awake".toUpperCase();
-        wordList[92] = "award".toUpperCase();
-        wordList[93] = "aware".toUpperCase();
-        wordList[94] = "awful".toUpperCase();
-        wordList[95] = "badly".toUpperCase();
-        wordList[96] = "ballot".toUpperCase();
-        wordList[97] = "banana".toUpperCase();
-        wordList[98] = "banker".toUpperCase();
-        wordList[99] = "barely".toUpperCase();
-        wordList[100] = "barrel".toUpperCase();
-        wordList[101] = "basic".toUpperCase();
-        wordList[102] = "basis".toUpperCase();
-        wordList[103] = "basket".toUpperCase();
-        wordList[104] = "battle".toUpperCase();
-        wordList[105] = "beach".toUpperCase();
-        wordList[106] = "beard".toUpperCase();
-        wordList[107] = "beast".toUpperCase();
-        wordList[108] = "beauty".toUpperCase();
-        wordList[109] = "become".toUpperCase();
-        wordList[110] = "before".toUpperCase();
-        wordList[111] = "begin".toUpperCase();
-        wordList[112] = "behalf".toUpperCase();
-        wordList[113] = "behave".toUpperCase();
-        wordList[114] = "behind".toUpperCase();
-        wordList[115] = "being".toUpperCase();
-        wordList[116] = "belief".toUpperCase();
-        wordList[117] = "belly".toUpperCase();
-        wordList[118] = "belong".toUpperCase();
-        wordList[119] = "below".toUpperCase();
-        wordList[120] = "bench".toUpperCase();
-        wordList[121] = "beside".toUpperCase();
-        wordList[122] = "better".toUpperCase();
-        wordList[123] = "beyond".toUpperCase();
-        wordList[124] = "birth".toUpperCase();
-        wordList[125] = "bishop".toUpperCase();
-        wordList[126] = "bitter".toUpperCase();
-        wordList[127] = "black".toUpperCase();
-        wordList[128] = "blade".toUpperCase();
-        wordList[129] = "blame".toUpperCase();
-        wordList[130] = "blank".toUpperCase();
-        wordList[131] = "blast".toUpperCase();
-        wordList[132] = "blend".toUpperCase();
-        wordList[133] = "bless".toUpperCase();
-        wordList[134] = "blind".toUpperCase();
-        wordList[135] = "blink".toUpperCase();
-        wordList[136] = "block".toUpperCase();
-        wordList[137] = "blond".toUpperCase();
-        wordList[138] = "blood".toUpperCase();
-        wordList[139] = "bloody".toUpperCase();
-        wordList[140] = "board".toUpperCase();
-        wordList[141] = "boast".toUpperCase();
-        wordList[142] = "bonus".toUpperCase();
-        wordList[143] = "boost".toUpperCase();
-        wordList[144] = "booth".toUpperCase();
-        wordList[145] = "border".toUpperCase();
-        wordList[146] = "boring".toUpperCase();
-        wordList[147] = "borrow".toUpperCase();
-        wordList[148] = "bother".toUpperCase();
-        wordList[149] = "bottle".toUpperCase();
-        wordList[150] = "bottom".toUpperCase();
-        wordList[151] = "bounce".toUpperCase();
-        wordList[152] = "brain".toUpperCase();
-        wordList[153] = "brake".toUpperCase();
-        wordList[154] = "branch".toUpperCase();
-        wordList[155] = "brand".toUpperCase();
-        wordList[156] = "brave".toUpperCase();
-        wordList[157] = "bread".toUpperCase();
-        wordList[158] = "break".toUpperCase();
-        wordList[159] = "breast".toUpperCase();
-        wordList[160] = "breath".toUpperCase();
-        wordList[161] = "breeze".toUpperCase();
-        wordList[162] = "brick".toUpperCase();
-        wordList[163] = "bride".toUpperCase();
-        wordList[164] = "bridge".toUpperCase();
-        wordList[165] = "brief".toUpperCase();
-        wordList[166] = "bright".toUpperCase();
-        wordList[167] = "bring".toUpperCase();
-        wordList[168] = "broad".toUpperCase();
-        wordList[169] = "broken".toUpperCase();
-        wordList[170] = "broker".toUpperCase();
-        wordList[171] = "bronze".toUpperCase();
-        wordList[172] = "brown".toUpperCase();
-        wordList[173] = "brush".toUpperCase();
-        wordList[174] = "brutal".toUpperCase();
-        wordList[175] = "bubble".toUpperCase();
-        wordList[176] = "bucket".toUpperCase();
-        wordList[177] = "buddy".toUpperCase();
-        wordList[178] = "budget".toUpperCase();
-        wordList[179] = "build".toUpperCase();
-        wordList[180] = "bullet".toUpperCase();
-        wordList[181] = "bunch".toUpperCase();
-        wordList[182] = "burden".toUpperCase();
-        wordList[183] = "bureau".toUpperCase();
-        wordList[184] = "burst".toUpperCase();
-        wordList[185] = "butter".toUpperCase();
-        wordList[186] = "button".toUpperCase();
-        wordList[187] = "buyer".toUpperCase();
-        wordList[188] = "cabin".toUpperCase();
-        wordList[189] = "cable".toUpperCase();
-        wordList[190] = "camera".toUpperCase();
-        wordList[191] = "campus".toUpperCase();
-        wordList[192] = "cancel".toUpperCase();
-        wordList[193] = "cancer".toUpperCase();
-        wordList[194] = "candle".toUpperCase();
-        wordList[195] = "candy".toUpperCase();
-        wordList[196] = "canvas".toUpperCase();
-        wordList[197] = "carbon".toUpperCase();
-        wordList[198] = "career".toUpperCase();
-        wordList[199] = "cargo".toUpperCase();
-        wordList[200] = "carpet".toUpperCase();
-        wordList[201] = "carrot".toUpperCase();
-        wordList[202] = "carry".toUpperCase();
-        wordList[203] = "carve".toUpperCase();
-        wordList[204] = "casino".toUpperCase();
-        wordList[205] = "casual".toUpperCase();
-        wordList[206] = "catch".toUpperCase();
-        wordList[207] = "cattle".toUpperCase();
-        wordList[208] = "cause".toUpperCase();
-        wordList[209] = "cease".toUpperCase();
-        wordList[210] = "center".toUpperCase();
-        wordList[211] = "chain".toUpperCase();
-        wordList[212] = "chair".toUpperCase();
-        wordList[213] = "chance".toUpperCase();
-        wordList[214] = "change".toUpperCase();
-        wordList[215] = "chaos".toUpperCase();
-        wordList[216] = "charge".toUpperCase();
-        wordList[217] = "charm".toUpperCase();
-        wordList[218] = "chart".toUpperCase();
-        wordList[219] = "chase".toUpperCase();
-        wordList[220] = "cheap".toUpperCase();
-        wordList[221] = "cheat".toUpperCase();
-        wordList[222] = "check".toUpperCase();
-        wordList[223] = "cheek".toUpperCase();
-        wordList[224] = "cheer".toUpperCase();
-        wordList[225] = "cheese".toUpperCase();
-        wordList[226] = "chest".toUpperCase();
-        wordList[227] = "chief".toUpperCase();
-        wordList[228] = "child".toUpperCase();
-        wordList[229] = "chill".toUpperCase();
-        wordList[230] = "choice".toUpperCase();
-        wordList[231] = "choose".toUpperCase();
-        wordList[232] = "chunk".toUpperCase();
-        wordList[233] = "church".toUpperCase();
-        wordList[234] = "circle".toUpperCase();
-        wordList[235] = "civic".toUpperCase();
-        wordList[236] = "civil".toUpperCase();
-        wordList[237] = "claim".toUpperCase();
-        wordList[238] = "class".toUpperCase();
-        wordList[239] = "clean".toUpperCase();
-        wordList[240] = "clear".toUpperCase();
-        wordList[241] = "clerk".toUpperCase();
-        wordList[242] = "click".toUpperCase();
-        wordList[243] = "client".toUpperCase();
-        wordList[244] = "cliff".toUpperCase();
-        wordList[245] = "climb".toUpperCase();
-        wordList[246] = "cling".toUpperCase();
-        wordList[247] = "clinic".toUpperCase();
-        wordList[248] = "clock".toUpperCase();
-        wordList[249] = "close".toUpperCase();
-        wordList[250] = "closed".toUpperCase();
-        wordList[251] = "closer".toUpperCase();
-        wordList[252] = "closet".toUpperCase();
-        wordList[253] = "cloth".toUpperCase();
-        wordList[254] = "cloud".toUpperCase();
-        wordList[255] = "coach".toUpperCase();
-        wordList[256] = "coast".toUpperCase();
-        wordList[257] = "coffee".toUpperCase();
-        wordList[258] = "collar".toUpperCase();
-        wordList[259] = "colony".toUpperCase();
-        wordList[260] = "color".toUpperCase();
-        wordList[261] = "column".toUpperCase();
-        wordList[262] = "combat".toUpperCase();
-        wordList[263] = "comedy".toUpperCase();
-        wordList[264] = "coming".toUpperCase();
-        wordList[265] = "commit".toUpperCase();
-        wordList[266] = "common".toUpperCase();
-        wordList[267] = "compel".toUpperCase();
-        wordList[268] = "comply".toUpperCase();
-        wordList[269] = "convey".toUpperCase();
-        wordList[270] = "cookie".toUpperCase();
-        wordList[271] = "corner".toUpperCase();
-        wordList[272] = "costly".toUpperCase();
-        wordList[273] = "cotton".toUpperCase();
-        wordList[274] = "couch".toUpperCase();
-        wordList[275] = "could".toUpperCase();
-        wordList[276] = "count".toUpperCase();
-        wordList[277] = "county".toUpperCase();
-        wordList[278] = "couple".toUpperCase();
-        wordList[279] = "course".toUpperCase();
-        wordList[280] = "court".toUpperCase();
-        wordList[281] = "cousin".toUpperCase();
-        wordList[282] = "cover".toUpperCase();
-        wordList[283] = "crack".toUpperCase();
-        wordList[284] = "craft".toUpperCase();
-        wordList[285] = "crash".toUpperCase();
-        wordList[286] = "crawl".toUpperCase();
-        wordList[287] = "crazy".toUpperCase();
-        wordList[288] = "cream".toUpperCase();
-        wordList[289] = "create".toUpperCase();
-        wordList[290] = "credit".toUpperCase();
-        wordList[291] = "crime".toUpperCase();
-        wordList[292] = "crisis".toUpperCase();
-        wordList[293] = "critic".toUpperCase();
-        wordList[294] = "cross".toUpperCase();
-        wordList[295] = "crowd".toUpperCase();
-        wordList[296] = "cruel".toUpperCase();
-        wordList[297] = "cruise".toUpperCase();
-        wordList[298] = "crush".toUpperCase();
-        wordList[299] = "curve".toUpperCase();
-        wordList[300] = "custom".toUpperCase();
-        wordList[301] = "cycle".toUpperCase();
-        wordList[302] = "daily".toUpperCase();
-        wordList[303] = "damage".toUpperCase();
-        wordList[304] = "dance".toUpperCase();
-        wordList[305] = "dancer".toUpperCase();
-        wordList[306] = "danger".toUpperCase();
-        wordList[307] = "deadly".toUpperCase();
-        wordList[308] = "dealer".toUpperCase();
-        wordList[309] = "death".toUpperCase();
-        wordList[310] = "debate".toUpperCase();
-        wordList[311] = "debris".toUpperCase();
-        wordList[312] = "debut".toUpperCase();
-        wordList[313] = "decade".toUpperCase();
-        wordList[314] = "decent".toUpperCase();
-        wordList[315] = "decide".toUpperCase();
-        wordList[316] = "deeply".toUpperCase();
-        wordList[317] = "defeat".toUpperCase();
-        wordList[318] = "defend".toUpperCase();
-        wordList[319] = "define".toUpperCase();
-        wordList[320] = "degree".toUpperCase();
-        wordList[321] = "delay".toUpperCase();
-        wordList[322] = "demand".toUpperCase();
-        wordList[323] = "denial".toUpperCase();
-        wordList[324] = "dense".toUpperCase();
-        wordList[325] = "depart".toUpperCase();
-        wordList[326] = "depend".toUpperCase();
-        wordList[327] = "depict".toUpperCase();
-        wordList[328] = "deploy".toUpperCase();
-        wordList[329] = "depth".toUpperCase();
-        wordList[330] = "deputy".toUpperCase();
-        wordList[331] = "derive".toUpperCase();
-        wordList[332] = "desert".toUpperCase();
-        wordList[333] = "design".toUpperCase();
-        wordList[334] = "desire".toUpperCase();
-        wordList[335] = "detail".toUpperCase();
-        wordList[336] = "detect".toUpperCase();
-        wordList[337] = "device".toUpperCase();
-        wordList[338] = "devil".toUpperCase();
-        wordList[339] = "devote".toUpperCase();
-        wordList[340] = "diary".toUpperCase();
-        wordList[341] = "differ".toUpperCase();
-        wordList[342] = "dining".toUpperCase();
-        wordList[343] = "dinner".toUpperCase();
-        wordList[344] = "direct".toUpperCase();
-        wordList[345] = "dirty".toUpperCase();
-        wordList[346] = "divide".toUpperCase();
-        wordList[347] = "divine".toUpperCase();
-        wordList[348] = "doctor".toUpperCase();
-        wordList[349] = "domain".toUpperCase();
-        wordList[350] = "donate".toUpperCase();
-        wordList[351] = "donor".toUpperCase();
-        wordList[352] = "double".toUpperCase();
-        wordList[353] = "doubt".toUpperCase();
-        wordList[354] = "dough".toUpperCase();
-        wordList[355] = "dozen".toUpperCase();
-        wordList[356] = "draft".toUpperCase();
-        wordList[357] = "drain".toUpperCase();
-        wordList[358] = "drama".toUpperCase();
-        wordList[359] = "drawer".toUpperCase();
-        wordList[360] = "dream".toUpperCase();
-        wordList[361] = "dress".toUpperCase();
-        wordList[362] = "dried".toUpperCase();
-        wordList[363] = "drift".toUpperCase();
-        wordList[364] = "drill".toUpperCase();
-        wordList[365] = "drink".toUpperCase();
-        wordList[366] = "drive".toUpperCase();
-        wordList[367] = "driver".toUpperCase();
-        wordList[368] = "drown".toUpperCase();
-        wordList[369] = "drunk".toUpperCase();
-        wordList[370] = "during".toUpperCase();
-        wordList[371] = "dying".toUpperCase();
-        wordList[372] = "eager".toUpperCase();
-        wordList[373] = "early".toUpperCase();
-        wordList[374] = "earth".toUpperCase();
-        wordList[375] = "easily".toUpperCase();
-        wordList[376] = "eating".toUpperCase();
-        wordList[377] = "editor".toUpperCase();
-        wordList[378] = "effect".toUpperCase();
-        wordList[379] = "effort".toUpperCase();
-        wordList[380] = "eight".toUpperCase();
-        wordList[381] = "eighth".toUpperCase();
-        wordList[382] = "either".toUpperCase();
-        wordList[383] = "elbow".toUpperCase();
-        wordList[384] = "elder".toUpperCase();
-        wordList[385] = "elect".toUpperCase();
-        wordList[386] = "eleven".toUpperCase();
-        wordList[387] = "elite".toUpperCase();
-        wordList[388] = "emerge".toUpperCase();
-        wordList[389] = "empire".toUpperCase();
-        wordList[390] = "employ".toUpperCase();
-        wordList[391] = "empty".toUpperCase();
-        wordList[392] = "enable".toUpperCase();
-        wordList[393] = "enact".toUpperCase();
-        wordList[394] = "endure".toUpperCase();
-        wordList[395] = "enemy".toUpperCase();
-        wordList[396] = "energy".toUpperCase();
-        wordList[397] = "engage".toUpperCase();
-        wordList[398] = "engine".toUpperCase();
-        wordList[399] = "enjoy".toUpperCase();
-        wordList[400] = "enough".toUpperCase();
-        wordList[401] = "enroll".toUpperCase();
-        wordList[402] = "ensure".toUpperCase();
-        wordList[403] = "enter".toUpperCase();
-        wordList[404] = "entire".toUpperCase();
-        wordList[405] = "entity".toUpperCase();
-        wordList[406] = "entry".toUpperCase();
-        wordList[407] = "equal".toUpperCase();
-        wordList[408] = "equip".toUpperCase();
-        wordList[409] = "equity".toUpperCase();
-        wordList[410] = "error".toUpperCase();
-        wordList[411] = "escape".toUpperCase();
-        wordList[412] = "essay".toUpperCase();
-        wordList[413] = "estate".toUpperCase();
-        wordList[414] = "ethics".toUpperCase();
-        wordList[415] = "ethnic".toUpperCase();
-        wordList[416] = "event".toUpperCase();
-        wordList[417] = "every".toUpperCase();
-        wordList[418] = "evolve".toUpperCase();
-        wordList[419] = "exact".toUpperCase();
-        wordList[420] = "exceed".toUpperCase();
-        wordList[421] = "except".toUpperCase();
-        wordList[422] = "excuse".toUpperCase();
-        wordList[423] = "exist".toUpperCase();
-        wordList[424] = "exotic".toUpperCase();
-        wordList[425] = "expand".toUpperCase();
-        wordList[426] = "expect".toUpperCase();
-        wordList[427] = "expert".toUpperCase();
-        wordList[428] = "export".toUpperCase();
-        wordList[429] = "expose".toUpperCase();
-        wordList[430] = "extend".toUpperCase();
-        wordList[431] = "extent".toUpperCase();
-        wordList[432] = "extra".toUpperCase();
-        wordList[433] = "fabric".toUpperCase();
-        wordList[434] = "factor".toUpperCase();
-        wordList[435] = "faint".toUpperCase();
-        wordList[436] = "fairly".toUpperCase();
-        wordList[437] = "faith".toUpperCase();
-        wordList[438] = "false".toUpperCase();
-        wordList[439] = "family".toUpperCase();
-        wordList[440] = "famous".toUpperCase();
-        wordList[441] = "farmer".toUpperCase();
-        wordList[442] = "faster".toUpperCase();
-        wordList[443] = "fatal".toUpperCase();
-        wordList[444] = "father".toUpperCase();
-        wordList[445] = "fault".toUpperCase();
-        wordList[446] = "favor".toUpperCase();
-        wordList[447] = "fellow".toUpperCase();
-        wordList[448] = "female".toUpperCase();
-        wordList[449] = "fence".toUpperCase();
-        wordList[450] = "fever".toUpperCase();
-        wordList[451] = "fewer".toUpperCase();
-        wordList[452] = "fiber".toUpperCase();
-        wordList[453] = "field".toUpperCase();
-        wordList[454] = "fierce".toUpperCase();
-        wordList[455] = "fifth".toUpperCase();
-        wordList[456] = "fifty".toUpperCase();
-        wordList[457] = "fight".toUpperCase();
-        wordList[458] = "figure".toUpperCase();
-        wordList[459] = "filter".toUpperCase();
-        wordList[460] = "final".toUpperCase();
-        wordList[461] = "finger".toUpperCase();
-        wordList[462] = "finish".toUpperCase();
-        wordList[463] = "firmly".toUpperCase();
-        wordList[464] = "first".toUpperCase();
-        wordList[465] = "fiscal".toUpperCase();
-        wordList[466] = "fixed".toUpperCase();
-        wordList[467] = "flame".toUpperCase();
-        wordList[468] = "flash".toUpperCase();
-        wordList[469] = "flavor".toUpperCase();
-        wordList[470] = "fleet".toUpperCase();
-        wordList[471] = "flesh".toUpperCase();
-        wordList[472] = "flight".toUpperCase();
-        wordList[473] = "float".toUpperCase();
-        wordList[474] = "flood".toUpperCase();
-        wordList[475] = "floor".toUpperCase();
-        wordList[476] = "flour".toUpperCase();
-        wordList[477] = "flower".toUpperCase();
-        wordList[478] = "fluid".toUpperCase();
-        wordList[479] = "flying".toUpperCase();
-        wordList[480] = "focus".toUpperCase();
-        wordList[481] = "follow".toUpperCase();
-        wordList[482] = "forbid".toUpperCase();
-        wordList[483] = "force".toUpperCase();
-        wordList[484] = "forest".toUpperCase();
-        wordList[485] = "forget".toUpperCase();
-        wordList[486] = "formal".toUpperCase();
-        wordList[487] = "format".toUpperCase();
-        wordList[488] = "former".toUpperCase();
-        wordList[489] = "forth".toUpperCase();
-        wordList[490] = "forty".toUpperCase();
-        wordList[491] = "forum".toUpperCase();
-        wordList[492] = "foster".toUpperCase();
-        wordList[493] = "found".toUpperCase();
-        wordList[494] = "fourth".toUpperCase();
-        wordList[495] = "frame".toUpperCase();
-        wordList[496] = "fraud".toUpperCase();
-        wordList[497] = "freely".toUpperCase();
-        wordList[498] = "freeze".toUpperCase();
-        wordList[499] = "fresh".toUpperCase();
-        wordList[500] = "friend".toUpperCase();
-        wordList[501] = "front".toUpperCase();
-        wordList[502] = "frown".toUpperCase();
-        wordList[503] = "frozen".toUpperCase();
-        wordList[504] = "fruit".toUpperCase();
-        wordList[505] = "fully".toUpperCase();
-        wordList[506] = "funny".toUpperCase();
-        wordList[507] = "future".toUpperCase();
-        wordList[508] = "galaxy".toUpperCase();
-        wordList[509] = "garage".toUpperCase();
-        wordList[510] = "garden".toUpperCase();
-        wordList[511] = "garlic".toUpperCase();
-        wordList[512] = "gather".toUpperCase();
-        wordList[513] = "gender".toUpperCase();
-        wordList[514] = "genius".toUpperCase();
-        wordList[515] = "genre".toUpperCase();
-        wordList[516] = "gentle".toUpperCase();
-        wordList[517] = "gently".toUpperCase();
-        wordList[518] = "ghost".toUpperCase();
-        wordList[519] = "giant".toUpperCase();
-        wordList[520] = "gifted".toUpperCase();
-        wordList[521] = "given".toUpperCase();
-        wordList[522] = "glance".toUpperCase();
-        wordList[523] = "glass".toUpperCase();
-        wordList[524] = "global".toUpperCase();
-        wordList[525] = "globe".toUpperCase();
-        wordList[526] = "glory".toUpperCase();
-        wordList[527] = "glove".toUpperCase();
-        wordList[528] = "golden".toUpperCase();
-        wordList[529] = "govern".toUpperCase();
-        wordList[530] = "grace".toUpperCase();
-        wordList[531] = "grade".toUpperCase();
-        wordList[532] = "grain".toUpperCase();
-        wordList[533] = "grand".toUpperCase();
-        wordList[534] = "grant".toUpperCase();
-        wordList[535] = "grape".toUpperCase();
-        wordList[536] = "grasp".toUpperCase();
-        wordList[537] = "grass".toUpperCase();
-        wordList[538] = "grave".toUpperCase();
-        wordList[539] = "great".toUpperCase();
-        wordList[540] = "green".toUpperCase();
-        wordList[541] = "greet".toUpperCase();
-        wordList[542] = "grief".toUpperCase();
-        wordList[543] = "gross".toUpperCase();
-        wordList[544] = "ground".toUpperCase();
-        wordList[545] = "group".toUpperCase();
-        wordList[546] = "growth".toUpperCase();
-        wordList[547] = "guard".toUpperCase();
-        wordList[548] = "guess".toUpperCase();
-        wordList[549] = "guest".toUpperCase();
-        wordList[550] = "guide".toUpperCase();
-        wordList[551] = "guilt".toUpperCase();
-        wordList[552] = "guilty".toUpperCase();
-        wordList[553] = "guitar".toUpperCase();
-        wordList[554] = "habit".toUpperCase();
-        wordList[555] = "handle".toUpperCase();
-        wordList[556] = "happen".toUpperCase();
-        wordList[557] = "happy".toUpperCase();
-        wordList[558] = "hardly".toUpperCase();
-        wordList[559] = "harsh".toUpperCase();
-        wordList[560] = "hazard".toUpperCase();
-        wordList[561] = "health".toUpperCase();
-        wordList[562] = "heart".toUpperCase();
-        wordList[563] = "heaven".toUpperCase();
-        wordList[564] = "heavy".toUpperCase();
-        wordList[565] = "height".toUpperCase();
-        wordList[566] = "hello".toUpperCase();
-        wordList[567] = "helmet".toUpperCase();
-        wordList[568] = "hence".toUpperCase();
-        wordList[569] = "hidden".toUpperCase();
-        wordList[570] = "highly".toUpperCase();
-        wordList[571] = "hockey".toUpperCase();
-        wordList[572] = "honest".toUpperCase();
-        wordList[573] = "honey".toUpperCase();
-        wordList[574] = "honor".toUpperCase();
-        wordList[575] = "horror".toUpperCase();
-        wordList[576] = "horse".toUpperCase();
-        wordList[577] = "hotel".toUpperCase();
-        wordList[578] = "house".toUpperCase();
-        wordList[579] = "human".toUpperCase();
-        wordList[580] = "humor".toUpperCase();
-        wordList[581] = "hunger".toUpperCase();
-        wordList[582] = "hungry".toUpperCase();
-        wordList[583] = "hunter".toUpperCase();
-        wordList[584] = "hurry".toUpperCase();
-        wordList[585] = "ideal".toUpperCase();
-        wordList[586] = "ignore".toUpperCase();
-        wordList[587] = "image".toUpperCase();
-        wordList[588] = "immune".toUpperCase();
-        wordList[589] = "impact".toUpperCase();
-        wordList[590] = "imply".toUpperCase();
-        wordList[591] = "import".toUpperCase();
-        wordList[592] = "impose".toUpperCase();
-        wordList[593] = "income".toUpperCase();
-        wordList[594] = "indeed".toUpperCase();
-        wordList[595] = "index".toUpperCase();
-        wordList[596] = "infant".toUpperCase();
-        wordList[597] = "inform".toUpperCase();
-        wordList[598] = "injure".toUpperCase();
-        wordList[599] = "injury".toUpperCase();
-        wordList[600] = "inmate".toUpperCase();
-        wordList[601] = "inner".toUpperCase();
-        wordList[602] = "input".toUpperCase();
-        wordList[603] = "insect".toUpperCase();
-        wordList[604] = "insert".toUpperCase();
-        wordList[605] = "inside".toUpperCase();
-        wordList[606] = "insist".toUpperCase();
-        wordList[607] = "intact".toUpperCase();
-        wordList[608] = "intend".toUpperCase();
-        wordList[609] = "intent".toUpperCase();
-        wordList[610] = "invade".toUpperCase();
-        wordList[611] = "invent".toUpperCase();
-        wordList[612] = "invest".toUpperCase();
-        wordList[613] = "invite".toUpperCase();
-        wordList[614] = "irony".toUpperCase();
-        wordList[615] = "island".toUpperCase();
-        wordList[616] = "issue".toUpperCase();
-        wordList[617] = "itself".toUpperCase();
-        wordList[618] = "jacket".toUpperCase();
-        wordList[619] = "jeans".toUpperCase();
-        wordList[620] = "joint".toUpperCase();
-        wordList[621] = "judge".toUpperCase();
-        wordList[622] = "juice".toUpperCase();
-        wordList[623] = "jungle".toUpperCase();
-        wordList[624] = "junior".toUpperCase();
-        wordList[625] = "juror".toUpperCase();
-        wordList[626] = "killer".toUpperCase();
-        wordList[627] = "kneel".toUpperCase();
-        wordList[628] = "knife".toUpperCase();
-        wordList[629] = "knock".toUpperCase();
-        wordList[630] = "known".toUpperCase();
-        wordList[631] = "label".toUpperCase();
-        wordList[632] = "labor".toUpperCase();
-        wordList[633] = "ladder".toUpperCase();
-        wordList[634] = "large".toUpperCase();
-        wordList[635] = "laser".toUpperCase();
-        wordList[636] = "lately".toUpperCase();
-        wordList[637] = "later".toUpperCase();
-        wordList[638] = "latter".toUpperCase();
-        wordList[639] = "laugh".toUpperCase();
-        wordList[640] = "launch".toUpperCase();
-        wordList[641] = "lawyer".toUpperCase();
-        wordList[642] = "layer".toUpperCase();
-        wordList[643] = "leader".toUpperCase();
-        wordList[644] = "league".toUpperCase();
-        wordList[645] = "learn".toUpperCase();
-        wordList[646] = "least".toUpperCase();
-        wordList[647] = "leave".toUpperCase();
-        wordList[648] = "legacy".toUpperCase();
-        wordList[649] = "legal".toUpperCase();
-        wordList[650] = "legend".toUpperCase();
-        wordList[651] = "lemon".toUpperCase();
-        wordList[652] = "length".toUpperCase();
-        wordList[653] = "lesson".toUpperCase();
-        wordList[654] = "letter".toUpperCase();
-        wordList[655] = "level".toUpperCase();
-        wordList[656] = "light".toUpperCase();
-        wordList[657] = "likely".toUpperCase();
-        wordList[658] = "limit".toUpperCase();
-        wordList[659] = "liquid".toUpperCase();
-        wordList[660] = "listen".toUpperCase();
-        wordList[661] = "little".toUpperCase();
-        wordList[662] = "liver".toUpperCase();
-        wordList[663] = "living".toUpperCase();
-        wordList[664] = "lobby".toUpperCase();
-        wordList[665] = "local".toUpperCase();
-        wordList[666] = "locate".toUpperCase();
-        wordList[667] = "logic".toUpperCase();
-        wordList[668] = "lonely".toUpperCase();
-        wordList[669] = "loose".toUpperCase();
-        wordList[670] = "lovely".toUpperCase();
-        wordList[671] = "lover".toUpperCase();
-        wordList[672] = "lower".toUpperCase();
-        wordList[673] = "loyal".toUpperCase();
-        wordList[674] = "lucky".toUpperCase();
-        wordList[675] = "lunch".toUpperCase();
-        wordList[676] = "magic".toUpperCase();
-        wordList[677] = "mainly".toUpperCase();
-        wordList[678] = "major".toUpperCase();
-        wordList[679] = "maker".toUpperCase();
-        wordList[680] = "makeup".toUpperCase();
-        wordList[681] = "manage".toUpperCase();
-        wordList[682] = "manner".toUpperCase();
-        wordList[683] = "manual".toUpperCase();
-        wordList[684] = "marble".toUpperCase();
-        wordList[685] = "march".toUpperCase();
-        wordList[686] = "margin".toUpperCase();
-        wordList[687] = "marine".toUpperCase();
-        wordList[688] = "marker".toUpperCase();
-        wordList[689] = "market".toUpperCase();
-        wordList[690] = "marry".toUpperCase();
-        wordList[691] = "master".toUpperCase();
-        wordList[692] = "match".toUpperCase();
-        wordList[693] = "matter".toUpperCase();
-        wordList[694] = "maybe".toUpperCase();
-        wordList[695] = "mayor".toUpperCase();
-        wordList[696] = "medal".toUpperCase();
-        wordList[697] = "media".toUpperCase();
-        wordList[698] = "medium".toUpperCase();
-        wordList[699] = "member".toUpperCase();
-        wordList[700] = "memory".toUpperCase();
-        wordList[701] = "mental".toUpperCase();
-        wordList[702] = "mentor".toUpperCase();
-        wordList[703] = "merely".toUpperCase();
-        wordList[704] = "merit".toUpperCase();
-        wordList[705] = "metal".toUpperCase();
-        wordList[706] = "meter".toUpperCase();
-        wordList[707] = "method".toUpperCase();
-        wordList[708] = "middle".toUpperCase();
-        wordList[709] = "midst".toUpperCase();
-        wordList[710] = "might".toUpperCase();
-        wordList[711] = "minor".toUpperCase();
-        wordList[712] = "minute".toUpperCase();
-        wordList[713] = "mirror".toUpperCase();
-        wordList[714] = "mixed".toUpperCase();
-        wordList[715] = "mobile".toUpperCase();
-        wordList[716] = "model".toUpperCase();
-        wordList[717] = "modern".toUpperCase();
-        wordList[718] = "modest".toUpperCase();
-        wordList[719] = "modify".toUpperCase();
-        wordList[720] = "moment".toUpperCase();
-        wordList[721] = "money".toUpperCase();
-        wordList[722] = "monkey".toUpperCase();
-        wordList[723] = "month".toUpperCase();
-        wordList[724] = "moral".toUpperCase();
-        wordList[725] = "mostly".toUpperCase();
-        wordList[726] = "mother".toUpperCase();
-        wordList[727] = "motion".toUpperCase();
-        wordList[728] = "motive".toUpperCase();
-        wordList[729] = "motor".toUpperCase();
-        wordList[730] = "mount".toUpperCase();
-        wordList[731] = "mouse".toUpperCase();
-        wordList[732] = "mouth".toUpperCase();
-        wordList[733] = "movie".toUpperCase();
-        wordList[734] = "murder".toUpperCase();
-        wordList[735] = "muscle".toUpperCase();
-        wordList[736] = "museum".toUpperCase();
-        wordList[737] = "music".toUpperCase();
-        wordList[738] = "mutter".toUpperCase();
-        wordList[739] = "mutual".toUpperCase();
-        wordList[740] = "myself".toUpperCase();
-        wordList[741] = "naked".toUpperCase();
-        wordList[742] = "narrow".toUpperCase();
-        wordList[743] = "nasty".toUpperCase();
-        wordList[744] = "nation".toUpperCase();
-        wordList[745] = "native".toUpperCase();
-        wordList[746] = "nature".toUpperCase();
-        wordList[747] = "naval".toUpperCase();
-        wordList[748] = "nearby".toUpperCase();
-        wordList[749] = "nearly".toUpperCase();
-        wordList[750] = "needle".toUpperCase();
-        wordList[751] = "nerve".toUpperCase();
-        wordList[752] = "never".toUpperCase();
-        wordList[753] = "newly".toUpperCase();
-        wordList[754] = "night".toUpperCase();
-        wordList[755] = "nobody".toUpperCase();
-        wordList[756] = "noise".toUpperCase();
-        wordList[757] = "normal".toUpperCase();
-        wordList[758] = "north".toUpperCase();
-        wordList[759] = "notice".toUpperCase();
-        wordList[760] = "notion".toUpperCase();
-        wordList[761] = "novel".toUpperCase();
-        wordList[762] = "number".toUpperCase();
-        wordList[763] = "nurse".toUpperCase();
-        wordList[764] = "object".toUpperCase();
-        wordList[765] = "obtain".toUpperCase();
-        wordList[766] = "occupy".toUpperCase();
-        wordList[767] = "occur".toUpperCase();
-        wordList[768] = "ocean".toUpperCase();
-        wordList[769] = "offer".toUpperCase();
-        wordList[770] = "office".toUpperCase();
-        wordList[771] = "often".toUpperCase();
-        wordList[772] = "onion".toUpperCase();
-        wordList[773] = "online".toUpperCase();
-        wordList[774] = "openly".toUpperCase();
-        wordList[775] = "opera".toUpperCase();
-        wordList[776] = "oppose".toUpperCase();
-        wordList[777] = "option".toUpperCase();
-        wordList[778] = "orange".toUpperCase();
-        wordList[779] = "orbit".toUpperCase();
-        wordList[780] = "order".toUpperCase();
-        wordList[781] = "organ".toUpperCase();
-        wordList[782] = "origin".toUpperCase();
-        wordList[783] = "other".toUpperCase();
-        wordList[784] = "others".toUpperCase();
-        wordList[785] = "ought".toUpperCase();
-        wordList[786] = "outer".toUpperCase();
-        wordList[787] = "outfit".toUpperCase();
-        wordList[788] = "outlet".toUpperCase();
-        wordList[789] = "output".toUpperCase();
-        wordList[790] = "owner".toUpperCase();
-        wordList[791] = "oxygen".toUpperCase();
-        wordList[792] = "paint".toUpperCase();
-        wordList[793] = "palace".toUpperCase();
-        wordList[794] = "panel".toUpperCase();
-        wordList[795] = "panic".toUpperCase();
-        wordList[796] = "paper".toUpperCase();
-        wordList[797] = "parade".toUpperCase();
-        wordList[798] = "parent".toUpperCase();
-        wordList[799] = "parish".toUpperCase();
-        wordList[800] = "partly".toUpperCase();
-        wordList[801] = "party".toUpperCase();
-        wordList[802] = "pasta".toUpperCase();
-        wordList[803] = "pastor".toUpperCase();
-        wordList[804] = "patch".toUpperCase();
-        wordList[805] = "patent".toUpperCase();
-        wordList[806] = "patrol".toUpperCase();
-        wordList[807] = "patron".toUpperCase();
-        wordList[808] = "pause".toUpperCase();
-        wordList[809] = "peace".toUpperCase();
-        wordList[810] = "peanut".toUpperCase();
-        wordList[811] = "pencil".toUpperCase();
-        wordList[812] = "people".toUpperCase();
-        wordList[813] = "pepper".toUpperCase();
-        wordList[814] = "period".toUpperCase();
-        wordList[815] = "permit".toUpperCase();
-        wordList[816] = "person".toUpperCase();
-        wordList[817] = "phase".toUpperCase();
-        wordList[818] = "phone".toUpperCase();
-        wordList[819] = "photo".toUpperCase();
-        wordList[820] = "phrase".toUpperCase();
-        wordList[821] = "piano".toUpperCase();
-        wordList[822] = "pickup".toUpperCase();
-        wordList[823] = "piece".toUpperCase();
-        wordList[824] = "pillow".toUpperCase();
-        wordList[825] = "pilot".toUpperCase();
-        wordList[826] = "pistol".toUpperCase();
-        wordList[827] = "pitch".toUpperCase();
-        wordList[828] = "pizza".toUpperCase();
-        wordList[829] = "place".toUpperCase();
-        wordList[830] = "plain".toUpperCase();
-        wordList[831] = "plane".toUpperCase();
-        wordList[832] = "planet".toUpperCase();
-        wordList[833] = "plant".toUpperCase();
-        wordList[834] = "plate".toUpperCase();
-        wordList[835] = "player".toUpperCase();
-        wordList[836] = "plead".toUpperCase();
-        wordList[837] = "please".toUpperCase();
-        wordList[838] = "plenty".toUpperCase();
-        wordList[839] = "plunge".toUpperCase();
-        wordList[840] = "pocket".toUpperCase();
-        wordList[841] = "poetry".toUpperCase();
-        wordList[842] = "point".toUpperCase();
-        wordList[843] = "police".toUpperCase();
-        wordList[844] = "policy".toUpperCase();
-        wordList[845] = "porch".toUpperCase();
-        wordList[846] = "poster".toUpperCase();
-        wordList[847] = "potato".toUpperCase();
-        wordList[848] = "pound".toUpperCase();
-        wordList[849] = "powder".toUpperCase();
-        wordList[850] = "power".toUpperCase();
-        wordList[851] = "praise".toUpperCase();
-        wordList[852] = "prayer".toUpperCase();
-        wordList[853] = "preach".toUpperCase();
-        wordList[854] = "prefer".toUpperCase();
-        wordList[855] = "press".toUpperCase();
-        wordList[856] = "pretty".toUpperCase();
-        wordList[857] = "price".toUpperCase();
-        wordList[858] = "pride".toUpperCase();
-        wordList[859] = "priest".toUpperCase();
-        wordList[860] = "prime".toUpperCase();
-        wordList[861] = "print".toUpperCase();
-        wordList[862] = "prior".toUpperCase();
-        wordList[863] = "prison".toUpperCase();
-        wordList[864] = "prize".toUpperCase();
-        wordList[865] = "profit".toUpperCase();
-        wordList[866] = "prompt".toUpperCase();
-        wordList[867] = "proof".toUpperCase();
-        wordList[868] = "proper".toUpperCase();
-        wordList[869] = "proud".toUpperCase();
-        wordList[870] = "prove".toUpperCase();
-        wordList[871] = "public".toUpperCase();
-        wordList[872] = "pulse".toUpperCase();
-        wordList[873] = "punch".toUpperCase();
-        wordList[874] = "punish".toUpperCase();
-        wordList[875] = "purple".toUpperCase();
-        wordList[876] = "purse".toUpperCase();
-        wordList[877] = "pursue".toUpperCase();
-        wordList[878] = "puzzle".toUpperCase();
-        wordList[879] = "queen".toUpperCase();
-        wordList[880] = "quest".toUpperCase();
-        wordList[881] = "quick".toUpperCase();
-        wordList[882] = "quiet".toUpperCase();
-        wordList[883] = "quite".toUpperCase();
-        wordList[884] = "quote".toUpperCase();
-        wordList[885] = "rabbit".toUpperCase();
-        wordList[886] = "racial".toUpperCase();
-        wordList[887] = "racism".toUpperCase();
-        wordList[888] = "radar".toUpperCase();
-        wordList[889] = "radio".toUpperCase();
-        wordList[890] = "raise".toUpperCase();
-        wordList[891] = "rally".toUpperCase();
-        wordList[892] = "ranch".toUpperCase();
-        wordList[893] = "random".toUpperCase();
-        wordList[894] = "range".toUpperCase();
-        wordList[895] = "rapid".toUpperCase();
-        wordList[896] = "rarely".toUpperCase();
-        wordList[897] = "rather".toUpperCase();
-        wordList[898] = "rating".toUpperCase();
-        wordList[899] = "ratio".toUpperCase();
-        wordList[900] = "reach".toUpperCase();
-        wordList[901] = "react".toUpperCase();
-        wordList[902] = "reader".toUpperCase();
-        wordList[903] = "ready".toUpperCase();
-        wordList[904] = "really".toUpperCase();
-        wordList[905] = "realm".toUpperCase();
-        wordList[906] = "reason".toUpperCase();
-        wordList[907] = "rebel".toUpperCase();
-        wordList[908] = "recall".toUpperCase();
-        wordList[909] = "recent".toUpperCase();
-        wordList[910] = "recipe".toUpperCase();
-        wordList[911] = "record".toUpperCase();
-        wordList[912] = "reduce".toUpperCase();
-        wordList[913] = "refer".toUpperCase();
-        wordList[914] = "reform".toUpperCase();
-        wordList[915] = "refuge".toUpperCase();
-        wordList[916] = "refuse".toUpperCase();
-        wordList[917] = "regain".toUpperCase();
-        wordList[918] = "regard".toUpperCase();
-        wordList[919] = "regime".toUpperCase();
-        wordList[920] = "region".toUpperCase();
-        wordList[921] = "regret".toUpperCase();
-        wordList[922] = "reject".toUpperCase();
-        wordList[923] = "relate".toUpperCase();
-        wordList[924] = "relax".toUpperCase();
-        wordList[925] = "relief".toUpperCase();
-        wordList[926] = "remain".toUpperCase();
-        wordList[927] = "remark".toUpperCase();
-        wordList[928] = "remind".toUpperCase();
-        wordList[929] = "remote".toUpperCase();
-        wordList[930] = "remove".toUpperCase();
-        wordList[931] = "render".toUpperCase();
-        wordList[932] = "rental".toUpperCase();
-        wordList[933] = "repair".toUpperCase();
-        wordList[934] = "repeat".toUpperCase();
-        wordList[935] = "reply".toUpperCase();
-        wordList[936] = "report".toUpperCase();
-        wordList[937] = "rescue".toUpperCase();
-        wordList[938] = "resign".toUpperCase();
-        wordList[939] = "resist".toUpperCase();
-        wordList[940] = "resort".toUpperCase();
-        wordList[941] = "result".toUpperCase();
-        wordList[942] = "resume".toUpperCase();
-        wordList[943] = "retail".toUpperCase();
-        wordList[944] = "retain".toUpperCase();
-        wordList[945] = "retire".toUpperCase();
-        wordList[946] = "return".toUpperCase();
-        wordList[947] = "reveal".toUpperCase();
-        wordList[948] = "review".toUpperCase();
-        wordList[949] = "reward".toUpperCase();
-        wordList[950] = "rhythm".toUpperCase();
-        wordList[951] = "ribbon".toUpperCase();
-        wordList[952] = "rider".toUpperCase();
-        wordList[953] = "ridge".toUpperCase();
-        wordList[954] = "rifle".toUpperCase();
-        wordList[955] = "right".toUpperCase();
-        wordList[956] = "risky".toUpperCase();
-        wordList[957] = "ritual".toUpperCase();
-        wordList[958] = "rival".toUpperCase();
-        wordList[959] = "river".toUpperCase();
-        wordList[960] = "robot".toUpperCase();
-        wordList[961] = "rocket".toUpperCase();
-        wordList[962] = "rough".toUpperCase();
-        wordList[963] = "round".toUpperCase();
-        wordList[964] = "route".toUpperCase();
-        wordList[965] = "royal".toUpperCase();
-        wordList[966] = "rubber".toUpperCase();
-        wordList[967] = "ruling".toUpperCase();
-        wordList[968] = "rumor".toUpperCase();
-        wordList[969] = "runner".toUpperCase();
-        wordList[970] = "rural".toUpperCase();
-        wordList[971] = "sacred".toUpperCase();
-        wordList[972] = "safely".toUpperCase();
-        wordList[973] = "safety".toUpperCase();
-        wordList[974] = "salad".toUpperCase();
-        wordList[975] = "salary".toUpperCase();
-        wordList[976] = "sales".toUpperCase();
-        wordList[977] = "salmon".toUpperCase();
-        wordList[978] = "sample".toUpperCase();
-        wordList[979] = "sauce".toUpperCase();
-        wordList[980] = "saving".toUpperCase();
-        wordList[981] = "scale".toUpperCase();
-        wordList[982] = "scare".toUpperCase();
-        wordList[983] = "scared".toUpperCase();
-        wordList[984] = "scary".toUpperCase();
-        wordList[985] = "scene".toUpperCase();
-        wordList[986] = "scent".toUpperCase();
-        wordList[987] = "scheme".toUpperCase();
-        wordList[988] = "school".toUpperCase();
-        wordList[989] = "scope".toUpperCase();
-        wordList[990] = "score".toUpperCase();
-        wordList[991] = "scream".toUpperCase();
-        wordList[992] = "screen".toUpperCase();
-        wordList[993] = "screw".toUpperCase();
-        wordList[994] = "script".toUpperCase();
-        wordList[995] = "search".toUpperCase();
-        wordList[996] = "season".toUpperCase();
-        wordList[997] = "second".toUpperCase();
-        wordList[998] = "secret".toUpperCase();
-        wordList[999] = "sector".toUpperCase();
-        wordList[1000] = "secure".toUpperCase();
-        wordList[1001] = "seize".toUpperCase();
-        wordList[1002] = "seldom".toUpperCase();
-        wordList[1003] = "select".toUpperCase();
-        wordList[1004] = "seller".toUpperCase();
-        wordList[1005] = "senior".toUpperCase();
-        wordList[1006] = "sense".toUpperCase();
-        wordList[1007] = "sensor".toUpperCase();
-        wordList[1008] = "series".toUpperCase();
-        wordList[1009] = "serve".toUpperCase();
-        wordList[1010] = "settle".toUpperCase();
-        wordList[1011] = "seven".toUpperCase();
-        wordList[1012] = "severe".toUpperCase();
-        wordList[1013] = "sexual".toUpperCase();
-        wordList[1014] = "shade".toUpperCase();
-        wordList[1015] = "shadow".toUpperCase();
-        wordList[1016] = "shake".toUpperCase();
-        wordList[1017] = "shall".toUpperCase();
-        wordList[1018] = "shame".toUpperCase();
-        wordList[1019] = "shape".toUpperCase();
-        wordList[1020] = "share".toUpperCase();
-        wordList[1021] = "shared".toUpperCase();
-        wordList[1022] = "shark".toUpperCase();
-        wordList[1023] = "sharp".toUpperCase();
-        wordList[1024] = "sheep".toUpperCase();
-        wordList[1025] = "sheer".toUpperCase();
-        wordList[1026] = "sheet".toUpperCase();
-        wordList[1027] = "shelf".toUpperCase();
-        wordList[1028] = "shell".toUpperCase();
-        wordList[1029] = "shift".toUpperCase();
-        wordList[1030] = "shine".toUpperCase();
-        wordList[1031] = "shirt".toUpperCase();
-        wordList[1032] = "shock".toUpperCase();
-        wordList[1033] = "shoot".toUpperCase();
-        wordList[1034] = "shore".toUpperCase();
-        wordList[1035] = "short".toUpperCase();
-        wordList[1036] = "shorts".toUpperCase();
-        wordList[1037] = "should".toUpperCase();
-        wordList[1038] = "shout".toUpperCase();
-        wordList[1039] = "shove".toUpperCase();
-        wordList[1040] = "shower".toUpperCase();
-        wordList[1041] = "shrimp".toUpperCase();
-        wordList[1042] = "shrink".toUpperCase();
-        wordList[1043] = "shrug".toUpperCase();
-        wordList[1044] = "sight".toUpperCase();
-        wordList[1045] = "signal".toUpperCase();
-        wordList[1046] = "silent".toUpperCase();
-        wordList[1047] = "silly".toUpperCase();
-        wordList[1048] = "silver".toUpperCase();
-        wordList[1049] = "simple".toUpperCase();
-        wordList[1050] = "simply".toUpperCase();
-        wordList[1051] = "since".toUpperCase();
-        wordList[1052] = "singer".toUpperCase();
-        wordList[1053] = "single".toUpperCase();
-        wordList[1054] = "sister".toUpperCase();
-        wordList[1055] = "sixth".toUpperCase();
-        wordList[1056] = "skill".toUpperCase();
-        wordList[1057] = "skirt".toUpperCase();
-        wordList[1058] = "skull".toUpperCase();
-        wordList[1059] = "slave".toUpperCase();
-        wordList[1060] = "sleep".toUpperCase();
-        wordList[1061] = "sleeve".toUpperCase();
-        wordList[1062] = "slice".toUpperCase();
-        wordList[1063] = "slide".toUpperCase();
-        wordList[1064] = "slight".toUpperCase();
-        wordList[1065] = "slope".toUpperCase();
-        wordList[1066] = "slowly".toUpperCase();
-        wordList[1067] = "small".toUpperCase();
-        wordList[1068] = "smart".toUpperCase();
-        wordList[1069] = "smell".toUpperCase();
-        wordList[1070] = "smile".toUpperCase();
-        wordList[1071] = "smoke".toUpperCase();
-        wordList[1072] = "smooth".toUpperCase();
-        wordList[1073] = "snake".toUpperCase();
-        wordList[1074] = "sneak".toUpperCase();
-        wordList[1075] = "soccer".toUpperCase();
-        wordList[1076] = "social".toUpperCase();
-        wordList[1077] = "sodium".toUpperCase();
-        wordList[1078] = "soften".toUpperCase();
-        wordList[1079] = "softly".toUpperCase();
-        wordList[1080] = "solar".toUpperCase();
-        wordList[1081] = "solely".toUpperCase();
-        wordList[1082] = "solid".toUpperCase();
-        wordList[1083] = "solve".toUpperCase();
-        wordList[1084] = "sorry".toUpperCase();
-        wordList[1085] = "sound".toUpperCase();
-        wordList[1086] = "source".toUpperCase();
-        wordList[1087] = "south".toUpperCase();
-        wordList[1088] = "space".toUpperCase();
-        wordList[1089] = "spare".toUpperCase();
-        wordList[1090] = "spark".toUpperCase();
-        wordList[1091] = "speak".toUpperCase();
-        wordList[1092] = "speech".toUpperCase();
-        wordList[1093] = "speed".toUpperCase();
-        wordList[1094] = "spell".toUpperCase();
-        wordList[1095] = "spend".toUpperCase();
-        wordList[1096] = "sphere".toUpperCase();
-        wordList[1097] = "spill".toUpperCase();
-        wordList[1098] = "spine".toUpperCase();
-        wordList[1099] = "spirit".toUpperCase();
-        wordList[1100] = "spite".toUpperCase();
-        wordList[1101] = "split".toUpperCase();
-        wordList[1102] = "spoon".toUpperCase();
-        wordList[1103] = "sport".toUpperCase();
-        wordList[1104] = "spouse".toUpperCase();
-        wordList[1105] = "spray".toUpperCase();
-        wordList[1106] = "spread".toUpperCase();
-        wordList[1107] = "spring".toUpperCase();
-        wordList[1108] = "squad".toUpperCase();
-        wordList[1109] = "square".toUpperCase();
-        wordList[1110] = "stable".toUpperCase();
-        wordList[1111] = "stack".toUpperCase();
-        wordList[1112] = "staff".toUpperCase();
-        wordList[1113] = "stage".toUpperCase();
-        wordList[1114] = "stair".toUpperCase();
-        wordList[1115] = "stake".toUpperCase();
-        wordList[1116] = "stance".toUpperCase();
-        wordList[1117] = "stand".toUpperCase();
-        wordList[1118] = "stare".toUpperCase();
-        wordList[1119] = "start".toUpperCase();
-        wordList[1120] = "state".toUpperCase();
-        wordList[1121] = "statue".toUpperCase();
-        wordList[1122] = "status".toUpperCase();
-        wordList[1123] = "steady".toUpperCase();
-        wordList[1124] = "steak".toUpperCase();
-        wordList[1125] = "steal".toUpperCase();
-        wordList[1126] = "steam".toUpperCase();
-        wordList[1127] = "steel".toUpperCase();
-        wordList[1128] = "steep".toUpperCase();
-        wordList[1129] = "steer".toUpperCase();
-        wordList[1130] = "stick".toUpperCase();
-        wordList[1131] = "stiff".toUpperCase();
-        wordList[1132] = "still".toUpperCase();
-        wordList[1133] = "stock".toUpperCase();
-        wordList[1134] = "stone".toUpperCase();
-        wordList[1135] = "store".toUpperCase();
-        wordList[1136] = "storm".toUpperCase();
-        wordList[1137] = "story".toUpperCase();
-        wordList[1138] = "stove".toUpperCase();
-        wordList[1139] = "strain".toUpperCase();
-        wordList[1140] = "straw".toUpperCase();
-        wordList[1141] = "streak".toUpperCase();
-        wordList[1142] = "stream".toUpperCase();
-        wordList[1143] = "street".toUpperCase();
-        wordList[1144] = "stress".toUpperCase();
-        wordList[1145] = "strict".toUpperCase();
-        wordList[1146] = "strike".toUpperCase();
-        wordList[1147] = "string".toUpperCase();
-        wordList[1148] = "strip".toUpperCase();
-        wordList[1149] = "stroke".toUpperCase();
-        wordList[1150] = "strong".toUpperCase();
-        wordList[1151] = "studio".toUpperCase();
-        wordList[1152] = "study".toUpperCase();
-        wordList[1153] = "stuff".toUpperCase();
-        wordList[1154] = "stupid".toUpperCase();
-        wordList[1155] = "style".toUpperCase();
-        wordList[1156] = "submit".toUpperCase();
-        wordList[1157] = "subtle".toUpperCase();
-        wordList[1158] = "suburb".toUpperCase();
-        wordList[1159] = "sudden".toUpperCase();
-        wordList[1160] = "suffer".toUpperCase();
-        wordList[1161] = "sugar".toUpperCase();
-        wordList[1162] = "suite".toUpperCase();
-        wordList[1163] = "summer".toUpperCase();
-        wordList[1164] = "summit".toUpperCase();
-        wordList[1165] = "sunny".toUpperCase();
-        wordList[1166] = "super".toUpperCase();
-        wordList[1167] = "supply".toUpperCase();
-        wordList[1168] = "surely".toUpperCase();
-        wordList[1169] = "survey".toUpperCase();
-        wordList[1170] = "swear".toUpperCase();
-        wordList[1171] = "sweat".toUpperCase();
-        wordList[1172] = "sweep".toUpperCase();
-        wordList[1173] = "sweet".toUpperCase();
-        wordList[1174] = "swell".toUpperCase();
-        wordList[1175] = "swing".toUpperCase();
-        wordList[1176] = "switch".toUpperCase();
-        wordList[1177] = "sword".toUpperCase();
-        wordList[1178] = "symbol".toUpperCase();
-        wordList[1179] = "system".toUpperCase();
-        wordList[1180] = "table".toUpperCase();
-        wordList[1181] = "tackle".toUpperCase();
-        wordList[1182] = "tactic".toUpperCase();
-        wordList[1183] = "talent".toUpperCase();
-        wordList[1184] = "target".toUpperCase();
-        wordList[1185] = "taste".toUpperCase();
-        wordList[1186] = "teach".toUpperCase();
-        wordList[1187] = "temple".toUpperCase();
-        wordList[1188] = "tender".toUpperCase();
-        wordList[1189] = "tennis".toUpperCase();
-        wordList[1190] = "terms".toUpperCase();
-        wordList[1191] = "terror".toUpperCase();
-        wordList[1192] = "thank".toUpperCase();
-        wordList[1193] = "thanks".toUpperCase();
-        wordList[1194] = "their".toUpperCase();
-        wordList[1195] = "theme".toUpperCase();
-        wordList[1196] = "theory".toUpperCase();
-        wordList[1197] = "there".toUpperCase();
-        wordList[1198] = "these".toUpperCase();
-        wordList[1199] = "thick".toUpperCase();
-        wordList[1200] = "thigh".toUpperCase();
-        wordList[1201] = "thing".toUpperCase();
-        wordList[1202] = "think".toUpperCase();
-        wordList[1203] = "third".toUpperCase();
-        wordList[1204] = "thirty".toUpperCase();
-        wordList[1205] = "those".toUpperCase();
-        wordList[1206] = "though".toUpperCase();
-        wordList[1207] = "thread".toUpperCase();
-        wordList[1208] = "threat".toUpperCase();
-        wordList[1209] = "three".toUpperCase();
-        wordList[1210] = "thrive".toUpperCase();
-        wordList[1211] = "throat".toUpperCase();
-        wordList[1212] = "throw".toUpperCase();
-        wordList[1213] = "thumb".toUpperCase();
-        wordList[1214] = "ticket".toUpperCase();
-        wordList[1215] = "tight".toUpperCase();
-        wordList[1216] = "timber".toUpperCase();
-        wordList[1217] = "timing".toUpperCase();
-        wordList[1218] = "tired".toUpperCase();
-        wordList[1219] = "tissue".toUpperCase();
-        wordList[1220] = "title".toUpperCase();
-        wordList[1221] = "today".toUpperCase();
-        wordList[1222] = "toilet".toUpperCase();
-        wordList[1223] = "tomato".toUpperCase();
-        wordList[1224] = "tongue".toUpperCase();
-        wordList[1225] = "tooth".toUpperCase();
-        wordList[1226] = "topic".toUpperCase();
-        wordList[1227] = "total".toUpperCase();
-        wordList[1228] = "touch".toUpperCase();
-        wordList[1229] = "tough".toUpperCase();
-        wordList[1230] = "toward".toUpperCase();
-        wordList[1231] = "towel".toUpperCase();
-        wordList[1232] = "tower".toUpperCase();
-        wordList[1233] = "toxic".toUpperCase();
-        wordList[1234] = "trace".toUpperCase();
-        wordList[1235] = "track".toUpperCase();
-        wordList[1236] = "trade".toUpperCase();
-        wordList[1237] = "tragic".toUpperCase();
-        wordList[1238] = "trail".toUpperCase();
-        wordList[1239] = "train".toUpperCase();
-        wordList[1240] = "trait".toUpperCase();
-        wordList[1241] = "trash".toUpperCase();
-        wordList[1242] = "trauma".toUpperCase();
-        wordList[1243] = "travel".toUpperCase();
-        wordList[1244] = "treat".toUpperCase();
-        wordList[1245] = "treaty".toUpperCase();
-        wordList[1246] = "trend".toUpperCase();
-        wordList[1247] = "trial".toUpperCase();
-        wordList[1248] = "tribal".toUpperCase();
-        wordList[1249] = "tribe".toUpperCase();
-        wordList[1250] = "trick".toUpperCase();
-        wordList[1251] = "troop".toUpperCase();
-        wordList[1252] = "truck".toUpperCase();
-        wordList[1253] = "truly".toUpperCase();
-        wordList[1254] = "trunk".toUpperCase();
-        wordList[1255] = "trust".toUpperCase();
-        wordList[1256] = "truth".toUpperCase();
-        wordList[1257] = "tumor".toUpperCase();
-        wordList[1258] = "tunnel".toUpperCase();
-        wordList[1259] = "turkey".toUpperCase();
-        wordList[1260] = "twelve".toUpperCase();
-        wordList[1261] = "twenty".toUpperCase();
-        wordList[1262] = "twice".toUpperCase();
-        wordList[1263] = "twist".toUpperCase();
-        wordList[1264] = "unable".toUpperCase();
-        wordList[1265] = "uncle".toUpperCase();
-        wordList[1266] = "under".toUpperCase();
-        wordList[1267] = "unfair".toUpperCase();
-        wordList[1268] = "unfold".toUpperCase();
-        wordList[1269] = "union".toUpperCase();
-        wordList[1270] = "unique".toUpperCase();
-        wordList[1271] = "unite".toUpperCase();
-        wordList[1272] = "united".toUpperCase();
-        wordList[1273] = "unity".toUpperCase();
-        wordList[1274] = "unless".toUpperCase();
-        wordList[1275] = "unlike".toUpperCase();
-        wordList[1276] = "until".toUpperCase();
-        wordList[1277] = "update".toUpperCase();
-        wordList[1278] = "upper".toUpperCase();
-        wordList[1279] = "upset".toUpperCase();
-        wordList[1280] = "urban".toUpperCase();
-        wordList[1281] = "useful".toUpperCase();
-        wordList[1282] = "usual".toUpperCase();
-        wordList[1283] = "vacuum".toUpperCase();
-        wordList[1284] = "valid".toUpperCase();
-        wordList[1285] = "valley".toUpperCase();
-        wordList[1286] = "value".toUpperCase();
-        wordList[1287] = "vanish".toUpperCase();
-        wordList[1288] = "vendor".toUpperCase();
-        wordList[1289] = "verbal".toUpperCase();
-        wordList[1290] = "versus".toUpperCase();
-        wordList[1291] = "vessel".toUpperCase();
-        wordList[1292] = "victim".toUpperCase();
-        wordList[1293] = "video".toUpperCase();
-        wordList[1294] = "viewer".toUpperCase();
-        wordList[1295] = "virtue".toUpperCase();
-        wordList[1296] = "virus".toUpperCase();
-        wordList[1297] = "vision".toUpperCase();
-        wordList[1298] = "visit".toUpperCase();
-        wordList[1299] = "visual".toUpperCase();
-        wordList[1300] = "vital".toUpperCase();
-        wordList[1301] = "vocal".toUpperCase();
-        wordList[1302] = "voice".toUpperCase();
-        wordList[1303] = "volume".toUpperCase();
-        wordList[1304] = "voter".toUpperCase();
-        wordList[1305] = "voting".toUpperCase();
-        wordList[1306] = "wagon".toUpperCase();
-        wordList[1307] = "waist".toUpperCase();
-        wordList[1308] = "wander".toUpperCase();
-        wordList[1309] = "warmth".toUpperCase();
-        wordList[1310] = "waste".toUpperCase();
-        wordList[1311] = "watch".toUpperCase();
-        wordList[1312] = "water".toUpperCase();
-        wordList[1313] = "weaken".toUpperCase();
-        wordList[1314] = "wealth".toUpperCase();
-        wordList[1315] = "weapon".toUpperCase();
-        wordList[1316] = "weave".toUpperCase();
-        wordList[1317] = "weekly".toUpperCase();
-        wordList[1318] = "weigh".toUpperCase();
-        wordList[1319] = "weight".toUpperCase();
-        wordList[1320] = "weird".toUpperCase();
-        wordList[1321] = "whale".toUpperCase();
-        wordList[1322] = "wheat".toUpperCase();
-        wordList[1323] = "wheel".toUpperCase();
-        wordList[1324] = "where".toUpperCase();
-        wordList[1325] = "which".toUpperCase();
-        wordList[1326] = "while".toUpperCase();
-        wordList[1327] = "white".toUpperCase();
-        wordList[1328] = "whole".toUpperCase();
-        wordList[1329] = "whose".toUpperCase();
-        wordList[1330] = "widely".toUpperCase();
-        wordList[1331] = "widow".toUpperCase();
-        wordList[1332] = "window".toUpperCase();
-        wordList[1333] = "winner".toUpperCase();
-        wordList[1334] = "winter".toUpperCase();
-        wordList[1335] = "wisdom".toUpperCase();
-        wordList[1336] = "within".toUpperCase();
-        wordList[1337] = "woman".toUpperCase();
-        wordList[1338] = "wonder".toUpperCase();
-        wordList[1339] = "wooden".toUpperCase();
-        wordList[1340] = "worker".toUpperCase();
-        wordList[1341] = "works".toUpperCase();
-        wordList[1342] = "world".toUpperCase();
-        wordList[1343] = "worry".toUpperCase();
-        wordList[1344] = "worth".toUpperCase();
-        wordList[1345] = "would".toUpperCase();
-        wordList[1346] = "wound".toUpperCase();
-        wordList[1347] = "wrist".toUpperCase();
-        wordList[1348] = "write".toUpperCase();
-        wordList[1349] = "writer".toUpperCase();
-        wordList[1350] = "wrong".toUpperCase();
-        wordList[1351] = "yellow".toUpperCase();
-        wordList[1352] = "yield".toUpperCase();
-        wordList[1353] = "young".toUpperCase();
-        wordList[1354] = "yours".toUpperCase();
-        wordList[1355] = "youth".toUpperCase();
 
+setLevelButton.onclick = function () {
+    if( gameLevel == 1) {
+       gameLevel = 2;
+       label = 'Go to Level 1';
     }
+    else {
+       gameLevel = 1;
+       label = 'Go to Level 2';
+    } 
+    document.getElementById("setLevel").textContent = label;
+
+    startNewGame();
+}
