@@ -495,4 +495,4 @@ setLevelButton.onclick = function () {
     document.getElementById("setLevel").textContent = label;
 
     startNewGame();
-}
+} 
