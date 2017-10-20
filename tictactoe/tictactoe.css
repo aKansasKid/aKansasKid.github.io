@@ -1,0 +1,27 @@
+.header {
+    color: blue; 
+    font-size: 36px;
+    font-family: arial;
+    margin-bottom: 2%;
+}
+.NewGame {
+    color: red;
+    font-size: xx-large;
+    margin-top:6%;
+    margin-left: 6%;
+}
+.setLevel {
+    color: blue;
+    font-size: xx-large;
+    margin-top:6%;
+    margin-left: 6%;
+}
+.footer {
+    color: red;
+    font-size: 12px;
+    margin-top: 3%;
+}
+.container {
+    position: relative;
+    text-align: left;
+}
