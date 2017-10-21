@@ -156,9 +156,7 @@ function getClickedCoordinates ( event ) {
                 }
 ****************/
                 turn = turn + 1;
-console.log('turn: ', turn, 'humanMove: ', humanMove);
                 gameOver = checkGameOver();
-console.log('gameOver = ', gameOver);
                 if (gameOver) {
                     drawGameOver(centers, board);
                 }
@@ -190,16 +188,13 @@ console.log('gameOver = ', gameOver);
                         {
                             goodMove = false;
                             cpuMove = 1 + Math.floor(9 * Math.random());
-console.log('Level 1 - cpuMove: ', cpuMove);
                             while (!goodMove) {
-console.log('Checking move.', 'Board:', board[cpuMove]);
                                 if ((board[cpuMove] != 'x') && (board[cpuMove] != 'o')) {
                                     move = cpuMove;
                                     goodMove = true;
                                 } 
                                 else {
                                        cpuMove = 1 + Math.floor(9 * Math.random());
-console.log('Level 1 - next cpuMove to try: ', cpuMove);
                                 }
                             }
                         }
@@ -357,9 +352,7 @@ function doCPUmove(cpuMove) {
     drawO(centers[cpuMove][1], centers[cpuMove][2]);
     board[cpuMove] = 'o';
     turn = turn + 1;
-console.log('turn: ', turn, 'cpuMove: ', cpuMove);
     gameOver = checkGameOver();
-console.log('gameOver = ', gameOver);
     if (gameOver) drawGameOver();
     humanTurn = true;
 }
