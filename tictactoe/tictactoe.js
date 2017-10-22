@@ -111,7 +111,7 @@ function getClickedCoordinates ( event ) {
 
         if ((!gameOver ) && (turn <= 9) && humanTurn)
         {
-            humanTurn = false;
+            humanTurn = true;
             goodMove = false;
 
                 if ((xTouch < maxX3+10) && (yTouch < maxY3+10)) {
