@@ -26,6 +26,13 @@
     position: relative;
     text-align: left;
 }
+.break {
+    border:none;
+    border-radius: 0;
+    color:black;
+    background-color:black;
+    font-size:xx-large;
+}
 
 .selectRed {
     border: none;
