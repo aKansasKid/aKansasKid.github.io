@@ -1,1 +1,578 @@
+.header {
+    color: blue; 
+    font-size: 36px;
+    font-family: arial;
+    margin-bottom: 2%;
+}
+.check {
+    color:blue;
+    font-size: xx-large;
+    margin-top:3%;
+    margin-right:3%;
+}
+.newGame {
+    color:red;
+    font-size: xx-large;
+    margin-top:3%
+}
+.footer {
+    color: red;
+    font-size: 12px;
+    margin-top: 3%;
+}
 
+
+.container {
+    position: relative;
+    text-align: left;
+}
+
+.selectRed {
+    border: none;
+    border-radius: 50%;
+    background-color: red;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.selectBlue {
+    border: none;
+    border-radius: 50%;
+    background-color: blue;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.selectYellow {
+    border: none;
+    border-radius: 50%;
+    background-color: yellow;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.selectGreen {
+    border: none;
+    border-radius: 50%;
+    background-color: green;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.selectPurple {
+    border: none;
+    border-radius: 50%;
+    background-color: purple;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.selectOrange {
+    border: none;
+    border-radius: 50%;
+    background-color: orange;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.selectBlank {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess11 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess12 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess13 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess14 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint11 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint12 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint13 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint14 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess21 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess22 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess23 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess24 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint21 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint22 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint23 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint24 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess31 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess32 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess33 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess34 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint31 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint32 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint33 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint34 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess41 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess42 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess43 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess44 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint41 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint42 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint43 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint44 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess51 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess52 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess53 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess54 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint51 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint52 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint53 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint54 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess61 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess62 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess63 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess64 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint61 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint62 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint63 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint64 {
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    color: black;
+    font-size: xx-large;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
