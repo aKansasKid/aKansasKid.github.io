@@ -29,7 +29,7 @@
 
 .selectRed {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: red;
     color: black;
     font-size: xx-large;
@@ -39,7 +39,7 @@
 
 .selectBlue {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: blue;
     color: black;
     font-size: xx-large;
@@ -49,7 +49,7 @@
 
 .selectYellow {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: yellow;
     color: black;
     font-size: xx-large;
@@ -59,7 +59,7 @@
 
 .selectGreen {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: green;
     color: black;
     font-size: xx-large;
@@ -69,7 +69,7 @@
 
 .selectPurple {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: purple;
     color: black;
     font-size: xx-large;
@@ -79,7 +79,7 @@
 
 .selectOrange {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: orange;
     color: black;
     font-size: xx-large;
@@ -89,7 +89,7 @@
 
 .selectBlank {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -99,7 +99,7 @@
 
 .guess11 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -109,7 +109,7 @@
 
 .guess12 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -119,7 +119,7 @@
 
 .guess13 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -129,7 +129,7 @@
 
 .guess14 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -139,7 +139,7 @@
 
 .hint11 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -149,7 +149,7 @@
 
 .hint12 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -159,7 +159,7 @@
 
 .hint13 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -169,7 +169,7 @@
 
 .hint14 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -179,7 +179,7 @@
 
 .guess21 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -189,7 +189,7 @@
 
 .guess22 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -199,7 +199,7 @@
 
 .guess23 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -209,7 +209,7 @@
 
 .guess24 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -219,7 +219,7 @@
 
 .hint21 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -229,7 +229,7 @@
 
 .hint22 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -239,7 +239,7 @@
 
 .hint23 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -249,7 +249,7 @@
 
 .hint24 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -259,7 +259,7 @@
 
 .guess31 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -269,7 +269,7 @@
 
 .guess32 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -279,7 +279,7 @@
 
 .guess33 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -289,7 +289,7 @@
 
 .guess34 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -299,7 +299,7 @@
 
 .hint31 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -309,7 +309,7 @@
 
 .hint32 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -319,7 +319,7 @@
 
 .hint33 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -329,7 +329,7 @@
 
 .hint34 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -339,7 +339,7 @@
 
 .guess41 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -349,7 +349,7 @@
 
 .guess42 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -359,7 +359,7 @@
 
 .guess43 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -369,7 +369,7 @@
 
 .guess44 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -379,7 +379,7 @@
 
 .hint41 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -389,7 +389,7 @@
 
 .hint42 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -399,7 +399,7 @@
 
 .hint43 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -409,7 +409,7 @@
 
 .hint44 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -419,7 +419,7 @@
 
 .guess51 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -429,7 +429,7 @@
 
 .guess52 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -439,7 +439,7 @@
 
 .guess53 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -449,7 +449,7 @@
 
 .guess54 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -459,7 +459,7 @@
 
 .hint51 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -469,7 +469,7 @@
 
 .hint52 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -479,7 +479,7 @@
 
 .hint53 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -489,7 +489,7 @@
 
 .hint54 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -499,7 +499,7 @@
 
 .guess61 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -509,7 +509,7 @@
 
 .guess62 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -519,7 +519,7 @@
 
 .guess63 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -529,7 +529,7 @@
 
 .guess64 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -539,7 +539,7 @@
 
 .hint61 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -549,7 +549,7 @@
 
 .hint62 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -559,7 +559,7 @@
 
 .hint63 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -569,7 +569,7 @@
 
 .hint64 {
     border: none;
-    border-radius: 50%;
+    border-radius: 10px;
     background-color: gray;
     color: black;
     font-size: xx-large;
