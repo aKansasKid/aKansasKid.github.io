@@ -1,19 +1,19 @@
 .header {
     color: blue; 
-    font-size: 36px;
+    font-size: 50px;
     font-family: arial;
     margin-bottom: 2%;
 }
 .check {
     color:blue;
-    font-size: 75px;
-    margin-top:3%;
-    margin-right:3%;
+    font-size: 50px;
+    margin-top:1%;
+    margin-right:10%;
 }
 .newGame {
     color:red;
-    font-size: 75px;
-    margin-top:3%
+    font-size: 50px;
+    margin-top:1%
 }
 .footer {
     color: red;
