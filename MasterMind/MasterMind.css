@@ -46,6 +46,7 @@
 }
 
 .selectBlue {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: blue;
@@ -56,6 +57,7 @@
 }
 
 .selectYellow {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: yellow;
@@ -66,6 +68,7 @@
 }
 
 .selectGreen {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: green;
@@ -76,6 +79,7 @@
 }
 
 .selectPurple {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: purple;
@@ -86,6 +90,7 @@
 }
 
 .selectOrange {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: orange;
@@ -96,6 +101,7 @@
 }
 
 .selectBlank {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -106,6 +112,7 @@
 }
 
 .guess11 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -116,6 +123,7 @@
 }
 
 .guess12 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -126,6 +134,7 @@
 }
 
 .guess13 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -136,6 +145,7 @@
 }
 
 .guess14 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -146,6 +156,7 @@
 }
 
 .hint11 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -156,6 +167,7 @@
 }
 
 .hint12 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -166,6 +178,7 @@
 }
 
 .hint13 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -176,6 +189,7 @@
 }
 
 .hint14 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -186,6 +200,7 @@
 }
 
 .guess21 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -196,6 +211,7 @@
 }
 
 .guess22 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -206,6 +222,7 @@
 }
 
 .guess23 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -216,6 +233,7 @@
 }
 
 .guess24 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -226,6 +244,7 @@
 }
 
 .hint21 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -236,6 +255,7 @@
 }
 
 .hint22 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -246,6 +266,7 @@
 }
 
 .hint23 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -256,6 +277,7 @@
 }
 
 .hint24 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -266,6 +288,7 @@
 }
 
 .guess31 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -276,6 +299,7 @@
 }
 
 .guess32 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -286,6 +310,7 @@
 }
 
 .guess33 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -296,6 +321,7 @@
 }
 
 .guess34 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -306,6 +332,7 @@
 }
 
 .hint31 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -316,6 +343,7 @@
 }
 
 .hint32 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -326,6 +354,7 @@
 }
 
 .hint33 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -336,6 +365,7 @@
 }
 
 .hint34 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -346,6 +376,7 @@
 }
 
 .guess41 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -356,6 +387,7 @@
 }
 
 .guess42 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -366,6 +398,7 @@
 }
 
 .guess43 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -376,6 +409,7 @@
 }
 
 .guess44 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -386,6 +420,7 @@
 }
 
 .hint41 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -396,6 +431,7 @@
 }
 
 .hint42 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -406,6 +442,7 @@
 }
 
 .hint43 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -416,6 +453,7 @@
 }
 
 .hint44 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -426,6 +464,7 @@
 }
 
 .guess51 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -436,6 +475,7 @@
 }
 
 .guess52 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -446,6 +486,7 @@
 }
 
 .guess53 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -456,6 +497,7 @@
 }
 
 .guess54 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -466,6 +508,7 @@
 }
 
 .hint51 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -476,6 +519,7 @@
 }
 
 .hint52 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -486,6 +530,7 @@
 }
 
 .hint53 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -496,6 +541,7 @@
 }
 
 .hint54 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -506,6 +552,7 @@
 }
 
 .guess61 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -516,6 +563,7 @@
 }
 
 .guess62 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -526,6 +574,7 @@
 }
 
 .guess63 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -536,6 +585,7 @@
 }
 
 .guess64 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -546,6 +596,7 @@
 }
 
 .hint61 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -556,6 +607,7 @@
 }
 
 .hint62 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -566,6 +618,7 @@
 }
 
 .hint63 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -576,6 +629,7 @@
 }
 
 .hint64 {
+    height: 100px;
     border: none;
     border-radius: 50px;
     background-color: gray;
