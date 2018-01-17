@@ -107,6 +107,9 @@ function setupNewGame()
         setupButtons();
     }
 
+newGame.onclick = function()
+    {setupNewGame()}
+
 function setupButtons()
     {
         resetButtonColors();
@@ -115,6 +118,8 @@ function setupButtons()
 
 function resetButtonColors()
     {
+        //**** Reset button backgrounds *************/
+        //*******************************************/
         guess11.style.backgroundColor = 'gray';
         guess12.style.backgroundColor = 'gray';
         guess13.style.backgroundColor = 'gray';
@@ -124,50 +129,106 @@ function resetButtonColors()
         hint13.style.backgroundColor = 'gray';
         hint14.style.backgroundColor = 'gray';
 
-        guess21.style.backgroundColor = 'white';
-        guess22.style.backgroundColor = 'white';
-        guess23.style.backgroundColor = 'white';
-        guess24.style.backgroundColor = 'white';
-        hint21.style.backgroundColor = 'white';
-        hint22.style.backgroundColor = 'white';
-        hint23.style.backgroundColor = 'white';
-        hint24.style.backgroundColor = 'white';
+        guess21.style.backgroundColor = 'gray';
+        guess22.style.backgroundColor = 'gray';
+        guess23.style.backgroundColor = 'gray';
+        guess24.style.backgroundColor = 'gray';
+        hint21.style.backgroundColor = 'gray';
+        hint22.style.backgroundColor = 'gray';
+        hint23.style.backgroundColor = 'gray';
+        hint24.style.backgroundColor = 'gray';
 
-        guess31.style.backgroundColor = 'white';
-        guess32.style.backgroundColor = 'white';
-        guess33.style.backgroundColor = 'white';
-        guess34.style.backgroundColor = 'white';
-        hint31.style.backgroundColor = 'white';
-        hint32.style.backgroundColor = 'white';
-        hint33.style.backgroundColor = 'white';
-        hint34.style.backgroundColor = 'white';
+        guess31.style.backgroundColor = 'gray';
+        guess32.style.backgroundColor = 'gray';
+        guess33.style.backgroundColor = 'gray';
+        guess34.style.backgroundColor = 'gray';
+        hint31.style.backgroundColor = 'gray';
+        hint32.style.backgroundColor = 'gray';
+        hint33.style.backgroundColor = 'gray';
+        hint34.style.backgroundColor = 'gray';
 
-        guess41.style.backgroundColor = 'white';
-        guess42.style.backgroundColor = 'white';
-        guess43.style.backgroundColor = 'white';
-        guess44.style.backgroundColor = 'white';
-        hint41.style.backgroundColor = 'white';
-        hint42.style.backgroundColor = 'white';
-        hint43.style.backgroundColor = 'white';
-        hint44.style.backgroundColor = 'white';
+        guess41.style.backgroundColor = 'gray';
+        guess42.style.backgroundColor = 'gray';
+        guess43.style.backgroundColor = 'gray';
+        guess44.style.backgroundColor = 'gray';
+        hint41.style.backgroundColor = 'gray';
+        hint42.style.backgroundColor = 'gray';
+        hint43.style.backgroundColor = 'gray';
+        hint44.style.backgroundColor = 'gray';
 
-        guess51.style.backgroundColor = 'white';
-        guess52.style.backgroundColor = 'white';
-        guess53.style.backgroundColor = 'white';
-        guess54.style.backgroundColor = 'white';
-        hint51.style.backgroundColor = 'white';
-        hint52.style.backgroundColor = 'white';
-        hint53.style.backgroundColor = 'white';
-        hint54.style.backgroundColor = 'white';
+        guess51.style.backgroundColor = 'gray';
+        guess52.style.backgroundColor = 'gray';
+        guess53.style.backgroundColor = 'gray';
+        guess54.style.backgroundColor = 'gray';
+        hint51.style.backgroundColor = 'gray';
+        hint52.style.backgroundColor = 'gray';
+        hint53.style.backgroundColor = 'gray';
+        hint54.style.backgroundColor = 'gray';
 
-        guess61.style.backgroundColor = 'white';
-        guess62.style.backgroundColor = 'white';
-        guess63.style.backgroundColor = 'white';
-        guess64.style.backgroundColor = 'white';
-        hint61.style.backgroundColor = 'white';
-        hint62.style.backgroundColor = 'white';
-        hint63.style.backgroundColor = 'white';
-        hint64.style.backgroundColor = 'white';
+        guess61.style.backgroundColor = 'gray';
+        guess62.style.backgroundColor = 'gray';
+        guess63.style.backgroundColor = 'gray';
+        guess64.style.backgroundColor = 'gray';
+        hint61.style.backgroundColor = 'gray';
+        hint62.style.backgroundColor = 'gray';
+        hint63.style.backgroundColor = 'gray';
+        hint64.style.backgroundColor = 'gray';
+
+        //**** Reset button text ********************/
+        //*******************************************/
+        guess11.style.color = 'black';
+        guess12.style.color = 'black';
+        guess13.style.color = 'black';
+        guess14.style.color = 'black';
+        hint11.style.color = 'black';
+        hint12.style.color = 'black';
+        hint13.style.color = 'black';
+        hint14.style.color = 'black';
+
+        guess21.style.color = 'black';
+        guess22.style.color = 'black';
+        guess23.style.color = 'black';
+        guess24.style.color = 'black';
+        hint21.style.color = 'black';
+        hint22.style.color = 'black';
+        hint23.style.color = 'black';
+        hint24.style.color = 'black';
+
+        guess31.style.color = 'black';
+        guess32.style.color = 'black';
+        guess33.style.color = 'black';
+        guess34.style.color = 'black';
+        hint31.style.color = 'black';
+        hint32.style.color = 'black';
+        hint33.style.color = 'black';
+        hint34.style.color = 'black';
+
+        guess41.style.color = 'black';
+        guess42.style.color = 'black';
+        guess43.style.color = 'black';
+        guess44.style.color = 'black';
+        hint41.style.color = 'black';
+        hint42.style.color = 'black';
+        hint43.style.color = 'black';
+        hint44.style.color = 'black';
+
+        guess51.style.color = 'black';
+        guess52.style.color = 'black';
+        guess53.style.color = 'black';
+        guess54.style.color = 'black';
+        hint51.style.color = 'black';
+        hint52.style.color = 'black';
+        hint53.style.color = 'black';
+        hint54.style.color = 'black';
+
+        guess61.style.color = 'black';
+        guess62.style.color = 'black';
+        guess63.style.color = 'black';
+        guess64.style.color = 'black';
+        hint61.style.color = 'black';
+        hint62.style.color = 'black';
+        hint63.style.color = 'black';
+        hint64.style.color = 'black';
     }
 
 function resetButtonTextColor()
@@ -418,7 +479,374 @@ guess24.onclick = function()
                     }
             }
     }
-
+guess31.onclick = function()
+    {
+        if (activeRow == 3)
+            {
+                switch (activeColor)
+                    {
+                        case 'R' : guess31.style.color = 'red'; guess31.style.backgroundColor = 'red'; 
+                            currentGuess[1] = 'R'; break;
+                        case 'B' : guess31.style.color = 'blue'; guess31.style.backgroundColor = 'blue'; 
+                            currentGuess[1] = 'B'; break;
+                        case 'G' : guess31.style.color = 'green'; guess31.style.backgroundColor = 'green'; 
+                            currentGuess[1] = 'G'; break;
+                        case 'Y' : guess31.style.color = 'yellow'; guess31.style.backgroundColor = 'yellow'; 
+                            currentGuess[1] = 'Y'; break;
+                        case 'P' : guess31.style.color = 'purple'; guess31.style.backgroundColor = 'purple'; 
+                            currentGuess[1] = 'P'; break;
+                        case 'O' : guess31.style.color = 'orange'; guess31.style.backgroundColor = 'orange'; 
+                            currentGuess[1] = 'O'; break;
+                        case 'E' : guess31.style.color = 'gray'; guess31.style.backgroundColor = 'gray'; 
+                            currentGuess[1] = 'E'; break;
+                    }
+            }
+    }
+guess32.onclick = function()
+    {
+        if (activeRow == 3)
+            {
+                switch (activeColor)
+                    {
+                        case 'R' : guess32.style.color = 'red'; guess32.style.backgroundColor = 'red'; 
+                            currentGuess[2] = 'R'; break;
+                        case 'B' : guess32.style.color = 'blue'; guess32.style.backgroundColor = 'blue'; 
+                            currentGuess[2] = 'B'; break;
+                        case 'G' : guess32.style.color = 'green'; guess32.style.backgroundColor = 'green'; 
+                            currentGuess[2] = 'G'; break;
+                        case 'Y' : guess32.style.color = 'yellow'; guess32.style.backgroundColor = 'yellow'; 
+                            currentGuess[2] = 'Y'; break;
+                        case 'P' : guess32.style.color = 'purple'; guess32.style.backgroundColor = 'purple'; 
+                            currentGuess[2] = 'P'; break;
+                        case 'O' : guess32.style.color = 'orange'; guess32.style.backgroundColor = 'orange'; 
+                            currentGuess[2] = 'O'; break;
+                        case 'E' : guess32.style.color = 'gray'; guess32.style.backgroundColor = 'gray'; 
+                            currentGuess[2] = 'E'; break;
+                    }
+            }
+    }
+guess33.onclick = function()
+    {
+        if (activeRow == 3)
+            {
+                switch (activeColor)
+                    {
+                        case 'R' : guess33.style.color = 'red'; guess33.style.backgroundColor = 'red'; 
+                            currentGuess[3] = 'R'; break;
+                        case 'B' : guess33.style.color = 'blue'; guess33.style.backgroundColor = 'blue'; 
+                            currentGuess[3] = 'B'; break;
+                        case 'G' : guess33.style.color = 'green'; guess33.style.backgroundColor = 'green'; 
+                            currentGuess[3] = 'G'; break;
+                        case 'Y' : guess33.style.color = 'yellow'; guess33.style.backgroundColor = 'yellow'; 
+                            currentGuess[3] = 'Y'; break;
+                        case 'P' : guess33.style.color = 'purple'; guess33.style.backgroundColor = 'purple'; 
+                            currentGuess[3] = 'P'; break;
+                        case 'O' : guess33.style.color = 'orange'; guess33.style.backgroundColor = 'orange'; 
+                            currentGuess[3] = 'O'; break;
+                        case 'E' : guess33.style.color = 'gray'; guess33.style.backgroundColor = 'gray'; 
+                            currentGuess[3] = 'E'; break;
+                    }
+            }
+    }
+guess34.onclick = function()
+    {
+        if (activeRow == 3)
+            {
+                switch (activeColor)
+                    {
+                        case 'R' : guess34.style.color = 'red'; guess34.style.backgroundColor = 'red'; 
+                            currentGuess[4] = 'R'; break;
+                        case 'B' : guess34.style.color = 'blue'; guess34.style.backgroundColor = 'blue'; 
+                            currentGuess[4] = 'B'; break;
+                        case 'G' : guess34.style.color = 'green'; guess34.style.backgroundColor = 'green'; 
+                            currentGuess[4] = 'G'; break;
+                        case 'Y' : guess34.style.color = 'yellow'; guess34.style.backgroundColor = 'yellow'; 
+                            currentGuess[4] = 'Y'; break;
+                        case 'P' : guess34.style.color = 'purple'; guess34.style.backgroundColor = 'purple'; 
+                            currentGuess[4] = 'P'; break;
+                        case 'O' : guess34.style.color = 'orange'; guess34.style.backgroundColor = 'orange'; 
+                            currentGuess[4] = 'O'; break;
+                        case 'E' : guess34.style.color = 'gray'; guess34.style.backgroundColor = 'gray'; 
+                            currentGuess[4] = 'E'; break;
+                    }
+            }
+    }
+guess41.onclick = function()
+    {
+        if (activeRow == 4)
+            {
+                switch (activeColor)
+                    {
+                        case 'R' : guess41.style.color = 'red'; guess41.style.backgroundColor = 'red'; 
+                            currentGuess[1] = 'R'; break;
+                        case 'B' : guess41.style.color = 'blue'; guess41.style.backgroundColor = 'blue'; 
+                            currentGuess[1] = 'B'; break;
+                        case 'G' : guess41.style.color = 'green'; guess41.style.backgroundColor = 'green'; 
+                            currentGuess[1] = 'G'; break;
+                        case 'Y' : guess41.style.color = 'yellow'; guess41.style.backgroundColor = 'yellow'; 
+                            currentGuess[1] = 'Y'; break;
+                        case 'P' : guess41.style.color = 'purple'; guess41.style.backgroundColor = 'purple'; 
+                            currentGuess[1] = 'P'; break;
+                        case 'O' : guess41.style.color = 'orange'; guess41.style.backgroundColor = 'orange'; 
+                            currentGuess[1] = 'O'; break;
+                        case 'E' : guess41.style.color = 'gray'; guess41.style.backgroundColor = 'gray'; 
+                            currentGuess[1] = 'E'; break;
+                    }
+            }
+    }
+guess42.onclick = function()
+    {
+        if (activeRow == 4)
+            {
+                switch (activeColor)
+                    {
+                        case 'R' : guess42.style.color = 'red'; guess42.style.backgroundColor = 'red'; 
+                            currentGuess[2] = 'R'; break;
+                        case 'B' : guess42.style.color = 'blue'; guess42.style.backgroundColor = 'blue'; 
+                            currentGuess[2] = 'B'; break;
+                        case 'G' : guess42.style.color = 'green'; guess42.style.backgroundColor = 'green'; 
+                            currentGuess[2] = 'G'; break;
+                        case 'Y' : guess42.style.color = 'yellow'; guess42.style.backgroundColor = 'yellow'; 
+                            currentGuess[2] = 'Y'; break;
+                        case 'P' : guess42.style.color = 'purple'; guess42.style.backgroundColor = 'purple'; 
+                            currentGuess[2] = 'P'; break;
+                        case 'O' : guess42.style.color = 'orange'; guess42.style.backgroundColor = 'orange'; 
+                            currentGuess[2] = 'O'; break;
+                        case 'E' : guess42.style.color = 'gray'; guess42.style.backgroundColor = 'gray'; 
+                            currentGuess[2] = 'E'; break;
+                    }
+            }
+    }
+guess43.onclick = function()
+    {
+        if (activeRow == 4)
+            {
+                switch (activeColor)
+                    {
+                        case 'R' : guess43.style.color = 'red'; guess43.style.backgroundColor = 'red'; 
+                            currentGuess[3] = 'R'; break;
+                        case 'B' : guess43.style.color = 'blue'; guess43.style.backgroundColor = 'blue'; 
+                            currentGuess[3] = 'B'; break;
+                        case 'G' : guess43.style.color = 'green'; guess43.style.backgroundColor = 'green'; 
+                            currentGuess[3] = 'G'; break;
+                        case 'Y' : guess43.style.color = 'yellow'; guess43.style.backgroundColor = 'yellow'; 
+                            currentGuess[3] = 'Y'; break;
+                        case 'P' : guess43.style.color = 'purple'; guess43.style.backgroundColor = 'purple'; 
+                            currentGuess[3] = 'P'; break;
+                        case 'O' : guess43.style.color = 'orange'; guess43.style.backgroundColor = 'orange'; 
+                            currentGuess[3] = 'O'; break;
+                        case 'E' : guess43.style.color = 'gray'; guess43.style.backgroundColor = 'gray'; 
+                            currentGuess[3] = 'E'; break;
+                    }
+            }
+    }
+guess44.onclick = function()
+    {
+        if (activeRow == 4)
+            {
+                switch (activeColor)
+                    {
+                        case 'R' : guess44.style.color = 'red'; guess44.style.backgroundColor = 'red'; 
+                            currentGuess[4] = 'R'; break;
+                        case 'B' : guess44.style.color = 'blue'; guess44.style.backgroundColor = 'blue'; 
+                            currentGuess[4] = 'B'; break;
+                        case 'G' : guess44.style.color = 'green'; guess44.style.backgroundColor = 'green'; 
+                            currentGuess[4] = 'G'; break;
+                        case 'Y' : guess44.style.color = 'yellow'; guess44.style.backgroundColor = 'yellow'; 
+                            currentGuess[4] = 'Y'; break;
+                        case 'P' : guess44.style.color = 'purple'; guess44.style.backgroundColor = 'purple'; 
+                            currentGuess[4] = 'P'; break;
+                        case 'O' : guess44.style.color = 'orange'; guess44.style.backgroundColor = 'orange'; 
+                            currentGuess[4] = 'O'; break;
+                        case 'E' : guess44.style.color = 'gray'; guess44.style.backgroundColor = 'gray'; 
+                            currentGuess[4] = 'E'; break;
+                    }
+            }
+    }
+guess51.onclick = function()
+    {
+        if (activeRow == 5)
+            {
+                switch (activeColor)
+                    {
+                        case 'R' : guess51.style.color = 'red'; guess51.style.backgroundColor = 'red'; 
+                            currentGuess[1] = 'R'; break;
+                        case 'B' : guess51.style.color = 'blue'; guess51.style.backgroundColor = 'blue'; 
+                            currentGuess[1] = 'B'; break;
+                        case 'G' : guess51.style.color = 'green'; guess51.style.backgroundColor = 'green'; 
+                            currentGuess[1] = 'G'; break;
+                        case 'Y' : guess51.style.color = 'yellow'; guess51.style.backgroundColor = 'yellow'; 
+                            currentGuess[1] = 'Y'; break;
+                        case 'P' : guess51.style.color = 'purple'; guess51.style.backgroundColor = 'purple'; 
+                            currentGuess[1] = 'P'; break;
+                        case 'O' : guess51.style.color = 'orange'; guess51.style.backgroundColor = 'orange'; 
+                            currentGuess[1] = 'O'; break;
+                        case 'E' : guess51.style.color = 'gray'; guess51.style.backgroundColor = 'gray'; 
+                            currentGuess[1] = 'E'; break;
+                    }
+            }
+    }
+guess52.onclick = function()
+    {
+        if (activeRow == 5)
+            {
+                switch (activeColor)
+                    {
+                        case 'R' : guess52.style.color = 'red'; guess52.style.backgroundColor = 'red'; 
+                            currentGuess[2] = 'R'; break;
+                        case 'B' : guess52.style.color = 'blue'; guess52.style.backgroundColor = 'blue'; 
+                            currentGuess[2] = 'B'; break;
+                        case 'G' : guess52.style.color = 'green'; guess52.style.backgroundColor = 'green'; 
+                            currentGuess[2] = 'G'; break;
+                        case 'Y' : guess52.style.color = 'yellow'; guess52.style.backgroundColor = 'yellow'; 
+                            currentGuess[2] = 'Y'; break;
+                        case 'P' : guess52.style.color = 'purple'; guess52.style.backgroundColor = 'purple'; 
+                            currentGuess[2] = 'P'; break;
+                        case 'O' : guess52.style.color = 'orange'; guess52.style.backgroundColor = 'orange'; 
+                            currentGuess[2] = 'O'; break;
+                        case 'E' : guess52.style.color = 'gray'; guess52.style.backgroundColor = 'gray'; 
+                            currentGuess[2] = 'E'; break;
+                    }
+            }
+    }
+guess53.onclick = function()
+    {
+        if (activeRow == 5)
+            {
+                switch (activeColor)
+                    {
+                        case 'R' : guess53.style.color = 'red'; guess53.style.backgroundColor = 'red'; 
+                            currentGuess[3] = 'R'; break;
+                        case 'B' : guess53.style.color = 'blue'; guess53.style.backgroundColor = 'blue'; 
+                            currentGuess[3] = 'B'; break;
+                        case 'G' : guess53.style.color = 'green'; guess53.style.backgroundColor = 'green'; 
+                            currentGuess[3] = 'G'; break;
+                        case 'Y' : guess53.style.color = 'yellow'; guess53.style.backgroundColor = 'yellow'; 
+                            currentGuess[3] = 'Y'; break;
+                        case 'P' : guess53.style.color = 'purple'; guess53.style.backgroundColor = 'purple'; 
+                            currentGuess[3] = 'P'; break;
+                        case 'O' : guess53.style.color = 'orange'; guess53.style.backgroundColor = 'orange'; 
+                            currentGuess[3] = 'O'; break;
+                        case 'E' : guess53.style.color = 'gray'; guess53.style.backgroundColor = 'gray'; 
+                            currentGuess[3] = 'E'; break;
+                    }
+            }
+    }
+guess54.onclick = function()
+    {
+        if (activeRow == 5)
+            {
+                switch (activeColor)
+                    {
+                        case 'R' : guess54.style.color = 'red'; guess54.style.backgroundColor = 'red'; 
+                            currentGuess[4] = 'R'; break;
+                        case 'B' : guess54.style.color = 'blue'; guess54.style.backgroundColor = 'blue'; 
+                            currentGuess[4] = 'B'; break;
+                        case 'G' : guess54.style.color = 'green'; guess54.style.backgroundColor = 'green'; 
+                            currentGuess[4] = 'G'; break;
+                        case 'Y' : guess54.style.color = 'yellow'; guess54.style.backgroundColor = 'yellow'; 
+                            currentGuess[4] = 'Y'; break;
+                        case 'P' : guess54.style.color = 'purple'; guess54.style.backgroundColor = 'purple'; 
+                            currentGuess[4] = 'P'; break;
+                        case 'O' : guess54.style.color = 'orange'; guess54.style.backgroundColor = 'orange'; 
+                            currentGuess[4] = 'O'; break;
+                        case 'E' : guess54.style.color = 'gray'; guess54.style.backgroundColor = 'gray'; 
+                            currentGuess[4] = 'E'; break;
+                    }
+            }
+    }
+guess61.onclick = function()
+    {
+        if (activeRow == 6)
+            {
+                switch (activeColor)
+                    {
+                        case 'R' : guess61.style.color = 'red'; guess61.style.backgroundColor = 'red'; 
+                            currentGuess[1] = 'R'; break;
+                        case 'B' : guess61.style.color = 'blue'; guess61.style.backgroundColor = 'blue'; 
+                            currentGuess[1] = 'B'; break;
+                        case 'G' : guess61.style.color = 'green'; guess61.style.backgroundColor = 'green'; 
+                            currentGuess[1] = 'G'; break;
+                        case 'Y' : guess61.style.color = 'yellow'; guess61.style.backgroundColor = 'yellow'; 
+                            currentGuess[1] = 'Y'; break;
+                        case 'P' : guess61.style.color = 'purple'; guess61.style.backgroundColor = 'purple'; 
+                            currentGuess[1] = 'P'; break;
+                        case 'O' : guess61.style.color = 'orange'; guess61.style.backgroundColor = 'orange'; 
+                            currentGuess[1] = 'O'; break;
+                        case 'E' : guess61.style.color = 'gray'; guess61.style.backgroundColor = 'gray'; 
+                            currentGuess[1] = 'E'; break;
+                    }
+            }
+    }
+guess62.onclick = function()
+    {
+        if (activeRow == 6)
+            {
+                switch (activeColor)
+                    {
+                        case 'R' : guess62.style.color = 'red'; guess62.style.backgroundColor = 'red'; 
+                            currentGuess[2] = 'R'; break;
+                        case 'B' : guess62.style.color = 'blue'; guess62.style.backgroundColor = 'blue'; 
+                            currentGuess[2] = 'B'; break;
+                        case 'G' : guess62.style.color = 'green'; guess62.style.backgroundColor = 'green'; 
+                            currentGuess[2] = 'G'; break;
+                        case 'Y' : guess62.style.color = 'yellow'; guess62.style.backgroundColor = 'yellow'; 
+                            currentGuess[2] = 'Y'; break;
+                        case 'P' : guess62.style.color = 'purple'; guess62.style.backgroundColor = 'purple'; 
+                            currentGuess[2] = 'P'; break;
+                        case 'O' : guess62.style.color = 'orange'; guess62.style.backgroundColor = 'orange'; 
+                            currentGuess[2] = 'O'; break;
+                        case 'E' : guess62.style.color = 'gray'; guess62.style.backgroundColor = 'gray'; 
+                            currentGuess[2] = 'E'; break;
+                    }
+            }
+    }
+guess63.onclick = function()
+    {
+        if (activeRow == 6)
+            {
+                switch (activeColor)
+                    {
+                        case 'R' : guess63.style.color = 'red'; guess63.style.backgroundColor = 'red'; 
+                            currentGuess[3] = 'R'; break;
+                        case 'B' : guess63.style.color = 'blue'; guess63.style.backgroundColor = 'blue'; 
+                            currentGuess[3] = 'B'; break;
+                        case 'G' : guess63.style.color = 'green'; guess63.style.backgroundColor = 'green'; 
+                            currentGuess[3] = 'G'; break;
+                        case 'Y' : guess63.style.color = 'yellow'; guess63.style.backgroundColor = 'yellow'; 
+                            currentGuess[3] = 'Y'; break;
+                        case 'P' : guess63.style.color = 'purple'; guess63.style.backgroundColor = 'purple'; 
+                            currentGuess[3] = 'P'; break;
+                        case 'O' : guess63.style.color = 'orange'; guess63.style.backgroundColor = 'orange'; 
+                            currentGuess[3] = 'O'; break;
+                        case 'E' : guess63.style.color = 'gray'; guess63.style.backgroundColor = 'gray'; 
+                            currentGuess[3] = 'E'; break;
+                    }
+            }
+    }
+guess64.onclick = function()
+    {
+        if (activeRow == 6)
+            {
+                switch (activeColor)
+                    {
+                        case 'R' : guess64.style.color = 'red'; guess64.style.backgroundColor = 'red'; 
+                            currentGuess[4] = 'R'; break;
+                        case 'B' : guess64.style.color = 'blue'; guess64.style.backgroundColor = 'blue'; 
+                            currentGuess[4] = 'B'; break;
+                        case 'G' : guess64.style.color = 'green'; guess64.style.backgroundColor = 'green'; 
+                            currentGuess[4] = 'G'; break;
+                        case 'Y' : guess64.style.color = 'yellow'; guess64.style.backgroundColor = 'yellow'; 
+                            currentGuess[4] = 'Y'; break;
+                        case 'P' : guess64.style.color = 'purple'; guess64.style.backgroundColor = 'purple'; 
+                            currentGuess[4] = 'P'; break;
+                        case 'O' : guess64.style.color = 'orange'; guess64.style.backgroundColor = 'orange'; 
+                            currentGuess[4] = 'O'; break;
+                        case 'E' : guess64.style.color = 'gray'; guess64.style.backgroundColor = 'gray'; 
+                            currentGuess[4] = 'E'; break;
+                    }
+            }
+    }
 //*******************************************************
 //*******************************************************
 //    Check Current Row
