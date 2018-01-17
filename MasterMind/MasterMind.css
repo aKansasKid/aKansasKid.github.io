@@ -76,7 +76,7 @@
     background-color: red;
     color: black;
     font-size: xx-large;
-    margin-right: 1%;
+    margin-right: 3%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
@@ -87,7 +87,7 @@
     background-color: blue;
     color: black;
     font-size: xx-large;
-    margin-right: 1%;
+    margin-right: 3%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
@@ -98,7 +98,7 @@
     background-color: yellow;
     color: black;
     font-size: xx-large;
-    margin-right: 1%;
+    margin-right: 3%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
@@ -109,7 +109,7 @@
     background-color: green;
     color: black;
     font-size: xx-large;
-    margin-right: 1%;
+    margin-right: 3%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
@@ -120,7 +120,7 @@
     background-color: purple;
     color: black;
     font-size: xx-large;
-    margin-right: 1%;
+    margin-right: 3%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
@@ -131,7 +131,7 @@
     background-color: orange;
     color: black;
     font-size: xx-large;
-    margin-right: 1%;
+    margin-right: 3%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
@@ -147,6 +147,7 @@
 }
 
 .guess11 {
+    margin-bottom: 75px;
     height: 100px;
     border: none;
     border-radius: 50px;
@@ -587,6 +588,7 @@
 }
 
 .guess61 {
+    margin-top: 75px;
     height: 100px;
     border: none;
     border-radius: 50px;
