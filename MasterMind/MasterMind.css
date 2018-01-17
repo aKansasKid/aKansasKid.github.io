@@ -1,4 +1,5 @@
 .header {
+    text-align: center;
     color: blue; 
     font-size: 75px;
     font-family: arial;
@@ -197,7 +198,7 @@
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: xx-large;
+    font-size: large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
@@ -208,7 +209,7 @@
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: xx-large;
+    font-size: large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
@@ -219,7 +220,7 @@
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: xx-large;
+    font-size: large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
@@ -230,7 +231,7 @@
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: xx-large;
+    font-size: large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
