@@ -193,6 +193,7 @@
 }
 
 .hint11 {
+    height: 50px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -202,6 +203,7 @@
 }
 
 .hint12 {
+    height: 50px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -211,6 +213,7 @@
 }
 
 .hint13 {
+    height: 50px;
     border: none;
     border-radius: 50px;
     background-color: gray;
@@ -220,6 +223,7 @@
 }
 
 .hint14 {
+    height: 50px;
     border: none;
     border-radius: 50px;
     background-color: gray;
