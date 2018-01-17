@@ -199,7 +199,8 @@
     background-color: gray;
     color: black;
     font-size: large;
-    margin-right: 1%;;
+    margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint12 {
@@ -210,6 +211,7 @@
     color: black;
     font-size: large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint13 {
@@ -220,6 +222,7 @@
     color: black;
     font-size: large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint14 {
@@ -230,6 +233,7 @@
     color: black;
     font-size: large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 
 .guess21 {
@@ -284,6 +288,7 @@
     color: black;
     font-size: large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint22 {
@@ -294,6 +299,7 @@
     color: black;
     font-size: large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint23 {
@@ -304,6 +310,7 @@
     color: black;
     font-size: large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint24 {
@@ -314,6 +321,7 @@
     color: black;
     font-size: large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 
 .guess31 {
@@ -368,6 +376,7 @@
     color: black;
     font-size: large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint32 {
@@ -378,6 +387,7 @@
     color: black;
     font-size: large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint33 {
@@ -388,6 +398,7 @@
     color: black;
     font-size: large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint34 {
@@ -398,6 +409,7 @@
     color: black;
     font-size: large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 
 .guess41 {
@@ -452,6 +464,7 @@
     color: black;
     font-size: large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint42 {
@@ -462,6 +475,7 @@
     color: black;
     font-size: large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint43 {
@@ -472,6 +486,7 @@
     color: black;
     font-size: large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint44 {
@@ -482,6 +497,7 @@
     color: black;
     font-size: large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 
 .guess51 {
@@ -536,6 +552,7 @@
     color: black;
     font-size: large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint52 {
@@ -546,6 +563,7 @@
     color: black;
     font-size: large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint53 {
@@ -556,6 +574,7 @@
     color: black;
     font-size: large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint54 {
@@ -566,6 +585,7 @@
     color: black;
     font-size: large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 
 .guess61 {
@@ -621,6 +641,7 @@
     color: black;
     font-size: large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint62 {
@@ -631,6 +652,7 @@
     color: black;
     font-size: large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint63 {
@@ -641,6 +663,7 @@
     color: black;
     font-size: large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint64 {
@@ -651,4 +674,5 @@
     color: black;
     font-size: large;
     margin-right: 1%;
+    box-shadow: 3px 3px 2px 2px gray;
 }
