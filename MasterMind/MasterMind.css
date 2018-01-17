@@ -1,5 +1,4 @@
 .header {
-    text-align: center;
     color: blue; 
     font-size: 75px;
     font-family: arial;
@@ -9,7 +8,7 @@
     color:blue;
     font-size: 50px;
     margin-top:1%;
-    margin-right:5%;
+    margin-right:2%;
 }
 .newGame {
     color:red;
