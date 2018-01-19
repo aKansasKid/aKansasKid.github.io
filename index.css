@@ -1,0 +1,11 @@
+.header {
+    color: blue; 
+    font-size: 75px;
+    font-family: arial;
+    margin-bottom: 2%;
+}
+.gameMgmt {
+   font-size: 25px;
+   font-family: arial;
+   color: black;
+}
