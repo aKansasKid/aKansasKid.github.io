@@ -1,11 +1,15 @@
 .header {
+    margin: auto;
+    width: 75%;
     color: blue; 
     font-size: 40px;
     font-family: arial;
     margin-bottom: 3%;
 }
 .gameMgmt {
-   font-size: 25px;
-   font-family: arial;
-   color: black;
+    margin: auto;
+    width: 75%;
+    font-size: 25px;
+    font-family: arial;
+    color: black;
 }
