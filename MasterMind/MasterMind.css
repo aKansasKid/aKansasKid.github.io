@@ -31,10 +31,10 @@
     text-align: left;
 }
 .break1 {
-    border:none;
+    border:solid;
     border-radius: 0;
     color:black;
-    background-color:white;
+    background-color:yellow;
     font-size:xx-large;
 }
 .break2 {
