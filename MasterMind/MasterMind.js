@@ -127,10 +127,10 @@ function resetButtonColors()
     {
         break1.style.backgroundColor = 'yellow';
         break2.style.backgroundColor = 'white';
-        break3style.backgroundColor = 'white';
-        break4style.backgroundColor = 'white';
-        break5style.backgroundColor = 'white';
-        break6style.backgroundColor = 'white';
+        break3.style.backgroundColor = 'white';
+        break4.style.backgroundColor = 'white';
+        break5.style.backgroundColor = 'white';
+        break6.style.backgroundColor = 'white';
 
         //**** Reset button backgrounds *************/
         //*******************************************/
