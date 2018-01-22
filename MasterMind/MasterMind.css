@@ -1,5 +1,4 @@
 .header {
-    text-align: center;
     color: blue; 
     font-size: 75px;
     font-family: arial;
@@ -9,7 +8,7 @@
     color:blue;
     font-size: 50px;
     margin-top:1%;
-    margin-right:2%;
+    margin-right:5%;
 }
 .newGame {
     color:red;
@@ -31,7 +30,7 @@
     text-align: left;
 }
 .break1 {
-    border:solid;
+    border:none;
     border-radius: 0;
     color:black;
     background-color:yellow;
@@ -196,45 +195,45 @@
 }
 
 .hint11 {
-    height: 50px;
-    border: black;
+    height: 100px;
+    border: none;
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: large;
+    font-size: xx-large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint12 {
-    height: 50px;
-    border: black;
+    height: 100px;
+    border: none;
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: large;
+    font-size: xx-large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint13 {
-    height: 50px;
-    border: black;
+    height: 100px;
+    border: none;
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: large;
+    font-size: xx-large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint14 {
-    height: 50px;
-    border: black;
+    height: 100px;
+    border: none;
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: large;
+    font-size: xx-large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
@@ -284,45 +283,45 @@
 }
 
 .hint21 {
-    height: 50px;
-    border: black;
+    height: 100px;
+    border: none;
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: large;
+    font-size: xx-large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint22 {
-    height: 50px;
-    border: black;
+    height: 100px;
+    border: none;
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: large;
+    font-size: xx-large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint23 {
-    height: 50px;
-    border: black;
+    height: 100px;
+    border: none;
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: large;
+    font-size: xx-large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint24 {
-    height: 50px;
-    border: black;
+    height: 100px;
+    border: none;
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: large;
+    font-size: xx-large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
@@ -372,45 +371,45 @@
 }
 
 .hint31 {
-    height: 50px;
-    border: black;
+    height: 100px;
+    border: none;
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: large;
+    font-size: xx-large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint32 {
-    height: 50px;
-    border: black;
+    height: 100px;
+    border: none;
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: large;
+    font-size: xx-large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint33 {
-    height: 50px;
-    border: black;
+    height: 100px;
+    border: none;
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: large;
+    font-size: xx-large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint34 {
-    height: 50px;
-    border: black;
+    height: 100px;
+    border: none;
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: large;
+    font-size: xx-large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
@@ -460,45 +459,45 @@
 }
 
 .hint41 {
-    height: 50px;
-    border: black;
+    height: 100px;
+    border: none;
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: large;
+    font-size: xx-large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint42 {
-    height: 50px;
-    border: black;
+    height: 100px;
+    border: none;
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: large;
+    font-size: xx-large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint43 {
-    height: 50px;
-    border: black;
+    height: 100px;
+    border: none;
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: large;
+    font-size: xx-large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint44 {
-    height: 50px;
-    border: black;
+    height: 100px;
+    border: none;
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: large;
+    font-size: xx-large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
@@ -548,45 +547,45 @@
 }
 
 .hint51 {
-    height: 50px;
-    border: black;
+    height: 100px;
+    border: none;
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: large;
+    font-size: xx-large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint52 {
-    height: 50px;
-    border: black;
+    height: 100px;
+    border: none;
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: large;
+    font-size: xx-large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint53 {
-    height: 50px;
-    border: black;
+    height: 100px;
+    border: none;
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: large;
+    font-size: xx-large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint54 {
-    height: 50px;
-    border: black;
+    height: 100px;
+    border: none;
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: large;
+    font-size: xx-large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
@@ -637,45 +636,45 @@
 }
 
 .hint61 {
-    height: 50px;
-    border: black;
+    height: 100px;
+    border: none;
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: large;
+    font-size: xx-large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint62 {
-    height: 50px;
-    border: black;
+    height: 100px;
+    border: none;
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: large;
+    font-size: xx-large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint63 {
-    height: 50px;
-    border: black;
+    height: 100px;
+    border: none;
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: large;
+    font-size: xx-large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
 .hint64 {
-    height: 50px;
-    border: black;
+    height: 100px;
+    border: none;
     border-radius: 50px;
     background-color: gray;
     color: black;
-    font-size: large;
+    font-size: xx-large;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
