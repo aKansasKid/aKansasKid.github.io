@@ -18,6 +18,13 @@ var selectPurple = document.querySelector('button.selectPurple');
 var selectOrange = document.querySelector('button.selectOrange');
 var selectBlank = document.querySelector('button.selectBlank');
 
+var break1 = document.querySelector('button.break1');
+var break2 = document.querySelector('button.break2');
+var break3 = document.querySelector('button.break3');
+var break4 = document.querySelector('button.break4');
+var break5 = document.querySelector('button.break5');
+var break6 = document.querySelector('button.break6');
+
 var guess11 = document.querySelector('button.guess11');
 var guess12 = document.querySelector('button.guess12');
 var guess13 = document.querySelector('button.guess13');
@@ -118,6 +125,8 @@ function setupButtons()
 
 function resetButtonColors()
     {
+        break1.style.backgroundColor = 'yellow';
+
         //**** Reset button backgrounds *************/
         //*******************************************/
         guess11.style.backgroundColor = 'gray';
@@ -872,7 +881,7 @@ function checkRow1 ()
         }
         else if ( (currentGuess[1] == mysteryCode[2]) || (currentGuess[1] == mysteryCode[3]) || (currentGuess[1] == mysteryCode[4]))
         {
-            hint11.style.color = 'white'; hint11.style.backgroundColor = 'white';
+            hint11.style.color = 'white'; hint11.style.backgroundColor = 'white'; hint11.style.border = 'white';
         }
         if (currentGuess[2] == mysteryCode[2])
         {
@@ -880,7 +889,7 @@ function checkRow1 ()
         }
         else if ( (currentGuess[2] == mysteryCode[1]) || (currentGuess[2] == mysteryCode[3]) || (currentGuess[2] == mysteryCode[4]))
         {
-            hint12.style.color = 'white'; hint12.style.backgroundColor = 'white';
+            hint12.style.color = 'white'; hint12.style.backgroundColor = 'white'; hint12.style.border = 'white';
         }
         if (currentGuess[3] == mysteryCode[3])
         {
@@ -888,7 +897,7 @@ function checkRow1 ()
         }
         else if ( (currentGuess[3] == mysteryCode[1]) || (currentGuess[3] == mysteryCode[2]) || (currentGuess[3] == mysteryCode[4]))
         {
-            hint13.style.color = 'white'; hint13.style.backgroundColor = 'white';
+            hint13.style.color = 'white'; hint13.style.backgroundColor = 'white'; hint13.style.border = 'white';
         }
         if (currentGuess[4] == mysteryCode[4])
         {
@@ -896,8 +905,12 @@ function checkRow1 ()
         }
         else if ( (currentGuess[4] == mysteryCode[1]) || (currentGuess[4] == mysteryCode[2]) || (currentGuess[4] == mysteryCode[3]))
         {
-            hint14.style.color = 'white'; hint14.style.backgroundColor = 'white';
+            hint14.style.color = 'white'; hint14.style.backgroundColor = 'white'; hint14.style.border = 'white';
         }
+
+        break1.style.backgroundColor = 'white';
+        break2.style.backgroundColor = 'yellow';
+
         activeRow = 2;
         if ( (currentGuess[1] == mysteryCode[1]) && (currentGuess[2] == mysteryCode[2]) && (currentGuess[3] == mysteryCode[3]) &&(currentGuess[4] == mysteryCode[4]))
         {
@@ -946,6 +959,10 @@ function checkRow2 ()
         {
             hint24.style.color = 'white'; hint24.style.backgroundColor = 'white';
         }
+
+        break2.style.backgroundColor = 'white';
+        break3.style.backgroundColor = 'yellow';
+
         activeRow = 3;
         if ( (currentGuess[1] == mysteryCode[1]) && (currentGuess[2] == mysteryCode[2]) && (currentGuess[3] == mysteryCode[3]) &&(currentGuess[4] == mysteryCode[4]))
         {
@@ -994,6 +1011,10 @@ function checkRow3 ()
         {
             hint34.style.color = 'white'; hint34.style.backgroundColor = 'white';
         }
+        
+        break3.style.backgroundColor = 'white';
+        break4.style.backgroundColor = 'yellow';
+
         activeRow = 4;
         if ( (currentGuess[1] == mysteryCode[1]) && (currentGuess[2] == mysteryCode[2]) && (currentGuess[3] == mysteryCode[3]) &&(currentGuess[4] == mysteryCode[4]))
         {
@@ -1042,6 +1063,10 @@ function checkRow4 ()
         {
             hint44.style.color = 'white'; hint44.style.backgroundColor = 'white';
         }
+
+        break4.style.backgroundColor = 'white';
+        break5.style.backgroundColor = 'yellow';
+
         activeRow = 5;
         if ( (currentGuess[1] == mysteryCode[1]) && (currentGuess[2] == mysteryCode[2]) && (currentGuess[3] == mysteryCode[3]) &&(currentGuess[4] == mysteryCode[4]))
         {
@@ -1090,6 +1115,10 @@ function checkRow5 ()
         {
             hint54.style.color = 'white'; hint54.style.backgroundColor = 'white';
         }
+
+        break5.style.backgroundColor = 'white';
+        break6.style.backgroundColor = 'yellow';
+
         activeRow = 6;
         if ( (currentGuess[1] == mysteryCode[1]) && (currentGuess[2] == mysteryCode[2]) && (currentGuess[3] == mysteryCode[3]) &&(currentGuess[4] == mysteryCode[4]))
         {
@@ -1138,6 +1167,9 @@ function checkRow6 ()
         {
             hint64.style.color = 'white'; hint64.style.backgroundColor = 'white';
         }
+
+        break6.style.backgroundColor = 'white';
+
         activeRow = 0;
         if ( (currentGuess[1] == mysteryCode[1]) && (currentGuess[2] == mysteryCode[2]) && (currentGuess[3] == mysteryCode[3]) &&(currentGuess[4] == mysteryCode[4]))
         {
