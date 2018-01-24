@@ -28,7 +28,6 @@
 
 .container {
     web-kit-appearance: none !important;
-    display: inline-block !important;
     position: relative;
     text-align: left;
 }
