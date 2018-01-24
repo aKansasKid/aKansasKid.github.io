@@ -35,42 +35,47 @@
     color:black;
     background-color:yellow;
     font-size:xx-large;
+    margin-right: 2%;
 }
 .break2 {
     border-radius: 0;
     color:black;
     background-color:white;
     font-size:xx-large;
+    margin-right: 2%;
 }
 .break3 {
     border-radius: 0;
     color:black;
     background-color:white;
     font-size:xx-large;
+    margin-right: 2%;
 }
 .break4 {
     border-radius: 0;
     color:black;
     background-color:white;
     font-size:xx-large;
+    margin-right: 2%;
 }
 .break5 {
     border-radius: 0;
     color:black;
     background-color:white;
     font-size:xx-large;
+    margin-right: 2%;
 }
 .break6 {
     border-radius: 0;
     color:black;
     background-color:white;
     font-size:xx-large;
+    margin-right: 2%;
 }
 
 .selectRed {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: red;
     color: black;
     font-size: xx-large;
@@ -79,9 +84,8 @@
 }
 
 .selectBlue {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: blue;
     color: black;
     font-size: xx-large;
@@ -90,9 +94,8 @@
 }
 
 .selectYellow {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: yellow;
     color: black;
     font-size: xx-large;
@@ -101,9 +104,8 @@
 }
 
 .selectGreen {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: green;
     color: black;
     font-size: xx-large;
@@ -112,9 +114,8 @@
 }
 
 .selectPurple {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: purple;
     color: black;
     font-size: xx-large;
@@ -123,9 +124,8 @@
 }
 
 .selectOrange {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: orange;
     color: black;
     font-size: xx-large;
@@ -134,9 +134,8 @@
 }
 
 .selectBlank {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: xx-large;
@@ -146,45 +145,44 @@
 
 .guess11 {
     margin-bottom: 75px;
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: xx-large;
+    margin-right: 3%;
 }
 
 .guess12 {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: xx-large;
+    margin-right: 3%;
 }
 
 .guess13 {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: xx-large;
-    margin-right: 1%;
+    margin-right: 3%;
 }
 
 .guess14 {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: xx-large;
+    margin-right: 3%;
 }
 
 .hint11 {
-    height: 50px;
-    border-radius: 50px;
+    border: none;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: large;
@@ -192,8 +190,8 @@
 }
 
 .hint12 {
-    height: 50px;
-    border-radius: 50px;
+    border: none;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: large;
@@ -201,8 +199,8 @@
 }
 
 .hint13 {
-    height: 50px;
-    border-radius: 50px;
+    border: none;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: large;
@@ -210,8 +208,8 @@
 }
 
 .hint14 {
-    height: 50px;
-    border-radius: 50px;
+    border: none;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: large;
@@ -219,45 +217,44 @@
 }
 
 .guess21 {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: xx-large;
+    margin-right: 3%;
 }
 
 .guess22 {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: xx-large;
+    margin-right: 3%;
 }
 
 .guess23 {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: xx-large;
+    margin-right: 3%;
 }
 
 .guess24 {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: xx-large;
+    margin-right: 3%;
 }
 
 .hint21 {
-    height: 50px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: large;
@@ -265,9 +262,8 @@
 }
 
 .hint22 {
-    height: 50px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: large;
@@ -275,9 +271,8 @@
 }
 
 .hint23 {
-    height: 50px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: large;
@@ -285,9 +280,8 @@
 }
 
 .hint24 {
-    height: 50px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: large;
@@ -295,45 +289,44 @@
 }
 
 .guess31 {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: xx-large;
+    margin-right: 3%;
 }
 
 .guess32 {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: xx-large;
+    margin-right: 3%;
 }
 
 .guess33 {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: xx-large;
+    margin-right: 3%;
 }
 
 .guess34 {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: xx-large;
+    margin-right: 3%;
 }
 
 .hint31 {
-    height: 50px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: large;
@@ -341,9 +334,8 @@
 }
 
 .hint32 {
-    height: 50px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: large;
@@ -351,9 +343,8 @@
 }
 
 .hint33 {
-    height: 50px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: large;
@@ -361,9 +352,8 @@
 }
 
 .hint34 {
-    height: 50px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: large;
@@ -371,45 +361,44 @@
 }
 
 .guess41 {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: xx-large;
+    margin-right: 3%;
 }
 
 .guess42 {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: xx-large;
+    margin-right: 3%;
 }
 
 .guess43 {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: xx-large;
+    margin-right: 3%;
 }
 
 .guess44 {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: xx-large;
+    margin-right: 3%;
 }
 
 .hint41 {
-    height: 50px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: large;
@@ -417,9 +406,8 @@
 }
 
 .hint42 {
-    height: 50px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: large;
@@ -427,9 +415,8 @@
 }
 
 .hint43 {
-    height: 50px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: large;
@@ -437,9 +424,8 @@
 }
 
 .hint44 {
-    height: 50px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: large;
@@ -447,45 +433,43 @@
 }
 
 .guess51 {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: xx-large;
+    margin-right: 3%;
 }
 
 .guess52 {
-    height: 100px;
     border: none;
-    border-radius: 50px;
-    background-color: gray;
+    border-radius: 50%;;
     color: black;
     font-size: xx-large;
+    margin-right: 3%;
 }
 
 .guess53 {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: xx-large;
+    margin-right: 3%;
 }
 
 .guess54 {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: xx-large;
+    margin-right: 3%;
 }
 
 .hint51 {
-    height: 50px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: large;
@@ -493,9 +477,8 @@
 }
 
 .hint52 {
-    height: 50px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: large;
@@ -503,9 +486,8 @@
 }
 
 .hint53 {
-    height: 50px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: large;
@@ -513,9 +495,8 @@
 }
 
 .hint54 {
-    height: 50px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: large;
@@ -524,45 +505,44 @@
 
 .guess61 {
     margin-top: 75px;
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: xx-large;
+    margin-right: 3%;
 }
 
 .guess62 {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: xx-large;
+    margin-right: 3%;
 }
 
 .guess63 {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: xx-large;
+    margin-right: 3%;
 }
 
 .guess64 {
-    height: 100px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: xx-large;
+    margin-right: 3%;
 }
 
 .hint61 {
-    height: 50px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: large;
@@ -570,9 +550,8 @@
 }
 
 .hint62 {
-    height: 50px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: large;
@@ -580,9 +559,8 @@
 }
 
 .hint63 {
-    height: 50px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: large;
@@ -590,9 +568,8 @@
 }
 
 .hint64 {
-    height: 50px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: large;
