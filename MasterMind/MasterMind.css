@@ -75,7 +75,7 @@
 
 .selectRed {
     border: none;
-    border-radius: 50%;
+    border-radius: 100%;
     background-color: red;
     color: black;
     font-size: xx-large;
@@ -85,7 +85,7 @@
 
 .selectBlue {
     border: none;
-    border-radius: 50%;
+    border-radius: 100%;
     background-color: blue;
     color: black;
     font-size: xx-large;
@@ -95,7 +95,7 @@
 
 .selectYellow {
     border: none;
-    border-radius: 50%;
+    border-radius: 100%;
     background-color: yellow;
     color: black;
     font-size: xx-large;
@@ -105,7 +105,7 @@
 
 .selectGreen {
     border: none;
-    border-radius: 50%;
+    border-radius: 100%;
     background-color: green;
     color: black;
     font-size: xx-large;
@@ -115,7 +115,7 @@
 
 .selectPurple {
     border: none;
-    border-radius: 50%;
+    border-radius: 100%;
     background-color: purple;
     color: black;
     font-size: xx-large;
@@ -125,7 +125,7 @@
 
 .selectOrange {
     border: none;
-    border-radius: 50%;
+    border-radius: 100%;
     background-color: orange;
     color: black;
     font-size: xx-large;
@@ -135,7 +135,7 @@
 
 .selectBlank {
     border: none;
-    border-radius: 50%;
+    border-radius: 100%;
     background-color: gray;
     color: black;
     font-size: xx-large;
