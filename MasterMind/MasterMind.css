@@ -73,7 +73,7 @@
     margin-right: 2%;
 }
 
-.selectRed {
+.selectRed { height:100%; width:100%;
     border: none;
     border-radius: 50%;
     background-color: red;
@@ -83,7 +83,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectBlue {
+.selectBlue { height:100%; width:100%;
     border: none;
     border-radius: 50%;
     background-color: blue;
@@ -93,7 +93,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectYellow {
+.selectYellow { height:100%; width:100%;
     border: none;
     border-radius: 50%;
     background-color: yellow;
@@ -103,7 +103,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectGreen {
+.selectGreen { height:100%; width:100%;
     border: none;
     border-radius: 50%;
     background-color: green;
@@ -113,7 +113,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectPurple {
+.selectPurple { height:100%; width:100%;
     border: none;
     border-radius: 50%;
     background-color: purple;
@@ -123,7 +123,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectOrange {
+.selectOrange { height:100%; width:100%;
     border: none;
     border-radius: 50%;
     background-color: orange;
@@ -133,7 +133,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectBlank {
+.selectBlank { height:100%; width:100%;
     border: none;
     border-radius: 50%;
     background-color: gray;
