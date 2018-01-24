@@ -77,7 +77,7 @@
 
 .selectRed {
     border: none;
-    border-radius: 50%;
+    border-radius: 20%;
     background-color: red;
     color: black;
     font-size: 50%;
@@ -87,7 +87,7 @@
 
 .selectBlue { height:100%;
     border: none;
-    border-radius: 50%;
+    border-radius: 20%;
     background-color: blue;
     color: black;
     font-size: 50%;
@@ -97,7 +97,7 @@
 
 .selectYellow { height:100%;
     border: none;
-    border-radius: 50%;
+    border-radius: 20%;
     background-color: yellow;
     color: black;
     font-size: 50%;
@@ -107,7 +107,7 @@
 
 .selectGreen { height:100%;
     border: none;
-    border-radius: 50%;
+    border-radius: 20%;
     background-color: green;
     color: black;
     font-size: 50%;
@@ -117,7 +117,7 @@
 
 .selectPurple { height:100%;
     border: none;
-    border-radius: 50%;
+    border-radius: 20%;
     background-color: purple;
     color: black;
     font-size: 50%;
@@ -127,7 +127,7 @@
 
 .selectOrange { height:100%;
     border: none;
-    border-radius: 50%;
+    border-radius: 20%;
     background-color: orange;
     color: black;
     font-size: 50%;
@@ -137,7 +137,7 @@
 
 .selectBlank { height:100%;
     border: none;
-    border-radius: 50%;
+    border-radius: 20%;
     background-color: gray;
     color: black;
     font-size: 50%;
