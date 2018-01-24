@@ -75,7 +75,7 @@
     margin-right: 2%;
 }
 
-.selectRed {
+.selectRed { height:150%;
     border: none;
     border-radius: 20%;
     background-color: red;
@@ -85,7 +85,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectBlue { height:100%;
+.selectBlue { height:150%;
     border: none;
     border-radius: 20%;
     background-color: blue;
@@ -95,7 +95,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectYellow { height:100%;
+.selectYellow { height:150%;
     border: none;
     border-radius: 20%;
     background-color: yellow;
@@ -105,7 +105,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectGreen { height:100%;
+.selectGreen { height:150%;
     border: none;
     border-radius: 20%;
     background-color: green;
@@ -115,7 +115,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectPurple { height:100%;
+.selectPurple { height:150%;
     border: none;
     border-radius: 20%;
     background-color: purple;
@@ -125,7 +125,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectOrange { height:100%;
+.selectOrange { height:150%;
     border: none;
     border-radius: 20%;
     background-color: orange;
@@ -135,7 +135,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectBlank { height:100%;
+.selectBlank { height:150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
@@ -145,80 +145,17 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.guess11 { height: 100%;
+.guess11 { height: 150%;
     margin-bottom: 75px;
     border: none;
     border-radius: 20%;
     background-color: gray;
     color: black;
-    font-size: 50%;
+    font-size: 30%;
     margin-right: 2%;
 }
 
-.guess12 { height: 100%;
-    border: none;
-    border-radius: 20%;
-    background-color: gray;
-    color: black;
-    font-size: 50%;
-    margin-right: 2%;
-}
-
-.guess13 { height: 100%;
-    border: none;
-    border-radius: 20%;
-    background-color: gray;
-    color: black;
-    font-size: 50%;
-    margin-right: 2%;
-}
-
-.guess14 { height: 100%;
-    border: none;
-    border-radius: 20%;
-    background-color: gray;
-    color: black;
-    font-size: 50%;
-    margin-right: 2%;
-}
-
-.hint11 { height: 100%;
-    border: none;
-    border-radius: 20%;
-    background-color: gray;
-    color: black;
-    font-size: 20%;
-    box-shadow: 3px 3px 2px 2px gray;
-}
-
-.hint12 { height: 100%;
-    border: none;
-    border-radius: 20%;
-    background-color: gray;
-    color: black;
-    font-size: 20%;
-    box-shadow: 3px 3px 2px 2px gray;
-}
-
-.hint13 { height: 100%;
-    border: none;
-    border-radius: 20%;
-    background-color: gray;
-    color: black;
-    font-size: 20%;
-    box-shadow: 3px 3px 2px 2px gray;
-}
-
-.hint14 { height: 100%;
-    border: none;
-    border-radius: 20%;
-    background-color: gray;
-    color: black;
-    font-size: 20%;
-    box-shadow: 3px 3px 2px 2px gray;
-}
-
-.guess21 { height: 100%;
+.guess12 { height: 150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
@@ -227,7 +164,7 @@
     margin-right: 2%;
 }
 
-.guess22 { height: 100%;
+.guess13 { height: 150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
@@ -236,7 +173,7 @@
     margin-right: 2%;
 }
 
-.guess23 { height: 100%;
+.guess14 { height: 150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
@@ -245,7 +182,43 @@
     margin-right: 2%;
 }
 
-.guess24 { height: 100%;
+.hint11 { height: 150%;
+    border: none;
+    border-radius: 20%;
+    background-color: gray;
+    color: black;
+    font-size: 20%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint12 { height: 150%;
+    border: none;
+    border-radius: 20%;
+    background-color: gray;
+    color: black;
+    font-size: 20%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint13 { height: 150%;
+    border: none;
+    border-radius: 20%;
+    background-color: gray;
+    color: black;
+    font-size: 20%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint14 { height: 150%;
+    border: none;
+    border-radius: 20%;
+    background-color: gray;
+    color: black;
+    font-size: 20%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess21 { height: 150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
@@ -254,43 +227,7 @@
     margin-right: 2%;
 }
 
-.hint21 { height: 100%;
-    border: none;
-    border-radius: 20%;
-    background-color: gray;
-    color: black;
-    font-size: 20%;
-    box-shadow: 3px 3px 2px 2px gray;
-}
-
-.hint22 { height: 100%;
-    border: none;
-    border-radius: 20%;
-    background-color: gray;
-    color: black;
-    font-size: 20%;
-    box-shadow: 3px 3px 2px 2px gray;
-}
-
-.hint23 { height: 100%;
-    border: none;
-    border-radius: 20%;
-    background-color: gray;
-    color: black;
-    font-size: 20%;
-    box-shadow: 3px 3px 2px 2px gray;
-}
-
-.hint24 { height: 100%;
-    border: none;
-    border-radius: 20%;
-    background-color: gray;
-    color: black;
-    font-size: 20%;
-    box-shadow: 3px 3px 2px 2px gray;
-}
-
-.guess31 { height: 100%;
+.guess22 { height: 150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
@@ -299,7 +236,7 @@
     margin-right: 2%;
 }
 
-.guess32 { height: 100%;
+.guess23 { height: 150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
@@ -308,7 +245,7 @@
     margin-right: 2%;
 }
 
-.guess33 { height: 100%;
+.guess24 { height: 150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
@@ -317,7 +254,43 @@
     margin-right: 2%;
 }
 
-.guess34 { height: 100%;
+.hint21 { height: 150%;
+    border: none;
+    border-radius: 20%;
+    background-color: gray;
+    color: black;
+    font-size: 20%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint22 { height: 150%;
+    border: none;
+    border-radius: 20%;
+    background-color: gray;
+    color: black;
+    font-size: 20%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint23 { height: 150%;
+    border: none;
+    border-radius: 20%;
+    background-color: gray;
+    color: black;
+    font-size: 20%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint24 { height: 150%;
+    border: none;
+    border-radius: 20%;
+    background-color: gray;
+    color: black;
+    font-size: 20%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess31 { height: 150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
@@ -326,43 +299,7 @@
     margin-right: 2%;
 }
 
-.hint31 { height: 100%;
-    border: none;
-    border-radius: 20%;
-    background-color: gray;
-    color: black;
-    font-size: 20%;
-    box-shadow: 3px 3px 2px 2px gray;
-}
-
-.hint32 { height: 100%;
-    border: none;
-    border-radius: 20%;
-    background-color: gray;
-    color: black;
-    font-size: 20%;
-    box-shadow: 3px 3px 2px 2px gray;
-}
-
-.hint33 { height: 100%;
-    border: none;
-    border-radius: 20%;
-    background-color: gray;
-    color: black;
-    font-size: 20%;
-    box-shadow: 3px 3px 2px 2px gray;
-}
-
-.hint34 { height: 100%;
-    border: none;
-    border-radius: 20%;
-    background-color: gray;
-    color: black;
-    font-size: 20%;
-    box-shadow: 3px 3px 2px 2px gray;
-}
-
-.guess41 { height: 100%;
+.guess32 { height: 150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
@@ -371,7 +308,7 @@
     margin-right: 2%;
 }
 
-.guess42 { height: 100%;
+.guess33 { height: 150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
@@ -380,7 +317,7 @@
     margin-right: 2%;
 }
 
-.guess43 { height: 100%;
+.guess34 { height: 150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
@@ -389,7 +326,43 @@
     margin-right: 2%;
 }
 
-.guess44 { height: 100%;
+.hint31 { height: 150%;
+    border: none;
+    border-radius: 20%;
+    background-color: gray;
+    color: black;
+    font-size: 20%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint32 { height: 150%;
+    border: none;
+    border-radius: 20%;
+    background-color: gray;
+    color: black;
+    font-size: 20%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint33 { height: 150%;
+    border: none;
+    border-radius: 20%;
+    background-color: gray;
+    color: black;
+    font-size: 20%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint34 { height: 150%;
+    border: none;
+    border-radius: 20%;
+    background-color: gray;
+    color: black;
+    font-size: 20%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess41 { height: 150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
@@ -398,43 +371,7 @@
     margin-right: 2%;
 }
 
-.hint41 { height: 100%;
-    border: none;
-    border-radius: 20%;
-    background-color: gray;
-    color: black;
-    font-size: 20%;
-    box-shadow: 3px 3px 2px 2px gray;
-}
-
-.hint42 { height: 100%;
-    border: none;
-    border-radius: 20%;
-    background-color: gray;
-    color: black;
-    font-size: 20%;
-    box-shadow: 3px 3px 2px 2px gray;
-}
-
-.hint43 { height: 100%;
-    border: none;
-    border-radius: 20%;
-    background-color: gray;
-    color: black;
-    font-size: 20%;
-    box-shadow: 3px 3px 2px 2px gray;
-}
-
-.hint44 { height: 100%;
-    border: none;
-    border-radius: 20%;
-    background-color: gray;
-    color: black;
-    font-size: 20%;
-    box-shadow: 3px 3px 2px 2px gray;
-}
-
-.guess51 { height: 100%;
+.guess42 { height: 150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
@@ -443,7 +380,70 @@
     margin-right: 2%;
 }
 
-.guess52 { height: 100%;
+.guess43 { height: 150%;
+    border: none;
+    border-radius: 20%;
+    background-color: gray;
+    color: black;
+    font-size: 30%;
+    margin-right: 2%;
+}
+
+.guess44 { height: 150%;
+    border: none;
+    border-radius: 20%;
+    background-color: gray;
+    color: black;
+    font-size: 30%;
+    margin-right: 2%;
+}
+
+.hint41 { height: 150%;
+    border: none;
+    border-radius: 20%;
+    background-color: gray;
+    color: black;
+    font-size: 20%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint42 { height: 150%;
+    border: none;
+    border-radius: 20%;
+    background-color: gray;
+    color: black;
+    font-size: 20%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint43 { height: 150%;
+    border: none;
+    border-radius: 20%;
+    background-color: gray;
+    color: black;
+    font-size: 20%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.hint44 { height: 150%;
+    border: none;
+    border-radius: 20%;
+    background-color: gray;
+    color: black;
+    font-size: 20%;
+    box-shadow: 3px 3px 2px 2px gray;
+}
+
+.guess51 { height: 150%;
+    border: none;
+    border-radius: 20%;
+    background-color: gray;
+    color: black;
+    font-size: 30%;
+    margin-right: 2%;
+}
+
+.guess52 { height: 150%;
     border: none;
     border-radius: 20%;;
     color: black;
@@ -451,7 +451,7 @@
     margin-right: 2%;
 }
 
-.guess53 { height: 100%;
+.guess53 { height: 150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
@@ -460,7 +460,7 @@
     margin-right: 2%;
 }
 
-.guess54 { height: 100%;
+.guess54 { height: 150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
@@ -469,7 +469,7 @@
     margin-right: 2%;
 }
 
-.hint51 { height: 100%;
+.hint51 { height: 150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
@@ -478,7 +478,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.hint52 { height: 100%;
+.hint52 { height: 150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
@@ -487,7 +487,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.hint53 { height: 100%;
+.hint53 { height: 150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
@@ -496,7 +496,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.hint54 { height: 100%;
+.hint54 { height: 150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
@@ -505,7 +505,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.guess61 { height: 100%;
+.guess61 { height: 150%;
     margin-top: 75px;
     border: none;
     border-radius: 20%;
@@ -515,7 +515,7 @@
     margin-right: 2%;
 }
 
-.guess62 { height: 100%;
+.guess62 { height: 150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
@@ -524,7 +524,7 @@
     margin-right: 2%;
 }
 
-.guess63 { height: 100%;
+.guess63 { height: 150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
@@ -533,7 +533,7 @@
     margin-right: 2%;
 }
 
-.guess64 { height: 100%;
+.guess64 { height: 150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
@@ -542,7 +542,7 @@
     margin-right: 2%;
 }
 
-.hint61 { height: 100%;
+.hint61 { height: 150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
@@ -551,7 +551,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.hint62 { height: 100%;
+.hint62 { height: 150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
@@ -560,7 +560,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.hint63 { height: 100%;
+.hint63 { height: 150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
@@ -569,7 +569,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.hint64 { height: 100%;
+.hint64 { height: 150%;
     border: none;
     border-radius: 20%;
     background-color: gray;
