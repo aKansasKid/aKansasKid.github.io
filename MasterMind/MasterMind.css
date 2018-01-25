@@ -24,8 +24,6 @@
     font-size: 12px;
     margin-top: 0%;
 }
-
-
 .container {
     web-kit-appearance: none !important;
     position: relative;
@@ -75,7 +73,7 @@
     margin-right: 0%;
 }
 
-.selectRed { height:100%;
+.selectRed { height:200% !important;
     border: none;
     border-radius: 20%;
     background-color: red;
@@ -85,7 +83,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectBlue { height:100%;
+.selectBlue { height:200% !important;
     border: none;
     border-radius: 20%;
     background-color: blue;
@@ -95,7 +93,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectYellow { height:100%;
+.selectYellow { height:200% !important;
     border: none;
     border-radius: 20%;
     background-color: yellow;
@@ -105,7 +103,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectGreen { height:100%;
+.selectGreen { height:200% !important;
     border: none;
     border-radius: 20%;
     background-color: green;
@@ -115,7 +113,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectPurple { height:100%;
+.selectPurple { height:200% !important;
     border: none;
     border-radius: 20%;
     background-color: purple;
@@ -125,7 +123,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectOrange { height:100%;
+.selectOrange { height:200% !important;
     border: none;
     border-radius: 20%;
     background-color: orange;
@@ -135,7 +133,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectBlank { height:100%;
+.selectBlank { height:200% !important;
     border: none;
     border-radius: 20%;
     background-color: gray;
