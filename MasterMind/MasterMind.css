@@ -30,6 +30,7 @@
     web-kit-appearance: none !important;
     position: relative;
     text-align: left;
+    width: 100%;
 }
 .break1 {
     border-radius: 0;
