@@ -73,72 +73,72 @@
     margin-right: 0%;
 }
 
-.selectRed { height:200% !important;
+.selectRed { height:200% !important; width:4% !important;
     border: none;
     border-radius: 20%;
     background-color: red;
     color: black;
-    font-size: 40%;
+    font-size: 50%;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectBlue { height:200% !important;
+.selectBlue { height:200% !important; width:4% !important;
     border: none;
     border-radius: 20%;
     background-color: blue;
     color: black;
-    font-size: 40%;
+    font-size: 50%;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectYellow { height:200% !important;
+.selectYellow { height:200% !important; width:4% !important;
     border: none;
     border-radius: 20%;
     background-color: yellow;
     color: black;
-    font-size: 40%;
+    font-size: 50%;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectGreen { height:200% !important;
+.selectGreen { height:200% !important; width:4% !important;
     border: none;
     border-radius: 20%;
     background-color: green;
     color: black;
-    font-size: 40%;
+    font-size: 50%;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectPurple { height:200% !important;
+.selectPurple { height:200% !important; width:4% !important;
     border: none;
     border-radius: 20%;
     background-color: purple;
     color: black;
-    font-size: 40%;
+    font-size: 50%;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectOrange { height:200% !important;
+.selectOrange { height:200% !important; width:4% !important;
     border: none;
     border-radius: 20%;
     background-color: orange;
     color: black;
-    font-size: 40%;
+    font-size: 50%;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectBlank { height:200% !important;
+.selectBlank { height:200% !important; width:4% !important;
     border: none;
     border-radius: 20%;
     background-color: gray;
     color: black;
-    font-size: 40%;
+    font-size: 50%;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
 }
