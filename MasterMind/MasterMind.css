@@ -25,7 +25,7 @@
     margin-top: 0%;
 }
 .container {
-    web-kit-appearance: none !important;
+    webkit-appearance: none !important;
     position: relative;
     text-align: left;
     width: 100%;
