@@ -73,7 +73,7 @@
     margin-right: 0%;
 }
 
-.selectRed { height:200% !important; width:4% !important;
+.selectRed { height:400% !important; width:4% !important;
     border: none;
     border-radius: 20%;
     background-color: red;
@@ -83,7 +83,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectBlue { height:200% !important; width:4% !important;
+.selectBlue { height:400% !important; width:4% !important;
     border: none;
     border-radius: 20%;
     background-color: blue;
@@ -93,7 +93,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectYellow { height:200% !important; width:4% !important;
+.selectYellow { height:400% !important; width:4% !important;
     border: none;
     border-radius: 20%;
     background-color: yellow;
@@ -103,7 +103,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectGreen { height:200% !important; width:4% !important;
+.selectGreen { height:400% !important; width:4% !important;
     border: none;
     border-radius: 20%;
     background-color: green;
@@ -113,7 +113,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectPurple { height:200% !important; width:4% !important;
+.selectPurple { height:400% !important; width:4% !important;
     border: none;
     border-radius: 20%;
     background-color: purple;
@@ -123,7 +123,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectOrange { height:200% !important; width:4% !important;
+.selectOrange { height:400% !important; width:4% !important;
     border: none;
     border-radius: 20%;
     background-color: orange;
@@ -133,7 +133,7 @@
     box-shadow: 3px 3px 2px 2px gray;
 }
 
-.selectBlank { height:200% !important; width:4% !important;
+.selectBlank { height:400% !important; width:4% !important;
     border: none;
     border-radius: 20%;
     background-color: gray;
