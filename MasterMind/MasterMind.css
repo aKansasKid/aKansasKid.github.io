@@ -82,7 +82,7 @@
     text-align: center;
     margin-right: 3%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .selectBlue {
@@ -94,7 +94,7 @@
     text-align: center;
     margin-right: 3%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .selectYellow { 
@@ -106,7 +106,7 @@
     text-align: center;
     margin-right: 3%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .selectGreen { 
@@ -118,7 +118,7 @@
     text-align: center;
     margin-right: 3%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .selectPurple {
@@ -130,7 +130,7 @@
     text-align: center;
     margin-right: 3%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .selectOrange {
@@ -142,7 +142,7 @@
     text-align: center;
     margin-right: 3%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .selectBlank {
@@ -154,7 +154,7 @@
     text-align: center;
     margin-right: 3%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .guess11 { height: 100%;
@@ -166,7 +166,7 @@
     font-size: 100%;
     margin-right: 3%;
     text-align: center;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .guess12 { height: 100%;
@@ -177,7 +177,7 @@
     font-size: 100%;
     margin-right: 3%;
     text-align: center;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .guess13 { height: 100%;
@@ -188,7 +188,7 @@
     font-size: 100%;
     margin-right: 3%;
     text-align: center;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .guess14 { height: 100%;
@@ -199,7 +199,7 @@
     font-size: 100%;
     margin-right: 3%;
     text-align: center;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .hint11 { height: 100%;
@@ -209,7 +209,7 @@
     color: black;
     font-size: 25%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .hint12 { height: 100%;
@@ -219,7 +219,7 @@
     color: black;
     font-size: 25%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .hint13 { height: 100%;
@@ -229,7 +229,7 @@
     color: black;
     font-size: 25%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .hint14 { height: 100%;
@@ -239,7 +239,7 @@
     color: black;
     font-size: 25%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .guess21 { height: 100%;
@@ -250,7 +250,7 @@
     font-size: 100%;
     margin-right: 3%;
     text-align: center;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .guess22 { height: 100%;
@@ -261,7 +261,7 @@
     font-size: 100%;
     margin-right: 3%;
     text-align: center;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .guess23 { height: 100%;
@@ -272,7 +272,7 @@
     font-size: 100%;
     margin-right: 3%;
     text-align: center;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .guess24 { height: 100%;
@@ -283,7 +283,7 @@
     font-size: 100%;
     margin-right: 3%;
     text-align: center;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .hint21 { height: 100%;
@@ -293,7 +293,7 @@
     color: black;
     font-size: 25%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .hint22 { height: 100%;
@@ -303,7 +303,7 @@
     color: black;
     font-size: 25%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .hint23 { height: 100%;
@@ -313,7 +313,7 @@
     color: black;
     font-size: 25%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .hint24 { height: 100%;
@@ -323,7 +323,7 @@
     color: black;
     font-size: 25%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .guess31 { height: 100%;
@@ -334,7 +334,7 @@
     font-size: 100%;
     margin-right: 3%;
     text-align: center;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .guess32 { height: 100%;
@@ -345,7 +345,7 @@
     font-size: 100%;
     margin-right: 3%;
     text-align: center;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .guess33 { height: 100%;
@@ -356,7 +356,7 @@
     font-size: 100%;
     margin-right: 3%;
     text-align: center;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .guess34 { height: 100%;
@@ -367,7 +367,7 @@
     font-size: 100%;
     margin-right: 3%;
     text-align: center;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .hint31 { height: 100%;
@@ -377,7 +377,7 @@
     color: black;
     font-size: 25%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .hint32 { height: 100%;
@@ -387,7 +387,7 @@
     color: black;
     font-size: 25%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .hint33 { height: 100%;
@@ -397,7 +397,7 @@
     color: black;
     font-size: 25%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .hint34 { height: 100%;
@@ -407,7 +407,7 @@
     color: black;
     font-size: 25%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .guess41 { height: 100%;
@@ -418,7 +418,7 @@
     font-size: 100%;
     margin-right: 3%;
     text-align: center;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .guess42 { height: 100%;
@@ -429,7 +429,7 @@
     font-size: 100%;
     margin-right: 3%;
     text-align: center;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .guess43 { height: 100%;
@@ -440,7 +440,7 @@
     font-size: 100%;
     margin-right: 3%;
     text-align: center;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .guess44 { height: 100%;
@@ -451,7 +451,7 @@
     font-size: 100%;
     margin-right: 3%;
     text-align: center;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .hint41 { height: 100%;
@@ -461,7 +461,7 @@
     color: black;
     font-size: 25%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .hint42 { height: 100%;
@@ -471,7 +471,7 @@
     color: black;
     font-size: 25%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .hint43 { height: 100%;
@@ -481,7 +481,7 @@
     color: black;
     font-size: 25%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .hint44 { height: 100%;
@@ -491,7 +491,7 @@
     color: black;
     font-size: 25%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .guess51 { height: 100%;
@@ -502,7 +502,7 @@
     font-size: 100%;
     margin-right: 3%;
     text-align: center;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .guess52 { height: 100%;
@@ -512,7 +512,7 @@
     font-size: 100%;
     margin-right: 3%;
     text-align: center;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .guess53 { height: 100%;
@@ -523,7 +523,7 @@
     font-size: 100%;
     margin-right: 3%;
     text-align: center;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .guess54 { height: 100%;
@@ -534,7 +534,7 @@
     font-size: 100%;
     margin-right: 3%;
     text-align: center;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .hint51 { height: 100%;
@@ -544,7 +544,7 @@
     color: black;
     font-size: 25%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .hint52 { height: 100%;
@@ -554,7 +554,7 @@
     color: black;
     font-size: 25%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .hint53 { height: 100%;
@@ -564,7 +564,7 @@
     color: black;
     font-size: 25%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .hint54 { height: 100%;
@@ -574,7 +574,7 @@
     color: black;
     font-size: 25%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .guess61 { height: 100%;
@@ -586,7 +586,7 @@
     font-size: 100%;
     margin-right: 3%;
     text-align: center;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .guess62 { height: 100%;
@@ -597,7 +597,7 @@
     font-size: 100%;
     margin-right: 3%;
     text-align: center;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .guess63 { height: 100%;
@@ -608,7 +608,7 @@
     font-size: 100%;
     margin-right: 3%;
     text-align: center;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .guess64 { height: 100%;
@@ -619,7 +619,7 @@
     font-size: 100%;
     margin-right: 3%;
     text-align: center;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .hint61 { height: 100%;
@@ -629,7 +629,7 @@
     color: black;
     font-size: 25%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .hint62 { height: 100%;
@@ -639,7 +639,7 @@
     color: black;
     font-size: 25%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .hint63 { height: 100%;
@@ -649,7 +649,7 @@
     color: black;
     font-size: 25%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
 
 .hint64 { height: 100%;
@@ -659,5 +659,5 @@
     color: black;
     font-size: 25%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 1% 1%;
+    padding: 1% 3%;
 }
