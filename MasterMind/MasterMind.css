@@ -27,8 +27,7 @@
 .container {
     webkit-appearance: none !important;
     position: relative;
-    text-align: left;
-    width: 80%;
+    text-align: center;
 }
 .break1 {
     border-radius: 0;
