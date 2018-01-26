@@ -74,13 +74,12 @@
 }
 
 .selectRed { 
-    -webkit-appearance: none;
-    height:400% !important; width:4% !important;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: red;
     color: black;
     font-size: 50%;
+    text-align: center;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
     padding: 2% 2%;
