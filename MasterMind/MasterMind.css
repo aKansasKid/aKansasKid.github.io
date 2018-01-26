@@ -82,121 +82,129 @@
     text-align: center;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
-    padding: 2% 2%;
+    padding: 1% 1%;
 }
 
 .selectBlue {
-    -webkit-appearance: none;
-    height:400% !important; width:4% !important;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: blue;
     color: black;
     font-size: 50%;
+    text-align: center;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
+    padding: 1% 1%;
 }
 
 .selectYellow { 
-    -webkit-appearance: none;
-    height:400% !important; width:4% !important;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: yellow;
     color: black;
     font-size: 50%;
+    text-align: center;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
+    padding: 1% 1%;
 }
 
 .selectGreen { 
-    -webkit-appearance: none;
-    height:400% !important; width:4% !important;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: green;
     color: black;
     font-size: 50%;
+    text-align: center;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
+    padding: 1% 1%;
 }
 
 .selectPurple {
-    -webkit-appearance: none;
-    height:400% !important; width:4% !important;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: purple;
     color: black;
     font-size: 50%;
+    text-align: center;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
+    padding: 1% 1%;
 }
 
 .selectOrange {
-    -webkit-appearance: none;
-    height:400% !important; width:4% !important;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: orange;
     color: black;
     font-size: 50%;
+    text-align: center;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
+    padding: 1% 1%;
 }
 
 .selectBlank {
-    -webkit-appearance: none;
-    height:400% !important; width:4% !important;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 50%;
+    text-align: center;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
+    padding: 1% 1%;
 }
 
 .guess11 { height: 100%;
     margin-bottom: 75px;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 40%;
     margin-right: 0%;
+    text-align: center;
+    padding: 1% 1%;
 }
 
 .guess12 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 40%;
     margin-right: 0%;
+    text-align: center;
+    padding: 1% 1%;
 }
 
 .guess13 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 40%;
     margin-right: 0%;
+    text-align: center;
+    padding: 1% 1%;
 }
 
 .guess14 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 40%;
     margin-right: 0%;
+    text-align: center;
+    padding: 1% 1%;
 }
 
 .hint11 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 20%;
@@ -205,7 +213,7 @@
 
 .hint12 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 20%;
@@ -214,7 +222,7 @@
 
 .hint13 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 20%;
@@ -223,7 +231,7 @@
 
 .hint14 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 20%;
@@ -232,43 +240,51 @@
 
 .guess21 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 40%;
     margin-right: 0%;
+    text-align: center;
+    padding: 1% 1%;
 }
 
 .guess22 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 40%;
     margin-right: 0%;
+    text-align: center;
+    padding: 1% 1%;
 }
 
 .guess23 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 40%;
     margin-right: 0%;
+    text-align: center;
+    padding: 1% 1%;
 }
 
 .guess24 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 40%;
     margin-right: 0%;
+    text-align: center;
+    padding: 1% 1%;
 }
 
 .hint21 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 20%;
@@ -277,7 +293,7 @@
 
 .hint22 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 20%;
@@ -286,7 +302,7 @@
 
 .hint23 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 20%;
@@ -295,7 +311,7 @@
 
 .hint24 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 20%;
@@ -304,43 +320,51 @@
 
 .guess31 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 40%;
     margin-right: 0%;
+    text-align: center;
+    padding: 1% 1%;
 }
 
 .guess32 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 40%;
     margin-right: 0%;
+    text-align: center;
+    padding: 1% 1%;
 }
 
 .guess33 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 40%;
     margin-right: 0%;
+    text-align: center;
+    padding: 1% 1%;
 }
 
 .guess34 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 40%;
     margin-right: 0%;
+    text-align: center;
+    padding: 1% 1%;
 }
 
 .hint31 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 20%;
@@ -349,7 +373,7 @@
 
 .hint32 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 20%;
@@ -358,7 +382,7 @@
 
 .hint33 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 20%;
@@ -367,7 +391,7 @@
 
 .hint34 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 20%;
@@ -376,43 +400,51 @@
 
 .guess41 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 40%;
     margin-right: 0%;
+    text-align: center;
+    padding: 1% 1%;
 }
 
 .guess42 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 40%;
     margin-right: 0%;
+    text-align: center;
+    padding: 1% 1%;
 }
 
 .guess43 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 40%;
     margin-right: 0%;
+    text-align: center;
+    padding: 1% 1%;
 }
 
 .guess44 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 40%;
     margin-right: 0%;
+    text-align: center;
+    padding: 1% 1%;
 }
 
 .hint41 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 20%;
@@ -421,7 +453,7 @@
 
 .hint42 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 20%;
@@ -430,7 +462,7 @@
 
 .hint43 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 20%;
@@ -439,7 +471,7 @@
 
 .hint44 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 20%;
@@ -448,42 +480,50 @@
 
 .guess51 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 40%;
     margin-right: 0%;
+    text-align: center;
+    padding: 1% 1%;
 }
 
 .guess52 { height: 100%;
     border: none;
-    border-radius: 20%;;
+    border-radius: 50%;;
     color: black;
     font-size: 40%;
     margin-right: 0%;
+    text-align: center;
+    padding: 1% 1%;
 }
 
 .guess53 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 40%;
     margin-right: 0%;
+    text-align: center;
+    padding: 1% 1%;
 }
 
 .guess54 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 40%;
     margin-right: 0%;
+    text-align: center;
+    padding: 1% 1%;
 }
 
 .hint51 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 20%;
@@ -492,7 +532,7 @@
 
 .hint52 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 20%;
@@ -501,7 +541,7 @@
 
 .hint53 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 20%;
@@ -510,7 +550,7 @@
 
 .hint54 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 20%;
@@ -520,43 +560,51 @@
 .guess61 { height: 100%;
     margin-top: 75px;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 40%;
     margin-right: 0%;
+    text-align: center;
+    padding: 1% 1%;
 }
 
 .guess62 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 40%;
     margin-right: 0%;
+    text-align: center;
+    padding: 1% 1%;
 }
 
 .guess63 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 40%;
     margin-right: 0%;
+    text-align: center;
+    padding: 1% 1%;
 }
 
 .guess64 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 40%;
     margin-right: 0%;
+    text-align: center;
+    padding: 1% 1%;
 }
 
 .hint61 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 20%;
@@ -565,7 +613,7 @@
 
 .hint62 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 20%;
@@ -574,7 +622,7 @@
 
 .hint63 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 20%;
@@ -583,7 +631,7 @@
 
 .hint64 { height: 100%;
     border: none;
-    border-radius: 20%;
+    border-radius: 50%;
     background-color: gray;
     color: black;
     font-size: 20%;
