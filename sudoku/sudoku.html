@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+
+   <head>
+      <meta charset="utf-8">
+      <title>Sudoku Generator</title>
+      <link rel="stylesheet" href="C:\Users\Miles\Javascript\Sudoku\Sudoku.css">
+   </head>
+	
+   <body>
+	
+      <header class="header">
+         <h4>Sudoku</h4>
+
+
+<div class="container">
+
+<div class="grid>
+
+<div class="grid1">
+<textarea class="grid" id="grid11" name="grid11" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid12" name="grid12" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid13" name="grid13" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid14" name="grid14" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid15" name="grid15" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid16" name="grid16" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid17" name="grid17" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid18" name="grid18" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid19" name="grid19" rows="3" cols="3" ></textarea>
+</div>
+<div class="grid2">
+<textarea class="grid" id="grid21" name="grid21" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid22" name="grid22" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid23" name="grid23" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid24" name="grid24" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid25" name="grid25" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid26" name="grid26" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid27" name="grid27" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid28" name="grid28" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid29" name="grid29" rows="3" cols="3" ></textarea>
+</div>
+<div class="grid3">
+<textarea class="grid" id="grid31" name="grid31" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid32" name="grid32" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid33" name="grid33" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid34" name="grid34" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid35" name="grid35" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid36" name="grid36" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid37" name="grid37" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid38" name="grid38" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid39" name="grid39" rows="3" cols="3" ></textarea>
+</div>
+<div class="grid4">
+<textarea class="grid" id="grid41" name="grid41" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid42" name="grid42" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid43" name="grid43" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid44" name="grid44" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid45" name="grid45" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid46" name="grid46" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid47" name="grid47" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid48" name="grid48" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid49" name="grid49" rows="3" cols="3" ></textarea>
+</div>
+<div class="grid5">
+<textarea class="grid" id="grid51" name="grid51" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid52" name="grid52" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid53" name="grid53" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid54" name="grid54" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid55" name="grid55" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid56" name="grid56" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid57" name="grid57" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid58" name="grid58" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid59" name="grid59" rows="3" cols="3" ></textarea>
+</div>
+<div class="grid6">
+<textarea class="grid" id="grid61" name="grid61" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid62" name="grid62" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid63" name="grid63" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid64" name="grid64" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid65" name="grid65" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid66" name="grid66" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid67" name="grid67" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid68" name="grid68" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid69" name="grid69" rows="3" cols="3" ></textarea>
+</div>
+<div class="grid7">
+<textarea class="grid" id="grid71" name="grid71" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid72" name="grid72" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid73" name="grid73" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid74" name="grid74" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid75" name="grid75" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid76" name="grid76" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid77" name="grid77" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid78" name="grid78" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid79" name="grid79" rows="3" cols="3" ></textarea>
+</div>
+<div class="grid8">
+<textarea class="grid" id="grid81" name="grid81" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid82" name="grid82" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid83" name="grid83" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid84" name="grid84" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid85" name="grid85" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid86" name="grid86" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid87" name="grid87" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid88" name="grid88" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid89" name="grid89" rows="3" cols="3" ></textarea>
+</div>
+<div class="grid9">
+<textarea class="grid" id="grid91" name="grid91" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid92" name="grid92" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid93" name="grid93" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid94" name="grid94" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid95" name="grid95" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid96" name="grid96" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid97" name="grid97" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid98" name="grid98" rows="3" cols="3" ></textarea>
+<textarea class="grid" id="grid99" name="grid99" rows="3" cols="3" ></textarea>
+</div>
+</div>
+
+
+
+<div class="Candidates">
+<button class="Candidates" name="Candidates">Candidates</button>
+</div>
+       
+<div class="footer">    
+            <p>Created by <a href="#">aKansasKid</a></p>
+</div>  
+      <script src="C:\Users\Miles\Javascript\Sudoku\Sudoku.js"></script>
+		
+   </body>
+</html>
