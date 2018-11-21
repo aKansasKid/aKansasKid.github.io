@@ -166,7 +166,7 @@ function displayJumble(){
                     var temp = tempWord;
                     tempWord = temp.substring(0, --ind + 1) + temp.substring(++ind + 1);
                 }
-                if( jumbleWord.substring(0,1) != displayWords[i].substring(0,1) ) {
+                if( jumbleWord.substring(0,2) != displayWords[i].substring(0,2) ) {
                     goodJumble = true;
                     jumble[i] = jumbleWord;
                 }
@@ -188,7 +188,7 @@ function displayJumble(){
 function getWords(wordList)
     {
 wordList[1] = "all".toUpperCase();
-wordList[2] = "am".toUpperCase();
+wordList[2] = "most".toUpperCase();
 wordList[3] = "and".toUpperCase();
 wordList[4] = "ball".toUpperCase();
 wordList[5] = "bed".toUpperCase();
