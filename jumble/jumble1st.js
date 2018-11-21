@@ -1,7 +1,7 @@
 var displayWords = new Array();
 var jumble = new Array();
 
-var numWords = 6254;
+var numWords = 93;
 var wordList = new Array();
    getWords(wordList);
 
