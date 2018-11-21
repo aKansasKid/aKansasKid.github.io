@@ -1,7 +1,7 @@
 var displayWords = new Array();
 var jumble = new Array();
 
-var numWords = 100;
+var numWords = 128;
 var wordList = new Array();
    getWords(wordList);
 
@@ -188,7 +188,7 @@ function displayJumble(){
 function getWords(wordList)
     {
 wordList[1] = "all".toUpperCase();
-wordList[2] = "most".toUpperCase();
+wordList[2] = "am".toUpperCase();
 wordList[3] = "and".toUpperCase();
 wordList[4] = "ball".toUpperCase();
 wordList[5] = "bed".toUpperCase();
@@ -287,6 +287,34 @@ wordList[97] = "open".toUpperCase();
 wordList[98] = "four".toUpperCase();
 wordList[99] = "five".toUpperCase();
 wordList[100] = "three".toUpperCase();
+wordList[101] = "ask".toUpperCase();
+wordList[102] = "clean".toUpperCase();
+wordList[103] = "deep".toUpperCase();
+wordList[104] = "dress".toUpperCase();
+wordList[105] = "give".toUpperCase();
+wordList[106] = "long".toUpperCase();
+wordList[107] = "short".toUpperCase();
+wordList[108] = "read".toUpperCase();
+wordList[109] = "only".toUpperCase();
+wordList[110] = "tell".toUpperCase();
+wordList[111] = "lion".toUpperCase();
+wordList[112] = "kind".toUpperCase();
+wordList[113] = "new".toUpperCase();
+wordList[114] = "yard".toUpperCase();
+wordList[115] = "cold".toUpperCase();
+wordList[116] = "fast".toUpperCase();
+wordList[117] = "help".toUpperCase();
+wordList[118] = "wish".toUpperCase();
+wordList[119] = "rock".toUpperCase();
+wordList[120] = "bath".toUpperCase();
+wordList[121] = "take".toUpperCase();
+wordList[122] = "high".toUpperCase();
+wordList[123] = "low".toUpperCase();
+wordList[124] = "into".toUpperCase();
+wordList[125] = "with".toUpperCase();
+wordList[126] = "girl".toUpperCase();
+wordList[127] = "some".toUpperCase();
+wordList[128] = "brown".toUpperCase();
 
     }
 
