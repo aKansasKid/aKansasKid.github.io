@@ -5,6 +5,8 @@ var wordList = new Array();
 getWords(wordList);
 
 
+var AkeyButton = document.querySelector('button.Akey');  
+
 mainLoop(wordList);
 
 function mainLoop(wordList){
@@ -12,6 +14,12 @@ function mainLoop(wordList){
        keyPressed.textContent = 'ABC';
     
 } /* End of function mainLoop */
+
+
+AkeyButton.onclick = function() {
+   var currentLetter = document.querySelector('Akey');
+   currentLetter.textContent = 'A';
+}
 
 function getWords(wordList)
     {
