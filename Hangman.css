@@ -2,6 +2,15 @@
     position: relative;
     text-align: left;
 }
+.letter {
+    color: black;
+    font-size: xx-large;
+}
+.keyPressed {
+    color: red;
+    font-size: xx-large;
+}
+    
 
 .key {
     border: 2px solid black;
