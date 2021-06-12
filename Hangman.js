@@ -9,7 +9,7 @@ mainLoop(wordList);
 
 function mainLoop(wordList){
    var keyPressed = document.querySelector('label.keyPressed');
-       hintWord.textContent = 'ABC';
+       keyPressed.textContent = 'ABC';
     
 } /* End of function mainLoop */
 
