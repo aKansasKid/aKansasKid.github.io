@@ -9,14 +9,16 @@ var AkeyButton = document.querySelector('button.Akey');
 
 mainLoop(wordList);
 
-function mainLoop(wordList){
+function mainLoop(wordList)
+{
    var keyPressed = document.querySelector('label.keyPressed');
        keyPressed.textContent = 'ABCD';
     
 } /* End of function mainLoop */
 
 
-AkeyButton.onclick = function() {
+AkeyButton.onclick = function() 
+{
    var keyPressed = document.querySelector('label.keyPressed');
        keyPressed.textContent = 'A';
 }
