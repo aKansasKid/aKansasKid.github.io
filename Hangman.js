@@ -17,7 +17,7 @@ function mainLoop(wordList){
 
 
 AkeyButton.onclick = function() {
-   var currentLetter = document.querySelector('Akey');
+   var currentLetter = document.querySelector('button.Akey');
    currentLetter.textContent = 'A';
 }
 
