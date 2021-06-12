@@ -4,6 +4,15 @@ var numWords = 6254;
 var wordList = new Array();
 getWords(wordList);
 
+
+mainLoop(wordList);
+
+function mainLoop(wordList){
+   var keyPressed = document.querySelector('label.keyPressed');
+       hintWord.textContent = 'ABC';
+    
+} /* End of function mainLoop */
+
 function getWords(wordList)
     {
 wordList[1] = "aback".toUpperCase();
