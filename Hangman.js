@@ -11,14 +11,14 @@ mainLoop(wordList);
 
 function mainLoop(wordList){
    var keyPressed = document.querySelector('label.keyPressed');
-       keyPressed.textContent = 'ABC';
+       keyPressed.textContent = 'ABCD';
     
 } /* End of function mainLoop */
 
 
 AkeyButton.onclick = function() {
-   var currentLetter = document.querySelector('button.Akey');
-   currentLetter.textContent = 'A';
+   var keyPressed = document.querySelector('label.keyPressed');
+       keyPressed.textContent = 'A';
 }
 
 function getWords(wordList)
