@@ -17,7 +17,7 @@ function mainLoop(wordList)
 
 aKeyButton.onclick = function() 
 {
-       keyPressed.textContent = aKeyButton.textContent;
+       keyPressed.textContent = 'A';
 }
 
 function getWords(wordList)
