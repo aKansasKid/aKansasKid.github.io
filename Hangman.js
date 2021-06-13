@@ -15,7 +15,7 @@ function mainLoop(wordList)
 } /* End of function mainLoop */
 
 
-var aKeyButton = document.querySelector('button.Akey');  
+var aKeyButton = document.querySelector('button.aKey');  
 aKeyButton.onclick = function() 
 {
    var keyPressed = document.querySelector('label.keyPressed');
