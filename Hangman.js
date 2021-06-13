@@ -19,7 +19,7 @@ var aKeyButton = document.querySelector('button.aKey');
 aKeyButton.onclick = function() 
 {
    var keyPressed = document.querySelector('label.keyPressed');
-       keyPressed.textContent = 'A';
+       keyPressed.textContent = aKeyButton.textContent;
 }
 
 function getWords(wordList)
