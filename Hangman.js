@@ -4,21 +4,19 @@ var numWords = 6254;
 var wordList = new Array();
 getWords(wordList);
 
+var keyPressed = document.querySelector('label.keyPressed');
+var aKeyButton = document.querySelector('button.aKey');
 
 mainLoop(wordList);
 
 function mainLoop(wordList)
 {
-   var keyPressed = document.querySelector('label.keyPressed');
        keyPressed.textContent = 'ABCD';
     
 } /* End of function mainLoop */
 
-
-var aKeyButton = document.querySelector('button.aKey');  
 aKeyButton.onclick = function() 
 {
-   var keyPressed = document.querySelector('label.keyPressed');
        keyPressed.textContent = aKeyButton.textContent;
 }
 
