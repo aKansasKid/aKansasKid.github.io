@@ -1,0 +1,470 @@
+.container {
+    position: relative;
+    text-align: left;
+}
+.letter {
+    color: black;
+    font-size: xx-large;
+}
+.keyPressed {
+    color: red;
+    font-size: xx-large;
+}  
+.missesLabel {
+    color: black;
+    font-size: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.missesLeft {
+    color: red;
+    font-size: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.outcome{
+    color: blue;
+    font-size: 72px;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+    
+.letter1 {
+    color: black;
+    font-size: 300%;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+.letter2 {
+    color: black;
+    font-size: 300%;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+.letter3 {
+    color: black;
+    font-size: 300%;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+.letter4 {
+    color: black;
+    font-size: 300%;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+.letter5 {
+    color: black;
+    font-size: 300%;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+.letter6 {
+    color: black;
+    font-size: 300%;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+.letter7 {
+    color: black;
+    font-size: 300%;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+.letter8 {
+    color: black;
+    font-size: 300%;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+.letter9 {
+    color: black;
+    font-size: 300%;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+.letter10 {
+    color: black;
+    font-size: 300%;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+.letter11 {
+    color: black;
+    font-size: 300%;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+.letter12 {
+    color: black;
+    font-size: 300%;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+.letter13 {
+    color: black;
+    font-size: 300%;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+.letter14 {
+    color: black;
+    font-size: 300%;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+.letter15 {
+    color: black;
+    font-size: 300%;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+.letter16 {
+    color: black;
+    font-size: 300%;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+.letter17 {
+    color: black;
+    font-size: 300%;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+.letter18 {
+    color: black;
+    font-size: 300%;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+.word1 {
+    color: black;
+    font-size: 200%;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+.word2 {
+    color: black;
+    font-size: 200%;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+.word3 {
+    color: black;
+    font-size: 200%;
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}  
+.aKey  {
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 400%;
+    margin-right: 0.5%;
+    margin-top: 4%;
+    padding: 8px 5%;
+    width: 12%;
+    box-shadow: 4px 4px 4px 4px lightgray;
+}   
+.bKey {
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 400%;
+    margin-right: 0.5%;
+    margin-top: 4%;
+    padding: 8px 5%;
+    width: 12%;
+    box-shadow: 4px 4px 4px 4px lightgray;
+}   
+.cKey {
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 400%;
+    margin-right: 0.5%;
+    margin-top: 4%;
+    padding: 8px 5%;
+    width: 12%;
+    box-shadow: 4px 4px 4px 4px lightgray;
+}   
+.dKey {
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 400%;
+    margin-right: 0.5%;
+    margin-top: 4%;
+    padding: 8px 5%;
+    width: 12%;
+    box-shadow: 4px 4px 4px 4px lightgray;
+}   
+.eKey {
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 400%;
+    margin-right: 0.5%;
+    margin-top: 4%;
+    padding: 8px 5%;
+    width: 12%;
+    box-shadow: 4px 4px 4px 4px lightgray;
+}   
+.fKey {
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 400%;
+    margin-right: 0.5%;
+    margin-top: 4%;
+    padding: 8px 5%;
+    width: 12%;
+    box-shadow: 4px 4px 4px 4px lightgray;
+}   
+.gKey {
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 400%;
+    margin-right: 0.5%;
+    margin-top: 4%;
+    padding: 8px 5%;
+    width: 12%;
+    box-shadow: 4px 4px 4px 4px lightgray;
+}   
+.hKey {
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 400%;
+    margin-right: 0.5%;
+    margin-top: 4%;
+    padding: 8px 5%;
+    width: 12%;
+    box-shadow: 4px 4px 4px 4px lightgray;
+}   
+.iKey {
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 400%;
+    margin-right: 0.5%;
+    margin-top: 4%;
+    padding: 8px 5%;
+    width: 12%;
+    box-shadow: 4px 4px 4px 4px lightgray;
+}   
+.jKey {
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 400%;
+    margin-right: 0.5%;
+    margin-top: 4%;
+    padding: 8px 5%;
+    width: 12%;
+    box-shadow: 4px 4px 4px 4px lightgray;
+}   
+.kKey {
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 400%;
+    margin-right: 0.5%;
+    margin-top: 4%;
+    padding: 8px 5%;
+    width: 12%;
+    box-shadow: 4px 4px 4px 4px lightgray;
+}   
+.lKey {
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 400%;
+    margin-right: 0.5%;
+    margin-top: 4%;
+    padding: 8px 5%;
+    width: 12%;
+    box-shadow: 4px 4px 4px 4px lightgray;
+}   
+.mKey {
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 400%;
+    margin-right: 0.5%;
+    margin-top: 4%;
+    padding: 8px 5%;
+    width: 12%;
+    box-shadow: 4px 4px 4px 4px lightgray;
+}   
+.nKey {
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 400%;
+    margin-right: 0.5%;
+    margin-top: 4%;
+    padding: 8px 5%;
+    width: 12%;
+    box-shadow: 4px 4px 4px 4px lightgray;
+}   
+.oKey {
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 400%;
+    margin-right: 0.5%;
+    margin-top: 4%;
+    padding: 8px 5%;
+    width: 12%;
+    box-shadow: 4px 4px 4px 4px lightgray;
+}   
+.pKey {
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 400%;
+    margin-right: 0.5%;
+    margin-top: 4%;
+    padding: 8px 5%;
+    width: 12%;
+    box-shadow: 4px 4px 4px 4px lightgray;
+}   
+.qKey {
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 400%;
+    margin-right: 0.5%;
+    margin-top: 4%;
+    padding: 8px 5%;
+    width: 12%;
+    box-shadow: 4px 4px 4px 4px lightgray;
+}   
+.rKey {
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 400%;
+    margin-right: 0.5%;
+    margin-top: 4%;
+    padding: 8px 5%;
+    width: 12%;
+    box-shadow: 4px 4px 4px 4px lightgray;
+}   
+.sKey {
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 400%;
+    margin-right: 0.5%;
+    margin-top: 4%;
+    padding: 8px 5%;
+    width: 12%;
+    box-shadow: 4px 4px 4px 4px lightgray;
+}   
+.tKey {
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 400%;
+    margin-right: 0.5%;
+    margin-top: 4%;
+    padding: 8px 5%;
+    width: 12%;
+    box-shadow: 4px 4px 4px 4px lightgray;
+}   
+.uKey {
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 400%;
+    margin-right: 0.5%;
+    margin-top: 4%;
+    padding: 8px 5%;
+    width: 12%;
+    box-shadow: 4px 4px 4px 4px lightgray;
+}   
+.vKey {
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 400%;
+    margin-right: 0.5%;
+    margin-top: 4%;
+    padding: 8px 5%;
+    width: 12%;
+    box-shadow: 4px 4px 4px 4px lightgray;
+}   
+.wKey {
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 400%;
+    margin-right: 0.5%;
+    margin-top: 4%;
+    padding: 8px 5%;
+    width: 12%;
+    box-shadow: 4px 4px 4px 4px lightgray;
+}   
+.xKey {
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 400%;
+    margin-right: 0.5%;
+    margin-top: 4%;
+    padding: 8px 5%;
+    width: 12%;
+    box-shadow: 4px 4px 4px 4px lightgray;
+}   
+.yKey {
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 400%;
+    margin-right: 0.5%;
+    margin-top: 4%;
+    padding: 8px 5%;
+    width: 12%;
+    box-shadow: 4px 4px 4px 4px lightgray;
+}   
+.zKey {
+    border: 2px solid black;
+    border-radius: 40px;
+    background-color: gray;
+    color: white;
+    font-size: 400%;
+    margin-right: 0.5%;
+    margin-top: 4%;
+    padding: 8px 5%;
+    width: 12%;
+    box-shadow: 4px 4px 4px 4px lightgray;
+}
