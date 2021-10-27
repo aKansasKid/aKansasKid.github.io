@@ -1,0 +1,33 @@
+<!DOCTYPE html>  
+
+<html>
+
+   <head>
+      <meta charset="utf-8">
+      <title>JavaScript Animation</title>   
+   </head>
+   
+   <body>   
+
+      <div class = "container">
+            
+      <div class="images">
+         <img id = "background" src = "background.png" onclick = "flapBird()"; />      
+         <img id = "top" src = "top.png" />
+         <img id = "bottom" src = "bottom.png" />
+         <img id = "bird" src = "bird1.png" />
+      </div> 
+      
+      <div class = "buttons">
+         <p>Click the buttons below to handle animation</p>
+         <label class="scoreLabel"; style="position:absolute; left: 0px; top:10px;">Score: </label>
+         <label class="highScoreLabel"; style="position:absolute; left: 0px; top:40px;">HighScore: </label>
+         <button class="Flap" name="Flap" onclick = "flapBird()"; style="position: absolute; left: 100px; bottom: 100px; height: 40px; width:100px;">Flap</button>>
+         <button class="Start" name="Start" onclick = "update();" style="position: absolute; left: 20px; bottom: 20px;">Start</button>
+         <button class="Stop" name="Stop" onclick = "stop();" style="position: absolute; left: 200px; bottom: 20px;">Stop</button>
+      </div>
+
+      <script src = "FlappyBird.js"></script>   
+      
+   </body>
+</html>
