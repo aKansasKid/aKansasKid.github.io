@@ -4,13 +4,14 @@
             var imgBottom = null;
             var scoreBoard = null;
             var animate ;
-            var scrWidth = Math.min(window.innerWidth, 400) ;
+            //var scrWidth = Math.min(window.innerWidth, 400) ;
+            var scrWidth = window.innerWidth;
             var scrHeight = window.innerHeight;
             
-            var gap = 130;
-            var flapStrength = 2;
-            var gravity = 0.1;
-            var speed = 12;
+            var gap = 0.1 * scrHeight;
+            var flapStrength = 2.2;
+            var gravity = 0.15;
+            var speed = 15;
             var num = 0;
             
             var score = 0;
@@ -31,8 +32,8 @@
                var pipeRight;
                var pipeTop;
                var pipeBottom;
-               var pipeWidth = 98;
-               var Pipeeight = 500;
+               var pipeWidth = 0.2 * scrWidth;
+               var pipeHeight = 0.7 * scrHeight;
             
             //initialize images
             function init(){               
@@ -49,7 +50,8 @@
                imgBackground.style.position= 'absolute'; 
                imgBackground.style.left = '0px'; 
                imgBackground.style.top = '0px';
-               imgBackground.style.height = window.innerHeight;
+               num = scrHeight;
+               imgBackground.style.height = num.toString() + '%';
                
                scoreBoard = document.querySelector('label.scoreLabel');
                scoreBoard.textContent = 'Score: ' + score.toString();
@@ -71,17 +73,21 @@
                imgBottom.style.top = num.toString() + 'px';
                num = scrHeight - parseInt(imgBottom.style.top);
                imgBottom.style.height = num.toString() + 'px';
-               imgBottom.style.width = '120px';
+               num = 0.2 * scrWidth;
+               imgBottom.style.width = num.toString() + 'px';
                
                imgTop.style.left = scrWidth.toString() + 'px'; 
                num = (scrHeight - parseInt(imgBottom.style.top) + gap);
                imgTop.style.bottom = num.toString() + 'px'; 
                imgTop.style.height = '100%';
-               imgTop.style.width = '120px';
+               num = 0.2 * scrWidth;
+               imgTop.style.width = num.toString() + 'px';
             }            
-            function resetBird(){               
-               imgBird.style.left = '75px'; 
-               imgBird.style.top = '250px';
+            function resetBird(){   
+               num = 0.2 * scrWidth;
+               imgBird.style.left = num.toString() + 'px';
+               num = 0.3 * scrHeight;
+               imgBird.style.top = num.toString() + 'px';
                birdDead = false; 
                birdVelocity = 0;
                
