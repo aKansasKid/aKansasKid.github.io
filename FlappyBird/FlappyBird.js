@@ -11,7 +11,7 @@
             var gap = 0.15 * scrHeight;
             var flapStrength = 0.0025 * scrHeight;
             var gravity = 0.15;
-            var speed = 15;
+            var speed = 10;
             var num = 0;
             
             var score = 0;
@@ -120,9 +120,9 @@
                    //reset();
                }
                
-                   num = parseInt(imgTop.style.left) -(0.005) * scrWidth;
+                   num = parseInt(imgTop.style.left) -( (0.005) * scrWidth);
                imgTop.style.left = num.toString() + 'px';
-                   num = parseInt(imgBottom.style.left) -(0.005) * scrWidth;
+                   num = parseInt(imgBottom.style.left) -( (0.005) * scrWidth);
                imgBottom.style.left = num.toString() + 'px';
                if( parseInt(imgTop.style.left) < (-1*pipeWidth) ) {
                   resetPipes();
