@@ -9,7 +9,7 @@
             var scrHeight = window.innerHeight;
             
             var gap = 0.15 * scrHeight;
-            var flapStrength = 0.03 * scrHeight;
+            var flapStrength = 0.0025 * scrHeight;
             var gravity = 0.15;
             var speed = 15;
             var num = 0;
