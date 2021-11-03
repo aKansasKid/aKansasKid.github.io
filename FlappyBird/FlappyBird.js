@@ -8,8 +8,8 @@
             var scrWidth = window.innerWidth;
             var scrHeight = window.innerHeight;
             
-            var gap = 0.1 * scrHeight;
-            var flapStrength = 2.2;
+            var gap = 0.15 * scrHeight;
+            var flapStrength = 0.03 * scrHeight;
             var gravity = 0.15;
             var speed = 15;
             var num = 0;
@@ -51,7 +51,7 @@
                imgBackground.style.left = '0px'; 
                imgBackground.style.top = '0px';
                num = scrHeight;
-               imgBackground.style.height = num.toString() + '%';
+               imgBackground.style.height = num.toString() + 'px';
                
                scoreBoard = document.querySelector('label.scoreLabel');
                scoreBoard.textContent = 'Score: ' + score.toString();
@@ -120,8 +120,9 @@
                    //reset();
                }
                
-               imgTop.style.left = parseInt(imgTop.style.left) + -2 + 'px';
-               imgBottom.style.left = parseInt(imgBottom.style.left) + -2 + 'px';
+                        num = (-0.005) * scrWidth;
+               imgTop.style.left = parseInt(imgTop.style.left) + num.toString() + 'px';
+               imgBottom.style.left = parseInt(imgBottom.style.left) + nu.toString() + 'px';
                if( parseInt(imgTop.style.left) < (-1*pipeWidth) ) {
                   resetPipes();
                   if (birdDead == false) {
