@@ -122,7 +122,7 @@
                
                         num = (-0.005) * scrWidth;
                imgTop.style.left = parseInt(imgTop.style.left) + num.toString() + 'px';
-               imgBottom.style.left = parseInt(imgBottom.style.left) + nu.toString() + 'px';
+               imgBottom.style.left = parseInt(imgBottom.style.left) + num.toString() + 'px';
                if( parseInt(imgTop.style.left) < (-1*pipeWidth) ) {
                   resetPipes();
                   if (birdDead == false) {
