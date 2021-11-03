@@ -120,9 +120,10 @@
                    //reset();
                }
                
-                        num = (-0.005) * scrWidth;
-               imgTop.style.left = parseInt(imgTop.style.left) + num.toString() + 'px';
-               imgBottom.style.left = parseInt(imgBottom.style.left) + num.toString() + 'px';
+                   num = parseInt(imgTop.style.left) -(0.005) * scrWidth;
+               imgTop.style.left = num.toString() + 'px';
+                   num = parseInt(imgBottom.style.left) -(0.005) * scrWidth;
+               imgBottom.style.left = num.toString() + 'px';
                if( parseInt(imgTop.style.left) < (-1*pipeWidth) ) {
                   resetPipes();
                   if (birdDead == false) {
