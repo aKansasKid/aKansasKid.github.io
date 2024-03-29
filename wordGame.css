@@ -1,0 +1,16 @@
+.header {
+    color: blue; 
+    font-size: 24px;
+    font-family: arial;
+    margin-bottom: 2%;
+}
+.container {
+    position: relative;
+    text-align: left;
+}
+.userWord { 
+    color: blue;
+    font-size: 72px;
+    margin-right: 10%;
+    margin-top: 5%;
+}
