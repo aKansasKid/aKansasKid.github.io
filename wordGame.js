@@ -20,6 +20,7 @@ function mainLoop(wordsList)
    
 let inputField = document.getElementById("userWord"); 
 var theWord = inputField.value;
+theWord = theWord.toLowerCase();
 console.log("theWord = ", theWord);
 
 var wordsList = new Array();
