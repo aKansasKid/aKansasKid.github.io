@@ -4,7 +4,7 @@
 
    <head>
       <meta charset="utf-8">
-      <title>Jumble Word Game</title>
+      <title>Word Game</title>
       <link rel="stylesheet" href="wordGame.css">
    </head>
 	
@@ -13,12 +13,10 @@
       <header class="header">
          <h4>Word Game</h4>
          
-      <label size="32" for="userWord">Enter word to use:</label>
+      <label size="48" for="userWord">Enter word to use:</label>
       <div> 
-        <input type="text" id="userWord" name="userWord" size="18" />
-      </div>
-      <div>
-         <button name="Submit" id="Submit" onclick="mainLoop()">Submit</button>
+        <input type="text" id="userWord" name="userWord" />
+        <button class="submit" name="submit" id="submit" onclick="mainLoop()">Submit</button>
       </div>
       
       <script src="wordGame.js"></script>

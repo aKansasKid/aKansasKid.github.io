@@ -21,7 +21,7 @@ function mainLoop(wordsList)
 let inputField = document.getElementById("userWord"); 
 var theWord = inputField.value;
 theWord = theWord.toLowerCase();
-console.log("theWord = ", theWord);
+//console.log("theWord = ", theWord);
 
 var wordsList = new Array();
 readWordsList(wordsList);
@@ -56,9 +56,13 @@ for (let i = 0; i < theWord.length; i++) {
           }
           if (included && dictWord.length >= 4) {
               numFound++;
+              if (numFound == 1) {                
+                document.write("Words with 4 or more letters in: ",theWord);
+                document.write("<br>");
+              }
               document.write(dictWord);
               document.write("<br>");
-              console.log("Found dictWord = ", dictWord);
+              //console.log("Found dictWord = ", dictWord);
               
         
           }
