@@ -56,12 +56,13 @@ for (let i = 0; i < theWord.length; i++) {
           }
           if (included && dictWord.length >= 4) {
               numFound++;
-              if (numFound == 1) {                
-                document.write("Words with 4 or more letters in: ",theWord);
-                document.write("<br>");
+              if (numFound == 1) {   
+                var headerString = "Words with 4 or more letters in: " + theWord;
+                document.write("<p style='font-size:x-large;'</p>",headerString);
+                //document.write("<br>");
               }
-              document.write(dictWord);
-              document.write("<br>");
+              document.write("<p style='font-size:x-large;'</p>",dictWord);
+              //document.write("<br>");
               //console.log("Found dictWord = ", dictWord);
               
         
