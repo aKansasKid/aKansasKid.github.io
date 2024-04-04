@@ -58,10 +58,10 @@ for (let i = 0; i < theWord.length; i++) {
               numFound++;
               if (numFound == 1) {   
                 var headerString = "Words with 4 or more letters in: " + theWord;
-                document.write("<p style='font-size:x-large;'</p>",headerString);
+                document.write("<p style='font-size:48px;'</p>",headerString);
                 //document.write("<br>");
               }
-              document.write("<p style='font-size:x-large;'</p>",dictWord);
+              document.write("<p style='font-size:48px;'</p>",dictWord);
               //document.write("<br>");
               //console.log("Found dictWord = ", dictWord);
               
