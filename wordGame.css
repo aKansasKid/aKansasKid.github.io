@@ -1,8 +1,9 @@
 .header {
-    color: blue; 
+    color: black; 
     font-size: 72px;
     font-family: arial;
     margin-bottom: 2%;
+    text-align: center;
 }
 .container {
     webkit-appearance: none !important;
@@ -16,6 +17,7 @@
     margin-top: 5%;
 }
 input[type="text"] {
+  color: blue;
   size:18;
   font-size:48px;
 }
@@ -24,8 +26,14 @@ input[type="text"] {
     border-radius: 10px;
     background-color: blue;
     color: white;
-    font-size: xx-large;
+    font-size: 48px;
     margin-right: 1%;
     box-shadow: 3px 3px 2px 2px gray;
+}
+.aList {
+  font-size: 36px;
+  margin-right:10%;
+  text-align: left;
+  color: black;
 }
   
