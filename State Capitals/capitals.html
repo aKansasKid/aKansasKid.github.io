@@ -151,7 +151,7 @@ function startGame() {
     currentCapital = selected.capital;
 
     // Image file name format: lowercase, spaces -> underscores
-    const imageFile = "images/" + currentState.toLowerCase().replace(/ /g, "-") + ".jpg";
+    const imageFile = "images/" + currentState.replace(/ /g, "-") + ".jpg";
     document.getElementById('stateImage').src = imageFile;
     document.getElementById('stateImage').alt = currentState + " outline";
 }
@@ -180,3 +180,4 @@ function askPlayAgain() {
 </body>
 
 </html>
+
