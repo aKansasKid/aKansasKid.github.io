@@ -152,7 +152,6 @@ function startGame() {
 
     // Image file name format: lowercase, spaces -> underscores
     const imageFile = "images/" + currentState.replace(/ /g, "-") + ".jpg";
-    confirm("image filename: " + imageFile)
     document.getElementById('stateImage').src = imageFile;
     document.getElementById('stateImage').alt = currentState + " outline";
 }
@@ -181,5 +180,6 @@ function askPlayAgain() {
 </body>
 
 </html>
+
 
 
