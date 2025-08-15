@@ -127,6 +127,7 @@ let currentCapital = null;
     
 const noDups = 25
 var previous = new Array(noDups).fill(-1);
+var randomIndex = -2;
 
 document.getElementById('startBtn').addEventListener('click', startGame);
 
@@ -149,7 +150,7 @@ function startGame() {
 
     // Pick random state
     do{
-    const randomIndex = Math.floor(Math.random() * statesAndCapitals.length);
+        randomIndex = Math.floor(Math.random() * statesAndCapitals.length);
     } while( previous.includes(randomIndex) )
     
     for( let i = 0; i < noDups - 1; i++){
@@ -191,6 +192,7 @@ function askPlayAgain() {
 </body>
 
 </html>
+
 
 
 
