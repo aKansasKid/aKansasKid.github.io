@@ -124,6 +124,9 @@ const statesAndCapitals = [
 
 let currentState = null;
 let currentCapital = null;
+    
+const noDups = 25
+const previous = new Array(noDups).fill(-1);
 
 document.getElementById('startBtn').addEventListener('click', startGame);
 
@@ -145,8 +148,15 @@ function startGame() {
     });
 
     // Pick random state
-    var randomIndex = Math.floor(Math.random() * statesAndCapitals.length);
-    const selected = statesAndCapitals[randomIndex];
+    do{
+    const randomIndex = Math.floor(Math.random() * statesAndCapitals.length);
+    } while( previous.includes(randomIndex) )
+    
+    for( let i = 0; i < noDups - 1; i++){
+        previous[i] = previous[i+1];
+    }
+    previous[noDups-1] = randomIndex;
+    
     currentState = selected.state;
     currentCapital = selected.capital;
 
@@ -180,6 +190,7 @@ function askPlayAgain() {
 </body>
 
 </html>
+
 
 
 
