@@ -145,7 +145,7 @@ function startGame() {
     });
 
     // Pick random state
-    const randomIndex = Math.floor(Math.random() * statesAndCapitals.length);
+    var randomIndex = Math.floor(Math.random() * statesAndCapitals.length);
     const selected = statesAndCapitals[randomIndex];
     currentState = selected.state;
     currentCapital = selected.capital;
@@ -180,6 +180,7 @@ function askPlayAgain() {
 </body>
 
 </html>
+
 
 
 
