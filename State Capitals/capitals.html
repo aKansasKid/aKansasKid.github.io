@@ -64,6 +64,10 @@
         <select id="capitalSelect"></select>
         <button id="submitBtn">Submit</button>
     </div>
+    <div>
+        <img id="USmap" alt="USmap" >
+        <button id="mapBtn">US Map</button>
+    </div>   
     <div id="message"></div>
 </div>
 
@@ -167,6 +171,13 @@ function startGame() {
     document.getElementById('stateImage').src = imageFile;
     document.getElementById('stateImage').alt = currentState + " outline";
 }
+    
+// Display US map if requested
+document.getElementById('mapBtn').addEventListener('click', function() {
+    const mapFile = "images/USmap.jpg";
+    document.getElementById('USmap').src = mapFile;
+    document.getElementById('USmap').alt = "USmap";
+});
 
 // Submit answer
 document.getElementById('submitBtn').addEventListener('click', function() {
@@ -192,6 +203,7 @@ function askPlayAgain() {
 </body>
 
 </html>
+
 
 
 
