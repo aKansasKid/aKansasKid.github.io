@@ -66,9 +66,9 @@
     </div>
     <div id="message"></div>
     <div>
-        <img id="USmap" alt="USmap" >
+        <img id="USmap" alt="USmap"  hidden>
         <button id="mapBtn">US Map</button>
-    </div>   
+    </div>    
 </div>
 
 <script>
@@ -171,12 +171,17 @@ function startGame() {
     document.getElementById('stateImage').src = imageFile;
     document.getElementById('stateImage').alt = currentState + " outline";
 }
-    
+
 // Display US map if requested
 document.getElementById('mapBtn').addEventListener('click', function() {
     const mapFile = "images/USmap.jpg";
     document.getElementById('USmap').src = mapFile;
     document.getElementById('USmap').alt = "USmap";
+    if (document.getElementById("USmap").hidden) {
+        document.getElementById("USmap").hidden = false;
+    } else {
+        document.getElementById("USmap").hidden = true;
+    }
 });
 
 // Submit answer
@@ -203,8 +208,6 @@ function askPlayAgain() {
 </body>
 
 </html>
-
-
 
 
 
